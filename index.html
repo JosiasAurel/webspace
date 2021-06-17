@@ -8,32 +8,20 @@
     <title>Josias Aurel</title>
 </head>
 <body>
-    <span class="flex">
-        <div id="summary">
-            <h2>About Me.</h2>
-            <p>My name is Josias Aurel. <br> I am a passionate developer. I live in Cameroon. <br>
-                I love to code on daily basis while experimenting with technologies and building my side projects.
-                <br>
-                I have experience coding in <em>JavaScript</em>, <em>TypeScript</em>, <em>Python</em>, <em>Java</em>,
-                <em>Nim</em> and <em>C/C++</em> .
-                <br>
-                I love learning new things every day and documenting my learnings with others.
-                <br>
-                I have built several projects in my coding journey so far and some of my apps are used by many people in around
-                the world today.
-                <br>
-                I like tinkering with computers, like astrology and making things work ;)
-            </p>
-        </div>
-    </span>
-    <header class="flex">
-        <div>
+    <header>
             <button id="toggleModal">
-                Josias
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <g data-name="Layer 2">
+                        <g data-name="moon">
+                            <rect width="24" height="24" opacity="0" />
+                            <path
+                                d="M12.3 22h-.1a10.31 10.31 0 0 1-7.34-3.15 10.46 10.46 0 0 1-.26-14 10.13 10.13 0 0 1 4-2.74 1 1 0 0 1 1.06.22 1 1 0 0 1 .24 1 8.4 8.4 0 0 0 1.94 8.81 8.47 8.47 0 0 0 8.83 1.94 1 1 0 0 1 1.27 1.29A10.16 10.16 0 0 1 19.6 19a10.28 10.28 0 0 1-7.3 3z" />
+                        </g>
+                    </g>
+                </svg>
             </button>
-        </div>
         <div class="mobile-menu">
-
+        
         </div>
         <nav>
             <a href="#">Blog</a>
@@ -41,18 +29,44 @@
             <a href="#">Projects</a>
         </nav>
     </header>
-    <main>
-        <div class="flex bird-container">
-            <span class="meProfile flex">
-                <img src="josias.jpg" alt="josias">
-            </span>
-        </div>
-        <span class="center-name">
-            <h1 class="main-name">Josias <h1 class="invert">Aurel</h1>
-            </h1>
-        </span>
-        <h2 class="dev">Developer</h2>
-    </main>
+
+    <article class="article-1">
+        <main class="main-me">
+            <div>
+                <h1>Hi 👋, <br> I'm Josias Aurel</h1>
+                <p>
+                    I'm a self-taught developer based in Cameroon.
+                    I love experimenting with technologies and building side projects.
+                    This is my place on the internet.
+                </p>
+
+                <p>
+                    I have experience with web technologies and have built many in my journey. 
+                    Among those apps you can find <a class="l1" href="https://linksbook.me">LinksBook</a> <a class="l1" href="https://jost.vercel.app">Jost</a> and many more.
+                </p>
+
+                <p>
+                    I have participated at hackathons like <em>Google Code-In</em>, <em>Hashnode Hackathons</em> and more.
+                    <br>
+                    <br>
+                    I am currently more into <em>Startups</em>, <em>Game Development</em> and building software that runs natively.
+                </p>
+            </div>
+        </main>
+    </article>
+
+    <div>
+
+    </div>
+
+    <footer>
+        <p id="right"></p>
+
+        <nav>
+            <a href="https://twitter.com/JosiasWing">Twitter</a>
+            <a href="https://github.com/JosiasAurel">GitHub</a>
+        </nav>
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
