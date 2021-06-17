@@ -20,7 +20,7 @@ themeToggle.addEventListener("click", () => {
         pars.style.color = "black";
         link1.style.color = "black";
         link2.style.color = "black";
-        toggle.src = "moon.svg";
+        toggle.src = `/static/img/moon.svg`;
         toggle.style.filter = "invert(0)";
         localStorage.setItem("theme", "light");
     } else {
@@ -34,7 +34,7 @@ themeToggle.addEventListener("click", () => {
         pars.style.color = "white";
         link1.style.color = "white";
         link2.style.color = "white";
-        toggle.src = "sun.svg";
+        toggle.src = `/static/img/sun.svg`;
         toggle.style.filter = "invert(180)";
         localStorage.setItem("theme", "dark");
     }
