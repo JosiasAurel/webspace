@@ -1,0 +1,132 @@
+:root {
+  --my-hotpink: rgb(255, 7, 89);
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  margin: 0 auto;
+  background-color: white;
+  font-family: monospace;
+  max-height: 100vh;
+}
+
+header {
+  justify-content: space-between !important;
+  margin: 0 1.5em 0 1.5em;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  backdrop-filter: blur(5px);
+  padding: 0.2em 0 0.2em 0;
+  max-height: 5em;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+}
+
+header a:hover {
+  color: white;
+  background-color: black;
+}
+
+header nav {
+  margin-right: 2em;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  position: relative;
+  top: -20em;
+}
+
+main h1 {
+  font-size: 3em;
+}
+
+.center-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.main-name {
+  text-align: center;
+  display: inline;
+  padding: 0.2em;
+}
+
+.invert {
+  background-color: black;
+  color: white;
+  margin-left: 1em;
+  padding: 0.2em;
+}
+
+.meProfile {
+  border: solid 2px var(--my-hotpink);
+  width: 16em;
+  height: 16em;
+  border-radius: 50%;
+}
+
+.meProfile img {
+  max-width: 15em;
+  max-height: 15em;
+  border-radius: 50%;
+}
+
+.dev {
+  color: var(--my-hotpink);
+  text-align: center;
+  font-size: 2.5em;
+}
+
+header button {
+  background-color: rgba(137, 43, 226, 0.116);
+  border: solid transparent;
+  backdrop-filter: blur(5px);
+  padding: 0.5em 1em;
+  border-radius: 6px;
+}
+
+#summary {
+  text-align: center;
+  max-width: 500px;
+  backdrop-filter: blur(6px);
+  z-index: 10;
+  position: relative;
+  top: -400px;
+  transition: all 0.4s ease-in-out;
+  border-radius: 6px;
+  height: 400px;
+}
+
+@media screen and (max-width: 400px) {
+  header nav {
+    display: none;
+    visibility: hidden;
+  }
+
+  .mobile-menu {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    backdrop-filter: blur(5px);
+    margin-right: 2em;
+    border-radius: 5px;
+  }
+}
