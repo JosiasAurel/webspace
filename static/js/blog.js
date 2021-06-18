@@ -10,32 +10,39 @@ themeToggle.addEventListener("click", () => {
     console.log(currentTheme)
     if (currentTheme === "dark") {
         // get necessary elements
-        let pars = document.getElementById("content");
-        let link1 = document.getElementById("l1");
-        let link2 = document.getElementById("l2");
+        let tags = document.getElementsByClassName("tag");
+        console.log(tags)
         let toggle = document.getElementById("toggle");
         
 
         document.body.classList.remove("darkBody");
-        pars.style.color = "black";
-        link1.style.color = "black";
-        link2.style.color = "black";
         toggle.src = `/static/img/moon.svg`;
         toggle.style.filter = "invert(0)";
+        for (let t = 0; t < tags.length; t++) {
+            tags[t].style.backgroundColor = "black";
+            tags[t].style.color = "white";
+        }
+        /* tags.forEach(tag => {
+            tag.style.backgroundColor = "black";
+            tag.style.color = "white";
+        }) */
         localStorage.setItem("theme", "light");
     } else {
         // get necessary elements
-        let pars = document.getElementById("content");
-        let link1 = document.getElementById("l1");
-        let link2 = document.getElementById("l2");
+        let tags = document.getElementsByClassName("tag");
         let toggle = document.getElementById("toggle");
 
         document.body.classList.add("darkBody");
-        pars.style.color = "white";
-        link1.style.color = "white";
-        link2.style.color = "white";
         toggle.src = `/static/img/sun.svg`;
         toggle.style.filter = "invert(180)";
+        for (let t = 0; t < tags.length; t++) {
+            tags[t].style.backgroundColor = "white";
+            tags[t].style.color = "black";
+        }
+        /* tags.forEach(tag => {
+            tag.style.backgroundColor = "white";
+            tag.style.color = "black";
+        }) */
         localStorage.setItem("theme", "dark");
     }
 });
