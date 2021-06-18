@@ -1,0 +1,72 @@
+:root {
+  --hbg-color: black;
+  --txt-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  margin: 0 auto;
+  background-color: white;
+  color: black;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+.darkBody {
+  background-color: black;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em 0 1em 0;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(5px);
+}
+
+header button {
+  width: 30px;
+  height: 30px;
+  border: solid transparent;
+  background-color: rgba(128, 128, 128, 0.322);
+  backdrop-filter: blur(5px);
+  border-radius: 6px;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.2em;
+  border-radius: 4px;
+}
+
+header a:hover {
+  background-color: var(--hbg-color);
+  color: var(--txt-color);
+  margin: 0 1em 0 1em;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 2em 1em 1em;
+}
+
+footer p {
+  padding: 0.2em;
+  border: 2px dotted grey;
+  border-radius: 4px;
+}
+
+footer a {
+  text-decoration: none;
+  color: grey;
+}

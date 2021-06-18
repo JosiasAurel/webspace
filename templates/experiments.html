@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', path='/css/global.css')}}">
+    <title>Josias Aurel - Experiments</title>
+</head>
+<body>
+    <header>
+        <button id="themeToggle">
+            <img id="toggle" src="{{url_for('static', path='/img/moon.svg')}}" alt="moon">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g data-name="Layer 2">
+                                <g data-name="moon">
+                                    <rect width="24" height="24" opacity="0" />
+                                    <path
+                                        d="M12.3 22h-.1a10.31 10.31 0 0 1-7.34-3.15 10.46 10.46 0 0 1-.26-14 10.13 10.13 0 0 1 4-2.74 1 1 0 0 1 1.06.22 1 1 0 0 1 .24 1 8.4 8.4 0 0 0 1.94 8.81 8.47 8.47 0 0 0 8.83 1.94 1 1 0 0 1 1.27 1.29A10.16 10.16 0 0 1 19.6 19a10.28 10.28 0 0 1-7.3 3z" />
+                                </g>
+                            </g>
+                        </svg> -->
+        </button>
+        <div class="mobile-menu">
+    
+        </div>
+        <nav>
+            <a id="headerLink" href="/blog">Blog</a>
+            <a id="headerLink" href="/experiments">Experiments</a>
+            <a id="headerLink" href="#">Projects</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="card">
+            <h1>theBird, Lab</h1>
+            <h1>Here will be experiments if any, ever...</h1>
+        </div>
+    </main>
+
+    <style>
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 30vh;
+        }
+        .card {
+            text-align: center;
+            border: 2px dotted grey;
+            padding: 2em;
+            border-radius: 6px;
+            margin: 1em;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 90vw;
+        }
+    </style>
+
+    <footer>
+        <p id="right"></p>
+    
+        <nav>
+            <a href="https://twitter.com/JosiasWing">Twitter</a>
+            <a href="https://github.com/JosiasAurel">GitHub</a>
+        </nav>
+    </footer>
+
+    <script>
+        
+            document.getElementById("right").innerText = `Josias Aurel ${new Date().getFullYear()}`
+
+            // let currentTheme = localStorage.getItem("theme");
+
+            const themeToggle = document.getElementById("themeToggle");
+
+            themeToggle.addEventListener("click", () => {
+                let currentTheme = localStorage.getItem("theme");
+                console.log(currentTheme)
+                if (currentTheme === "dark") {
+                    // get necessary elements
+                    let toggle = document.getElementById("toggle");
+
+
+                    document.body.classList.remove("darkBody");
+                    toggle.src = `/static/img/moon.svg`;
+                    toggle.style.filter = "invert(0)";
+                    localStorage.setItem("theme", "light");
+                } else {
+                    // get necessary elements
+                    let tags = document.getElementsByClassName("tag");
+                    let toggle = document.getElementById("toggle");
+
+                    document.body.classList.add("darkBody");
+                    toggle.src = `/static/img/sun.svg`;
+                    toggle.style.filter = "invert(180)";
+                    localStorage.setItem("theme", "dark");
+                }
+            });
+    </script>
+    <script src="{{request.url_for('static', path='/js/index.js')}}"></script>
+</body>
+</html>
