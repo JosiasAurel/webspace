@@ -22,9 +22,17 @@ async def about(request: Request):
     return templates.TemplateResponse("about.html", {"request": request})
 
 
+@app.get("/{page}", response_class=HTMLResponse)
+async def show_page(request: Request, page: str):
+    try:
+        return templates.TemplateResponse(f"{page}.html", {"request": request})
+    except:
+        return "Could not find requested page"
+
+
 @app.get("/post/{post}")
 async def handle_post(request: Request, post: str):
-    _content = open(f"content/{post}.md")
-    content = markdown(_content.read())
-    _content.close()
-    return templates.TemplateResponse("post.html", {"request": request, "content": content})
+    try:
+        return templates.TemplateResponse(f"{post}.html", {"request": request})
+    except:
+        return "Something went wrong"
