@@ -1,2 +1,3 @@
-flask
-werkzeug==2.0.1
+fastapi
+aiofiles
+jinja2

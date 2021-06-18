@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{{url_for('static', filename='/img/bird.png')}}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/about.css') }}">
+    <link rel="shortcut icon" href="{{url_for('static', path='/img/bird.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/about.css') }}">
     <title>Josias Aurel</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
     <main>
         <div class="flex bird-container">
             <span class="meProfile flex">
-                <img src="{{ url_for('static', filename='/img/josias.jpg') }}" alt="josias">
+                <img src="{{ url_for('static', path='/img/josias.jpg') }}" alt="josias">
             </span>
         </div>
         <span class="center-name">
@@ -54,6 +54,6 @@
         </span>
         <h2 class="dev">Developer</h2>
     </main>
-    <script src="{{ url_for('static', filename='/js/about.js') }}"></script>
+    <script src="{{ url_for('static', path='/js/about.js') }}"></script>
 </body>
 </html>
