@@ -1,3 +1,5 @@
 fastapi
 aiofiles
 jinja2
+markdown
+mistune
