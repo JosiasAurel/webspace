@@ -10,6 +10,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # set templates
 templates = Jinja2Templates(directory="templates")
+posts = Jinja2Templates(directory="templates/post")
 
 
 @app.get("/", response_class=HTMLResponse)
@@ -33,6 +34,11 @@ async def show_page(request: Request, page: str):
 @app.get("/post/{post}")
 async def handle_post(request: Request, post: str):
     try:
-        return templates.TemplateResponse(f"{post}.html", {"request": request})
+        return posts.TemplateResponse(f"/{post}.html", {"request": request})
     except:
         return "Something went wrong"
+
+
+@app.get("/personal/log00")
+def _log00(request: Request):
+    return templates.TemplateResponse("log00.html", {"request": request})

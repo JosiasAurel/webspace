@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block head %}
+{% block title %}
+11 Useful JavaScript Console commands
+{% endblock %}
+{{ super() }}
+{% endblock %}
+{% block page_content %}
+<h1 id="these-are-11-useful-javascript-console-commands-to-know-about-">These are 11 useful JavaScript
+    <code>console</code> commands to know about.
+</h1>
+<h2 id="1-console-log-">1. <code>console.log()</code></h2>
+<p>The first and most common command is the console.log() command. It takes in a message and prints out the result to
+    the console. It can also print JavaScript objects, arrays - all data types in JavaScript. Additionally, it takes
+    care of formatting the output of the result to make it easier to trace.</p>
+<pre><code class="lang-javascript"><span class="hljs-selector-tag">console</span><span class="hljs-selector-class">.log</span>(<span class="hljs-string">"Hello World"</span>); <span class="hljs-comment">// Hello World</span>
+    <span class="hljs-selector-tag">console</span><span class="hljs-selector-class">.log</span>({
+      <span class="hljs-attribute">name</span>: <span class="hljs-string">"Sam Simon"</span>,
+      <span class="hljs-attribute">age</span>: <span class="hljs-number">43</span>,
+    });
+    <span class="hljs-selector-tag">console</span><span class="hljs-selector-class">.log</span>([<span class="hljs-string">"Apple"</span>, <span class="hljs-string">"Banana"</span>, <span class="hljs-string">"Orange"</span>]);
+    </code></pre>
+<p><img src="https://i.ibb.co/NZJHBk3/console-logobj.png" alt="console.log objects"></p>
+<h2 id="2-console-error-">2. <code>console.error()</code></h2>
+<p>The console.log() command is used by developers for most of the things they do - including logging errors to the
+    console. But do you know there is a special console command for that ? It is the <code>console.error()</code>
+    command. It is very similar to the console.log() command except it wraps what you log in a red error box.</p>
+<pre><code class="lang-javascript">console.error(<span class="hljs-string">"Something is wrong"</span>)<span class="hljs-comment">;</span>
+    </code></pre>
+<p><img src="https://i.ibb.co/YfnPcZQ/consoleerror.png" alt="console.error example"></p>
+<h2 id="3-console-info-">3. <code>console.info()</code></h2>
+<p>This console command is especial useful to output information to the console. Rather than using console.log(), you
+    will use console.info() to make the information stand out from other console commands.</p>
+<pre><code class="lang-javascript">console.info(<span class="hljs-string">"You are awesome"</span>)<span class="hljs-comment">;</span>
+    </code></pre>
+<p><img src="https://i.ibb.co/rsTWxbw/consoleinfo.png" alt="console info example"></p>
+<h2 id="4-console-table-">4. <code>console.table()</code></h2>
+<p>When dealing with arrays, you usually like to represent it in an easy to understand structure. The console.table()
+    commands handles that for you.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.table([<span class="hljs-string">"orange"</span>, <span class="hljs-string">"apple"</span>, <span class="hljs-string">"grape"</span>]);
+    </code></pre>
+<p><img src="https://i.ibb.co/yB5vbL3/consoletable.png" alt="console.table() example"></p>
+<h2 id="5-console-assert-">5. <code>console.assert()</code></h2>
+<p>This console command writes an error message to the console if an evaluates condition is false.</p>
+<pre><code class="lang-javascript">console.assert(<span class="hljs-number">2</span> &gt; <span class="hljs-number">3</span>, <span class="hljs-string">"It cannot be"</span>);
+    </code></pre>
+<p><img src="https://i.ibb.co/2sZ49sB/consoleassert.png" alt="console.assert example"></p>
+<h2 id="6-console-clear-">6. <code>console.clear()</code></h2>
+<p>This command clears the console for you.</p>
+<pre><code class="lang-javascript">console.<span class="hljs-built_in">clear</span>(); <span class="hljs-comment">//clears the console</span>
+    </code></pre>
+<h2 id="7-8-console-group-and-console-groupend-">7. &amp; 8. <code>console.group()</code> and
+    <code>console.groupEnd()</code>
+</h2>
+<p>These two console commands are useful to group stuff together in the console.</p>
+<p>The console.group() is used to start a group. The group will continue until it encounters a console.groupEnd().</p>
+<p><img src="https://i.ibb.co/wLpcTqX/consolegroups.png" alt="console group adn groupEnd exampls"></p>
+<h2 id="9-console-warn-">9. <code>console.warn()</code></h2>
+<p>Logging warnings in the console should be easy! Thats why the console.warn command exists</p>
+<pre><code class="lang-javascript">console.warn(<span class="hljs-string">"Some warning"</span>)<span class="hljs-comment">;</span>
+    </code></pre>
+<p><img src="https://i.ibb.co/4sSpPFV/consolewarn.png" alt="console warn example"></p>
+<h2 id="10-11-console-time-and-console-timeend-">10. &amp; 11. <code>console.time()</code> and
+    <code>console.timeEnd()</code>
+</h2>
+<p>There will be times when you will ned to measrue the time taken for an operation to complete. For this situations,
+    you can make use of teh console.time() and console.timeEnd() functions.
+    You use the console.time() to start a timer and console.timeEnd() to stop the timer.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.time();
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) {
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"number "</span> + i);
+    }
+    
+    <span class="hljs-built_in">console</span>.timeEnd(); <span class="hljs-comment">// prints time taken since the timer started</span>
+    </code></pre>
+<p><img src="https://i.ibb.co/JHrvCHF/consoletime.png" alt="console.times example"></p>
+<p>You have reached the end. If you enjoyed this post, please share.
+    I encourage you to try ou these console commands to understand them best.
+    Thanks XD</p>
+{% endblock %}
