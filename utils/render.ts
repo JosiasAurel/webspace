@@ -1,13 +1,17 @@
 
-import MarkdownIt from "markdown-it";
-import katex, { KatexOptions } from "katex";
-
-import { readFileSync } from "fs";
+const MarkdownIt = require("markdown-it");
+import katex from "katex";
+import { KatexOptions } from "katex";
 
 /* types */
-type CharacterPartial = {
-    type: "md"|"math",
+type ObjectPartial = {
+    type: "md"|"math"
     content: string
+    displayMode?: boolean
+}
+
+type ParserOutput = {
+    getHTMLOutput: Function
 }
 
 class Renderer {
@@ -26,7 +30,7 @@ class Renderer {
         this.katexOptions = {
             output: "mathml"
         }
-
+        this.partials = [];
     }
 
     switchToMarkdown(): void {
@@ -39,24 +43,22 @@ class Renderer {
 
     render(text: string): string {
         if (this.currentRenderer === "markdown") {
-            return new MarkdownIt().render(text);
+            const md = new MarkdownIt();
+            return md.render(text);
         }
         return katex.renderToString(text, this.katexOptions);
     }
 
-    splitBlocksWithLabels(document: string): void {
-        const seps = document.split("\n");
-        console.log(seps);
-    }
-
-    parse(document: string): void {
+    compile(document: string): string {
         const lineBlocks: string[] = document.split("\n");
-
+        const katexBlock: string[] = [];
+        let isKatexMathBlock: boolean = false;
         for (let lineIdx: number = 0; lineIdx < lineBlocks.length; lineIdx++) {
             // if it is not a katex math block beginning
-            if (lineBlocks[lineIdx].trim() !== "$$") {
+            if (lineBlocks[lineIdx].trim() !== "$$" && !isKatexMathBlock) {
+                isKatexMathBlock = false;
                 const splittedLine: string[] = lineBlocks[lineIdx].trim().split(" ");
-                const linePartial: CharacterPartial[] = [];
+                const linePartial: ObjectPartial[] = [];
                 let previousSpecial: boolean = false;
 
                 // make sure we split parts of the line accordingly
@@ -65,11 +67,17 @@ class Renderer {
                     // add to the markdown part for rendering
                     if (splittedLine[itemIdx] !== "$" && !previousSpecial) {
                         // add as markdown
-                        linePartial.push({type: "md", content: splittedLine[itemIdx]});
+                        if (linePartial.length > 0) {
+                            linePartial[linePartial.length - 1].content = linePartial[linePartial.length - 1].content + " "+ splittedLine[itemIdx]
+                        } else {
+                            linePartial.push({type: "md", content: splittedLine[itemIdx]});
+                        }
+                        // linePartial.push({type: "md", content: splittedLine[itemIdx]});
                         // if there was a previously encountered $ but current item is not a $
                         // add to the math for rendering
                     } else if (previousSpecial && splittedLine[itemIdx] !== "$") {
-                        linePartial.push({type:"math", content: splittedLine[itemIdx]});
+                        linePartial.push({type:"math", content: splittedLine[itemIdx], displayMode: false});
+                        console.log(splittedLine[itemIdx]);
                         // if current character is a $ and there was no previous $
                         // now there is and we move to the next character
                     } else if (splittedLine[itemIdx] === "$" && !previousSpecial) {
@@ -82,28 +90,48 @@ class Renderer {
 
                 // render the line
                 const renderedLinePartial: string[] = [];
-                linePartial.forEach(item => {
+                linePartial.forEach((item: ObjectPartial) => {
                     if (item.type === "md") {
                         this.switchToMarkdown();
                         renderedLinePartial.push(this.render(item.content));
                     } else if (item.type === "math") {
                         this.switchToKatex();
+                        this.katexOptions.displayMode = item.displayMode;
                         renderedLinePartial.push(this.render(item.content));
                     } else { renderedLinePartial.push(item.content) }
                 });
 
                 // add the rendered line to partials above
                 this.partials.push(renderedLinePartial.join(" "));
+            } else if (lineBlocks[lineIdx].trim() === "$$" && !isKatexMathBlock) {
+                isKatexMathBlock = true;
+            } else if (lineBlocks[lineIdx].trim() !== "$$" && isKatexMathBlock) {
+                // add the line to katex math block
+                katexBlock.push(lineBlocks[lineIdx]);
+            } else if (lineBlocks[lineIdx].trim() === "$$" && isKatexMathBlock) {
+                isKatexMathBlock = false;
+                // add the rendered line to partials
+                this.katexOptions.displayMode = true;
+                this.switchToKatex();
+                this.partials.push(this.render(katexBlock.join("")));
+            } else {
+                throw new Error("Parsing Error");
             }
+
+        
         }
+
+        return this.partials.join(" ");
     }
 }
-
+/* 
 const render = new Renderer("markdown");
 
 const content = readFileSync("./sample.md").toString();
-const result = render.parse(content);
+const result = render.compile(content);
 
-console.log(result);
+console.log(result); */
 
-export { Renderer };
+export {
+    Renderer
+};
