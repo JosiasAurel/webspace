@@ -4,7 +4,9 @@
   "description": "My personal site with support for markdown and math",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "dev": "next dev",
+    "build": "next build"
   },
   "repository": {
     "type": "git",
