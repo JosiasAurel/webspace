@@ -131,6 +131,13 @@ class Renderer {
         
         }
 
+        this.partials.push(`
+            <style>
+            .katex {
+                margin: 0 4px;
+            }
+            </style>
+        `);
         return this.partials.join(" ");
     }
 }
