@@ -56,7 +56,6 @@ class Renderer {
         for (let lineIdx: number = 0; lineIdx < lineBlocks.length; lineIdx++) {
             // if it is not a katex math block beginning
             if (lineBlocks[lineIdx].trim() !== "$$" && !isKatexMathBlock) {
-                isKatexMathBlock = false;
                 const splittedLine: string[] = lineBlocks[lineIdx].trim().split(" ");
                 const linePartial: ObjectPartial[] = [];
                 let previousSpecial: boolean = false;
@@ -68,7 +67,7 @@ class Renderer {
                     if (splittedLine[itemIdx] !== "$" && !previousSpecial) {
                         // add as markdown
                         if (linePartial.length > 0) {
-                            linePartial[linePartial.length - 1].content = linePartial[linePartial.length - 1].content + " "+ splittedLine[itemIdx]
+                            linePartial[linePartial.length - 1].content = linePartial[linePartial.length - 1].content + " "+ splittedLine[itemIdx];
                         } else {
                             linePartial.push({type: "md", content: splittedLine[itemIdx]});
                         }
@@ -76,14 +75,19 @@ class Renderer {
                         // if there was a previously encountered $ but current item is not a $
                         // add to the math for rendering
                     } else if (previousSpecial && splittedLine[itemIdx] !== "$") {
-                        linePartial.push({type:"math", content: splittedLine[itemIdx], displayMode: false});
-                        console.log(splittedLine[itemIdx]);
+                        if (linePartial[linePartial.length - 1].type === "math") {
+                            linePartial[linePartial.length - 1].content = linePartial[linePartial.length - 1].content + " " + splittedLine[itemIdx];
+                        } else {
+                            linePartial.push({type:"math", content: splittedLine[itemIdx], displayMode: false});
+                        }
+                        // console.log(splittedLine[itemIdx]);
                         // if current character is a $ and there was no previous $
                         // now there is and we move to the next character
                     } else if (splittedLine[itemIdx] === "$" && !previousSpecial) {
                         previousSpecial = true;
                         // if there was a previous $ and we encounter another $, we switch back to markdown
                     } else if (splittedLine[itemIdx] === "$" && previousSpecial){
+                        linePartial.push({type: "md", content: ""});
                         previousSpecial = false;
                     }
                 }
@@ -93,16 +97,22 @@ class Renderer {
                 linePartial.forEach((item: ObjectPartial) => {
                     if (item.type === "md") {
                         this.switchToMarkdown();
-                        renderedLinePartial.push(this.render(item.content));
+                        const renderedMd: string = this.render(item.content);
+                        renderedLinePartial.push(renderedMd);
                     } else if (item.type === "math") {
                         this.switchToKatex();
                         this.katexOptions.displayMode = item.displayMode;
-                        renderedLinePartial.push(this.render(item.content));
-                    } else { renderedLinePartial.push(item.content) }
+                        const renderedMath: string = this.render(item.content);
+                        renderedLinePartial.push(renderedMath);
+                    }
                 });
 
                 // add the rendered line to partials above
-                this.partials.push(renderedLinePartial.join(" "));
+                if (renderedLinePartial[0].trim() !== "") {
+                    const inlineBlock = `<span style="display: flex;align-items: center;">
+                        ${renderedLinePartial.join(" ")} </span>`;
+                    this.partials.push(inlineBlock);
+                } else {};
             } else if (lineBlocks[lineIdx].trim() === "$$" && !isKatexMathBlock) {
                 isKatexMathBlock = true;
             } else if (lineBlocks[lineIdx].trim() !== "$$" && isKatexMathBlock) {

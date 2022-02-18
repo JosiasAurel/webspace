@@ -3,26 +3,11 @@ import React from "react";
 
 import { Renderer } from "../utils/render";
 
+import { readFileSync } from "fs";
 type Props = {
     content: string
 }
 
-const sample: string = `
-# This is a simple markdown document
-
-This simple document, can include math expressions using katex as a partial renderer.
-
-Here is a sample math expression as a proof of concept that it is possible 
-
- $ \\int_2^3 $
-
-$$
-\\Gamma(z) = \\int_0^\\infty t^{z-1}e^{-t}dt\\,.
-$$
-
-If you see some cool math, then it works YAY🎉
-
-`;
 const Index: React.FC<Props> = ({ content }): JSX.Element => {
     return (
         <div>
@@ -36,7 +21,9 @@ const Index: React.FC<Props> = ({ content }): JSX.Element => {
 export async function getServerSideProps() {
     const renderer = new Renderer("markdown");
 
-    const renderedOutput: string = renderer.compile(String.raw({ raw: sample }));
+    const content = readFileSync(`${process.cwd()}/utils/sample.md`).toString();
+
+    const renderedOutput: string = renderer.compile(String.raw({ raw: content }));
     return {
         props: {
             content: renderedOutput
