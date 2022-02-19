@@ -10,6 +10,7 @@
   border: solid 1px black;
   background-color: white;
   margin: 0.5em 0;
+  font-size: 100%;
 }
 .header,
 .header nav {
@@ -26,4 +27,11 @@
 
 .header nav * {
   margin: 0 1em;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 50%;
+    width: 90vw;
+  }
 }
