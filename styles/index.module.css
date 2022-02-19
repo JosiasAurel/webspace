@@ -12,3 +12,22 @@
 .profile img {
   max-width: 50%;
 }
+
+.labProjectPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labProjectPage .projectsCn {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 500px) {
+  .labProjectPage .projectsCn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
