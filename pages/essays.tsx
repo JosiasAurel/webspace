@@ -1,8 +1,19 @@
 import React from "react";
 
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 const EssaysPage: React.FC = (): JSX.Element => {
     return (
-        <h1>Coming Soon.</h1>
+        <div style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+            alignItems: "center"
+        }}>
+            <Header />
+            <h1>Coming Soon.</h1>
+            <Footer />
+        </div>
     )
 }
 
