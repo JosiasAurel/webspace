@@ -1,7 +1,7 @@
 
 import React from "react";
 
-import { Renderer } from "../utils/render";
+import Footer from "../components/Footer";
 import { TWITTER_PROFILE_IMAGE, twitterUrl } from "../utils/constants";
 import styles from "../styles/index.module.css";
 
@@ -23,6 +23,8 @@ const Index: React.FC = (): JSX.Element => {
                 </p>
                 <p> <a href="https://github.com/JosiasAurel">GitHub</a> <a href="mailto:josias@josiasw.dev">josias@josiasw.dev</a> <a href={twitterUrl}>Twitter</a> .</p>
             </main>
+
+            <Footer />
         </div>
     )
 }

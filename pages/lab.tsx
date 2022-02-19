@@ -1,7 +1,7 @@
 import React from "react";
 import Project from "../components/Project";
 import styles from "../styles/index.module.css";
-
+import Footer from "../components/Footer";
 import { projects } from "../utils/constants";
 
 const ProjectsPage: React.FC = (): JSX.Element => {
@@ -19,6 +19,7 @@ const ProjectsPage: React.FC = (): JSX.Element => {
                     );
                 })}
             </div>
+            <Footer />
         </div>
     )
 }
