@@ -1,6 +1,7 @@
 
 import React from "react";
 
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { TWITTER_PROFILE_IMAGE, twitterUrl } from "../utils/constants";
 import styles from "../styles/index.module.css";
@@ -9,6 +10,7 @@ import styles from "../styles/index.module.css";
 const Index: React.FC = (): JSX.Element => {
     return (
         <div className={styles.homePage}>
+            <Header />
             <main className={styles.profile}>
                 <img src={TWITTER_PROFILE_IMAGE} alt="Josias Aurel" />
                 <h2> Josias Aurel - <em><a href={twitterUrl}>@JosiasWing⚡</a></em> </h2>
