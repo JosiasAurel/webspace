@@ -5,7 +5,9 @@ import styles from "../styles/components.module.css";
 const Header: React.FC = (): JSX.Element => {
     return (
         <header className={styles.header}>
-            <h2>Josias Aurel ⚡</h2>
+            <Link href="/">
+                <h2>Josias Aurel ⚡</h2>
+            </Link>
             <nav>
                 <Link href="/lab">
                     <a>lab🧪</a>
