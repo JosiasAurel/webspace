@@ -1,0 +1,14 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.profile {
+  margin: 2em 0;
+}
+
+.profile img {
+  max-width: 50%;
+}
