@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Nunito&family=Open+Sans:wght@300;400&family=Readex+Pro:wght@300&family=Ubuntu+Mono&display=swap");
+
+::root {
+  --jos-blue: rgb(0, 110, 255);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Ubuntu Mono";
+}
+
+body {
+  margin: 0 auto;
+  background: linear-gradient(90deg, white 96%, transparent 1%) center,
+    linear-gradient(white 96%, transparent 5%) center, black;
+  background-size: 25px 25px;
+}
+
+a {
+  color: var(--jos-blue);
+}
