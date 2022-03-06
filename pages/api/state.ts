@@ -9,7 +9,12 @@ export default async function sendState(req: NextApiRequest, res) {
         let currentItem = await state.get("fr9jxrywtl8j");
         
         res.json({currentItem});
-        
+        res.json({
+  currentItem: {
+    key: "fr9jxrywtl8j",
+    state: "hyper"
+  }
+})
     } catch (err) {
         res.json({error: err});
     }
