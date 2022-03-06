@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Index: React.FC<Props> = (props): JSX.Element => {
-    // console.log(props);
+    //console.log(props);
     return (
         <div className={styles.homePage}>
             <Header mode={props.data.currentItem.state} />
@@ -38,14 +38,8 @@ const Index: React.FC<Props> = (props): JSX.Element => {
 export async function getStaticProps(ctx) {
     // console.log(ctx);
     const res = await fetch("http://josiasw.dev/api/state");
-    // const data = await res.json();
+    const data = await res.json();
 
-    const data = {
-        currentItem: {
-            key: "",
-            state: "hyper"
-        }
-    }
     // console.log(data);
 
     return {
