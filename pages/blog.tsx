@@ -20,9 +20,14 @@ const BlogPage: React.FC = (props: any): JSX.Element => {
 export async function getStaticProps(ctx) {
     // console.log(ctx);
     const res = await fetch("http://josiasw.dev/api/state");
-    const data = await res.json();
+    // const data = await res.json();
 
-    // console.log(data);
+    const data = {
+        currentItem: {
+            key: "",
+            state: "hyper"
+        }
+    }
 
     return {
         props: {
