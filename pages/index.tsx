@@ -11,7 +11,7 @@ type Props = {
 }
 
 const Index: React.FC<Props> = (props): JSX.Element => {
-    console.log(props);
+    // console.log(props);
     return (
         <div className={styles.homePage}>
             <Header mode={props.data.currentItem.state} />
