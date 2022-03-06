@@ -4,7 +4,7 @@ import { Deta } from "deta";
 const deta = Deta(process.env.NEXT_PUBLIC_DETA_PROJECT_KEY);
 const state = deta.Base("state");
 
-export default async function sendTime(req: NextApiRequest, res) {
+export default async function toggleState(req: NextApiRequest, res) {
     try {
         let currentItem = await state.get("fr9jxrywtl8j");
         let item = await state.update({
