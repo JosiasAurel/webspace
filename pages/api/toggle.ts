@@ -12,6 +12,9 @@ export default async function toggleState(req: NextApiRequest, res) {
         }, "fr9jxrywtl8j");
 
         await res.unstable_revalidate("/index");
+        await res.unstable_revalidate("/essays");
+        await res.unstable_revalidate("/blog");
+        await res.unstable_revalidate("/lab");
         res.json({revalidated: true});
         
     } catch (err) {
