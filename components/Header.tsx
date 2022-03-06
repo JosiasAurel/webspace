@@ -2,11 +2,14 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/components.module.css";
 
-const Header: React.FC = (): JSX.Element => {
+type Props = {
+    mode: "hyper" | "normal"
+}
+const Header: React.FC<Props> = ({ mode }): JSX.Element => {
     return (
         <header className={styles.header}>
             <Link href="/">
-                <h2>Josias Aurel ⚡</h2>
+                <h2>Josias Aurel {mode === "hyper" ? "⚡" : ""}</h2>
             </Link>
             <nav>
                 <Link href="/lab">
