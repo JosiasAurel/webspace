@@ -2,7 +2,7 @@ import React from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-const EssaysPage: React.FC = (): JSX.Element => {
+const EssaysPage: React.FC = (props: any): JSX.Element => {
     return (
         <div style={{
             display: "flex",
@@ -10,11 +10,25 @@ const EssaysPage: React.FC = (): JSX.Element => {
             justifyContent: "space-evenly",
             alignItems: "center"
         }}>
-            <Header />
+            <Header mode={props.data.currentItem.state} />
             <h1>Coming Soon.</h1>
             <Footer />
         </div>
     )
+}
+
+export async function getStaticProps(ctx) {
+    // console.log(ctx);
+    const res = await fetch("http://josiasw.dev/api/state");
+    const data = await res.json();
+
+    // console.log(data);
+
+    return {
+        props: {
+            data
+        }
+    }
 }
 
 export default EssaysPage;
