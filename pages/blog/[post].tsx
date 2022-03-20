@@ -3,29 +3,70 @@ import React from "react";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Layout from "../../components/Layout";
 
 import { Renderer } from "../../utils/render";
-const BlogPage: React.FC = (): JSX.Element => {
+import Image from "next/image";
 
-    const rendered = new Renderer("markdown");
+type Props = {
+    postHold: PostHolder
+}
+
+const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
+    const [renderedContent, setRenderedContent] = React.useState<string>("");
+    const renderer = new Renderer("markdown");
+
+    React.useEffect(() => {
+        console.log(postHold);
+        if (postHold.status) {
+            setRenderedContent(
+                renderer.render(postHold.post.content)
+            );
+        }
+    }, []);
+
+    if (!postHold.status) {
+        return (
+            <Layout>
+                <Header />
+                <div>
+                    <h1 style={{
+                        fontSize: "500%",
+                        textAlign: "center"
+                    }}>
+                        😢
+                    </h1>
+                    <h2>Sorry! I could not find this page.</h2>
+                </div>
+                <Footer />
+            </Layout>
+        )
+    }
 
     return (
-        <div style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            alignItems: "center"
-        }}>
+        <Layout>
             <Header />
 
+            <article style={{
+                margin: "2em",
+                fontSize: "2em"
+            }}>
+                <div>
+
+                </div>
+                <div dangerouslySetInnerHTML={{
+                    __html: renderedContent
+                }}>
+                </div>
+            </article>
             <Footer />
-        </div>
+        </Layout>
     )
 }
 
 export async function getServerSideProps(ctx) {
 
-    const postURI = ctx.query.post;
+    const postURI: string = ctx.query.post;
     // console.log(ctx);
     const baseURL = process.env.reqBase;
 
@@ -35,14 +76,15 @@ export async function getServerSideProps(ctx) {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            postURI
+            postURI: postURI
         })
     });
-    const post = await response.json();
+    const postHold = await response.json() as Post;
 
+    console.log(postHold);
     return {
         props: {
-            post
+            postHold
         }
     }
 }
