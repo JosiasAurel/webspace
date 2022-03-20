@@ -22,7 +22,7 @@ const Header: React.FC = (): JSX.Element => {
                     <a>lab🧪</a>
                 </Link>
                 <Link href="/blog">
-                    <a>Blog✍️</a>
+                    <a>Thoughts 🧠</a>
                 </Link>
                 <Link href="/essays">
                     <a>Essays📝</a>

@@ -30,6 +30,18 @@
   margin: 0 1em;
 }
 
+.postCard {
+  background-color: white;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.postCard:hover {
+  background-color: aliceblue;
+}
+
 @media screen and (max-width: 500px) {
   .header {
     font-size: 50%;
