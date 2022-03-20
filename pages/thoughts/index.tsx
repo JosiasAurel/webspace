@@ -43,7 +43,7 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
     )
 }
 
-export async function getStaticProps(ctx) {
+export async function getServerSideProps(ctx) {
     // console.log(ctx);
     const baseURL = process.env.reqBase;
     const res = await fetch(`${baseURL}/api/fetchPosts`);
