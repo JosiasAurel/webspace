@@ -2,14 +2,20 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/components.module.css";
 
-type Props = {
-    mode: "hyper" | "normal"
-}
-const Header: React.FC<Props> = ({ mode }): JSX.Element => {
+const Header: React.FC = (): JSX.Element => {
+
+    const [state, setState] = React.useState<string>("");
+
+    React.useEffect(() => {
+        fetch("/api/state")
+            .then(res => res.json())
+            .then(value => setState(value));
+    });
+
     return (
         <header className={styles.header}>
             <Link href="/">
-                <h2>Josias Aurel {mode === "hyper" ? "⚡" : ""}</h2>
+                <h2>Josias Aurel {state === "hyper" ? "⚡" : ""}</h2>
             </Link>
             <nav>
                 <Link href="/lab">

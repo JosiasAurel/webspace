@@ -25,10 +25,24 @@ const BlogPage: React.FC = (): JSX.Element => {
 
 export async function getServerSideProps(ctx) {
 
+    const postURI = ctx.query.post;
+    // console.log(ctx);
+    const baseURL = process.env.reqBase;
+
+    const response = await fetch(`${baseURL}/api/getPost`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            postURI
+        })
+    });
+    const post = await response.json();
 
     return {
         props: {
-
+            post
         }
     }
 }

@@ -3,11 +3,11 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import { Deta } from "deta";
 
-const deta = Deta(process.env.NEXT_PUBLIC_DETA_PROJECT_KEYs);
+const deta = Deta(process.env.NEXT_PUBLIC_DETA_PROJECT_KEY);
 
 const posts = deta.Base("posts");
 
-export async function getPostHandler(req: NextApiRequest, res: NextApiResponse) {
+export default async function getPostHandler(req: NextApiRequest, res: NextApiResponse) {
     const { postURI } = req.body;
     try {
         const post = await posts.get(postURI);
