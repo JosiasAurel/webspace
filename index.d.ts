@@ -12,6 +12,7 @@ declare type Post = {
     content: string,
     views: number,
     url: string
+    description: string
 }
 
 declare type PostHolder = {
