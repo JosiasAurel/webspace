@@ -2,7 +2,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 import { Deta } from "deta";
-import { INSPECT_MAX_BYTES } from "buffer";
 
 const deta = Deta(process.env.NEXT_PUBLIC_DETA_PROJECT_KEY);
 
