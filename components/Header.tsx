@@ -16,7 +16,7 @@ const Header: React.FC = (): JSX.Element => {
                 <Link href="/thoughts">
                     <a>Thoughts 🧠</a>
                 </Link>
-                <Link href="/essays">
+                <Link href="/playground">
                     <a>Playground🎮</a>
                 </Link>
             </nav>
