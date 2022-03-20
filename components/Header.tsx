@@ -21,7 +21,7 @@ const Header: React.FC = (): JSX.Element => {
                 <Link href="/lab">
                     <a>lab🧪</a>
                 </Link>
-                <Link href="/blog">
+                <Link href="/thoughts">
                     <a>Thoughts 🧠</a>
                 </Link>
                 <Link href="/essays">
