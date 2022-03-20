@@ -27,7 +27,7 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
                 width: "90vw"
             }}>
                 <div style={{
-                    marginLeft: "solid 4px dotted grey"
+                    borderLeft: "solid 4px dotted grey"
                 }}>
                     {posts.map((post, idx) => {
                         return (

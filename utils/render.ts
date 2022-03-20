@@ -25,7 +25,7 @@ class Renderer {
     */
     private partials: string[];
 
-    constructor(renderer: "markdown"|"katex") {
+    constructor(renderer?: "markdown"|"katex") {
         this.currentRenderer = renderer ? renderer : "markdown";
         this.katexOptions = {
             output: "mathml"

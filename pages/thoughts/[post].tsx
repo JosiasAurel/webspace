@@ -6,7 +6,6 @@ import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 
 import { Renderer } from "../../utils/render";
-import Image from "next/image";
 
 type Props = {
     postHold: PostHolder
@@ -14,14 +13,15 @@ type Props = {
 
 const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
     const [renderedContent, setRenderedContent] = React.useState<string>("");
-    const renderer = new Renderer("markdown");
+    const renderer = new Renderer();
 
     React.useEffect(() => {
         console.log(postHold);
         if (postHold.status) {
             setRenderedContent(
-                renderer.render(postHold.post.content)
+                renderer.compile(postHold.post.content)
             );
+            console.log(renderedContent);
         }
     }, []);
 
@@ -55,13 +55,15 @@ const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-evenly",
-                    textAlign: "center"
+                    margin: "0 18%"
                 }}>
                     <h2> {postHold.post.title} </h2>
                     <span style={{
                         display: "flex",
                         flexDirection: "row",
                         justifyContent: "space-evenly",
+                        fontSize: "0.7em",
+                        width: "100%"
                     }}>
                         <p style={{
                             margin: "0 1em"
@@ -72,11 +74,24 @@ const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
                             margin: "0 1em"
                         }}> Views : {postHold.post.views} </p>
                     </span>
+                    <p style={{
+                        color: "grey",
+                        fontSize: "0.7em",
+                        textAlign: "center"
+                    }}>
+                        <em>
+                            <blockquote>
+                                {postHold.post.description}
+                            </blockquote>
+                        </em>
+                    </p>
                 </div>
                 <div>
 
                 </div>
-                <div dangerouslySetInnerHTML={{
+                <div style={{
+                    margin: "0 15%"
+                }} dangerouslySetInnerHTML={{
                     __html: renderedContent
                 }}>
                 </div>

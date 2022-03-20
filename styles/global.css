@@ -7,6 +7,8 @@
 * {
   box-sizing: border-box;
   font-family: "Ubuntu Mono";
+  transition: all 0.2s ease-in-out;
+  word-wrap: break-word;
 }
 
 body {

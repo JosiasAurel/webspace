@@ -29,7 +29,6 @@
   padding: 0.5em 1em;
   margin: 0 1em;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
 }
 
 .header nav *:hover {
