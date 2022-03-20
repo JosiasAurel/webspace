@@ -16,7 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             publishDate: new Date().toDateString(),
             content: "Hello World",
             views: 1,
-            url: "hello-world"
+            url: "hello-world",
+            description: "Just testing the stuff..."
         } as Post);
 
         return res.json({

@@ -23,8 +23,7 @@ const PostCard: React.FC<Props> = ({
                 </h2>
                 <p>
                     {
-                        !description || !(description.length > 0) ?
-                            description : "---"
+                        description ? description : "---"
                     }
                 </p>
             </div>

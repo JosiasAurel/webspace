@@ -22,18 +22,21 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
                 <p>A collection of my thoughts and ideas. Juicy & instructive information.</p>
             </div>
             <div style={{
-                marginLeft: "4px dotted grey",
                 width: "90vw"
             }}>
-                {posts.map(post => {
-                    return (
-                        <PostCard
-                            title={post.title}
-                            url={post.url}
-                            description={post.description}
-                        />
-                    )
-                })}
+                <div style={{
+                    marginLeft: "solid 4px dotted grey"
+                }}>
+                    {posts.map(post => {
+                        return (
+                            <PostCard
+                                title={post.title}
+                                url={post.url}
+                                description={post.description}
+                            />
+                        )
+                    })}
+                </div>
             </div>
             <Footer />
         </div>

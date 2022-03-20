@@ -39,7 +39,7 @@
 }
 
 .postCard:hover {
-  background-color: aliceblue;
+  background-color: grey;
 }
 
 @media screen and (max-width: 500px) {
