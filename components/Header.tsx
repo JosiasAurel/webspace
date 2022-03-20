@@ -4,18 +4,10 @@ import styles from "../styles/components.module.css";
 
 const Header: React.FC = (): JSX.Element => {
 
-    const [state, setState] = React.useState<string>("");
-
-    React.useEffect(() => {
-        fetch("/api/state")
-            .then(res => res.json())
-            .then(value => setState(value));
-    });
-
     return (
         <header className={styles.header}>
             <Link href="/">
-                <h2>Josias Aurel {state === "hyper" ? "⚡" : ""}</h2>
+                <h2>Josias Aurel ⚡</h2>
             </Link>
             <nav>
                 <Link href="/lab">
