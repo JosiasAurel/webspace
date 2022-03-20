@@ -14,7 +14,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
     //console.log(props);
     return (
         <div className={styles.homePage}>
-            <Header mode={props.data.currentItem.state} />
+            <Header />
             <main className={styles.profile}>
                 <img src="/josias.jpg" alt="Josias Aurel" />
                 <h2> Josias Aurel - <em><a href={twitterUrl}>@JosiasWing</a></em> </h2>
@@ -35,15 +35,4 @@ const Index: React.FC<Props> = (props): JSX.Element => {
     )
 }
 
-export async function getStaticProps(ctx) {
-    // console.log(ctx);
-    const res = await fetch("http://josiasw.dev/api/state");
-    const data = await res.json();
-
-    return {
-        props: {
-            data
-        }
-    }
-}
 export default Index;
