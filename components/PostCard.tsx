@@ -2,21 +2,31 @@
 import React from "react";
 import Link from "next/link";
 
+import styles from "../styles/components.module.css";
+
 type Props = {
     title: string
     url: string
+    description: string
 }
 
 const PostCard: React.FC<Props> = ({
     title,
-    url
+    url,
+    description
 }): JSX.Element => {
     return (
-        <Link href={url}>
-            <div>
+        <Link href={`thoughts/${url}`}>
+            <div className={styles.postCard}>
                 <h2>
                     {title}
                 </h2>
+                <p>
+                    {
+                        !description || !(description.length > 0) ?
+                            description : "---"
+                    }
+                </p>
             </div>
         </Link>
     )
