@@ -35,4 +35,16 @@ const Index: React.FC<Props> = (props): JSX.Element => {
     )
 }
 
+export async function getStaticProps(ctx) {
+    // console.log(ctx);
+    const res = await fetch("http://josiasw.dev/api/state");
+    const data = await res.json();
+
+    return {
+        props: {
+            data
+        }
+    }
+}
+
 export default Index;
