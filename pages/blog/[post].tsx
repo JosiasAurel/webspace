@@ -51,6 +51,28 @@ const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
                 margin: "2em",
                 fontSize: "2em"
             }}>
+                <div style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-evenly",
+                    textAlign: "center"
+                }}>
+                    <h2> {postHold.post.title} </h2>
+                    <span style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-evenly",
+                    }}>
+                        <p style={{
+                            margin: "0 1em"
+                        }}>
+                            Published on <em>  {postHold.post.publishDate} </em>
+                        </p>
+                        <p style={{
+                            margin: "0 1em"
+                        }}> Views : {postHold.post.views} </p>
+                    </span>
+                </div>
                 <div>
 
                 </div>
@@ -81,7 +103,7 @@ export async function getServerSideProps(ctx) {
     });
     const postHold = await response.json() as Post;
 
-    console.log(postHold);
+    // console.log(postHold);
     return {
         props: {
             postHold
