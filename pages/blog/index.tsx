@@ -1,9 +1,9 @@
 import React from "react";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-const EssaysPage: React.FC = (props: any): JSX.Element => {
+const BlogPage: React.FC = (props: any): JSX.Element => {
     return (
         <div style={{
             display: "flex",
@@ -12,11 +12,9 @@ const EssaysPage: React.FC = (props: any): JSX.Element => {
             alignItems: "center"
         }}>
             <Header />
-            <h1>Coming Soon.</h1>
             <Footer />
         </div>
     )
 }
 
-
-export default EssaysPage;
+export default BlogPage;

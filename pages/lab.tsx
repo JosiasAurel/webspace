@@ -5,10 +5,10 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { projects } from "../utils/constants";
 
-const ProjectsPage: React.FC = (props: any): JSX.Element => {
+const ProjectsPage: React.FC = (): JSX.Element => {
     return (
         <div className={styles.labProjectPage}>
-            <Header mode={props.data.currentItem.state} />
+            <Header />
             <div className={styles.projectsCn}>
                 {projects.map((project, idx) => {
                     return (
@@ -26,18 +26,6 @@ const ProjectsPage: React.FC = (props: any): JSX.Element => {
     )
 }
 
-export async function getStaticProps(ctx) {
-    // console.log(ctx);
-    const res = await fetch("http://josiasw.dev/api/state");
-    const data = await res.json();
 
-    // console.log(data);
-
-    return {
-        props: {
-            data
-        }
-    }
-}
 
 export default ProjectsPage;

@@ -3,7 +3,7 @@ import React from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { TWITTER_PROFILE_IMAGE, twitterUrl } from "../utils/constants";
+import { twitterUrl } from "../utils/constants";
 import styles from "../styles/index.module.css";
 
 type Props = {
@@ -16,7 +16,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
         <div className={styles.homePage}>
             <Header mode={props.data.currentItem.state} />
             <main className={styles.profile}>
-                <img src={TWITTER_PROFILE_IMAGE} alt="Josias Aurel" />
+                <img src="/josias.jpg" alt="Josias Aurel" />
                 <h2> Josias Aurel - <em><a href={twitterUrl}>@JosiasWing</a></em> </h2>
                 <p>
                     Hi 👋,
@@ -39,8 +39,6 @@ export async function getStaticProps(ctx) {
     // console.log(ctx);
     const res = await fetch("http://josiasw.dev/api/state");
     const data = await res.json();
-
-    // console.log(data);
 
     return {
         props: {
