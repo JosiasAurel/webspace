@@ -1,0 +1,30 @@
+.post {
+  font-size: 150%;
+}
+
+.post * {
+  font-family: sans-serif !important;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 20vw;
+}
+
+.newsletterCTA {
+  padding: 0.5em;
+  border: solid 2px grey;
+  border-radius: 8px;
+}
+.newsletterCTA * {
+  font-family: sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .article {
+    margin: 0 5vw;
+  }
+}

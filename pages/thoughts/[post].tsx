@@ -7,6 +7,8 @@ import Layout from "../../components/Layout";
 import Head from "next/head";
 import { Renderer } from "../../utils/render";
 
+import styles from "../../styles/post.module.css";
+
 type Props = {
     postHold: PostHolder
 }
@@ -68,17 +70,19 @@ const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
             </Head>
             <Header />
 
-            <article style={{
-                margin: "2em",
-                fontSize: "2em"
-            }}>
+            <article className={styles.article}>
                 <div style={{
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-evenly",
-                    margin: "0 18%"
+                    margin: "0 10vw",
+                    fontSize: "1.5em",
+                    width: "100%"
                 }}>
-                    <h2> {postHold.post.title} </h2>
+                    <h2 style={{
+                        fontSize: "1.5em",
+                        textAlign: "center"
+                    }}> {postHold.post.title} </h2>
                     <span style={{
                         display: "flex",
                         flexDirection: "row",
@@ -87,13 +91,10 @@ const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
                         width: "100%"
                     }}>
                         <p style={{
-                            margin: "0 1em"
+                            margin: "0 1em",
                         }}>
-                            Published on <em>  {postHold.post.publishDate} </em>
+                            Written by Josias Aurel on <em>  {postHold.post.publishDate} </em>
                         </p>
-                        <p style={{
-                            margin: "0 1em"
-                        }}> Views : {postHold.post.views} </p>
                     </span>
                     <p style={{
                         color: "grey",
@@ -110,11 +111,19 @@ const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
                 <div>
 
                 </div>
-                <div style={{
-                    margin: "0 15%"
-                }} dangerouslySetInnerHTML={{
+                <div className={styles.post} dangerouslySetInnerHTML={{
                     __html: renderedContent
                 }}>
+                </div>
+
+                <div className={styles.newsletterCTA}>
+                    <em>
+                        You can read the original on my newsletter page <a href="https://www.getrevue.co/profile/josiaswing/issues/achieve-anything-you-want-1061194">here</a>
+                    </em>
+                    <p>You have reached the end of this article. I hope you enjoyed reading it and learned something along the way.
+                        <br />
+                        If you want more of this to your mailbox, then consider <a href="https://www.getrevue.co/profile/josiaswing">subscribing to my newsletter</a>.
+                    </p>
                 </div>
             </article>
             <Footer />
