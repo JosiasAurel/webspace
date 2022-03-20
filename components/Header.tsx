@@ -19,13 +19,13 @@ const Header: React.FC = (): JSX.Element => {
             </Link>
             <nav>
                 <Link href="/lab">
-                    <a>lab🧪</a>
+                    <a>Lab🧪</a>
                 </Link>
                 <Link href="/thoughts">
                     <a>Thoughts 🧠</a>
                 </Link>
                 <Link href="/essays">
-                    <a>Essays📝</a>
+                    <a>Playground🎮</a>
                 </Link>
             </nav>
         </header>

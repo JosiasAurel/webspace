@@ -17,7 +17,9 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
         }}>
             <Header />
 
-            <div>
+            <div style={{
+                margin: "1em"
+            }}>
                 <h2>Thoughts 🧠</h2>
                 <p>A collection of my thoughts and ideas. Juicy & instructive information.</p>
             </div>
@@ -27,9 +29,10 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
                 <div style={{
                     marginLeft: "solid 4px dotted grey"
                 }}>
-                    {posts.map(post => {
+                    {posts.map((post, idx) => {
                         return (
                             <PostCard
+                                key={idx}
                                 title={post.title}
                                 url={post.url}
                                 description={post.description}
