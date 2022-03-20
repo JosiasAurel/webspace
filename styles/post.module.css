@@ -2,10 +2,6 @@
   font-size: 150%;
 }
 
-.post * {
-  font-family: sans-serif !important;
-}
-
 .article {
   display: flex;
   flex-direction: column;
@@ -18,9 +14,6 @@
   padding: 0.5em;
   border: solid 2px grey;
   border-radius: 8px;
-}
-.newsletterCTA * {
-  font-family: sans-serif;
 }
 
 @media screen and (max-width: 500px) {
