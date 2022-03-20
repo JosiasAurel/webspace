@@ -4,7 +4,7 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
-
+import Head from "next/head";
 import { Renderer } from "../../utils/render";
 
 type Props = {
@@ -45,6 +45,27 @@ const BlogPage: React.FC<Props> = ({ postHold }): JSX.Element => {
 
     return (
         <Layout>
+            <Head>
+
+                <title>Thought</title>
+                <meta name="title" content={postHold.post.title} />
+                <meta name="description" content={postHold.post.description} />
+
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={`https://josiasw.dev/thoughts/${postHold.post.url}`} />
+                <meta property="og:title" content="Thought" />
+                <meta property="og:description" content={postHold.post.description} />
+                <meta property="og:image" content={`https://og-gen.josiasw.dev/${postHold.post.title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg`} />
+
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content={`https://josiasw.dev/thoughts/${postHold.post.url}`} />
+                <meta property="og:url" content={`https://josiasw.dev/thoughts/${postHold.post.url}`} />
+                <meta property="twitter:title" content={postHold.post.title} />
+                <meta property="twitter:description" content={postHold.post.description} />
+                <meta property="twitter:image" content={`https://og-gen.josiasw.dev/${postHold.post.title}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg`} />
+            </Head>
             <Header />
 
             <article style={{
