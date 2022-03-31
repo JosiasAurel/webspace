@@ -10,8 +10,8 @@ const Header: React.FC = (): JSX.Element => {
                 <h2>Josias Aurel ⚡</h2>
             </Link>
             <nav>
-                <Link href="/lab">
-                    <a>Lab🧪</a>
+                <Link href="/projects">
+                    <a>Projects🔨</a>
                 </Link>
                 <Link href="/thoughts">
                     <a>Thoughts 🧠</a>
