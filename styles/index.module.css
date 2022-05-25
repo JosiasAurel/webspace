@@ -5,12 +5,12 @@
   align-items: center;
 }
 
-.profile {
-  margin: 2em 0;
+.homePage p {
+  font-size: 1.2em;
 }
 
 .profile img {
-  max-width: 50%;
+  max-width: fit-content;
 }
 
 .labProjectPage {
