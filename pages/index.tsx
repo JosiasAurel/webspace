@@ -3,6 +3,7 @@ import React from "react";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Profile from "../components/Profile";
 import { twitterUrl } from "../utils/constants";
 import styles from "../styles/index.module.css";
 
@@ -19,7 +20,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
         <div className={styles.homePage}>
             <Header />
             <main className={styles.profile}>
-                <img src="/josias.jpg" alt="Josias Aurel" />
+                <Profile name="Josias" imagePath="/josias.jpg" />
                 <h2> Josias Aurel - <em><a href={twitterUrl}>@JosiasWing</a></em> </h2>
                 <p>
                     Hi 👋,
