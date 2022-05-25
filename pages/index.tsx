@@ -6,6 +6,9 @@ import Footer from "../components/Footer";
 import { twitterUrl } from "../utils/constants";
 import styles from "../styles/index.module.css";
 
+// test notion integration
+import { notion } from "../utils/notion";
+
 type Props = {
     data: any
 }
@@ -20,7 +23,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                 <h2> Josias Aurel - <em><a href={twitterUrl}>@JosiasWing</a></em> </h2>
                 <p>
                     Hi 👋,
-                    16 years old Cameroonian builder.
+                    17 years old Cameroonian builder.
                     <br />
                     I love to build little tools, run experiments or just hack around.
                     <br />
@@ -39,6 +42,28 @@ export async function getStaticProps(ctx) {
     // console.log(ctx);
     const res = await fetch("http://josiasw.dev/api/state");
     const data = await res.json();
+
+    const articles = [];
+    const pages = await notion.databases.query({
+        database_id: "4fa54ad81dc445c1ac1b89c634fdfc57",
+    });
+
+    pages.results.forEach(async page => {
+        const article = await notion.blocks.retrieve({
+            block_id: page.id
+        });
+
+        const content = await notion.blocks.children.list({
+            block_id: article.id
+        });
+
+        content.results.forEach(async item => {
+            const item_ = await notion.blocks.children.list({
+                block_id: item.id
+            });
+            console.log(item_);
+        });
+    });
 
     return {
         props: {

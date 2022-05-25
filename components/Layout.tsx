@@ -1,7 +1,11 @@
 
 import React from "react";
 
-const Layout: React.FC = (props): JSX.Element => {
+type Props = {
+    children: React.ReactNode
+}
+
+const Layout: React.FC<Props> = ({ children }): JSX.Element => {
     return (
         <div style={{
             display: "flex",
@@ -9,7 +13,7 @@ const Layout: React.FC = (props): JSX.Element => {
             justifyContent: "space-evenly",
             alignItems: "center"
         }}>
-            {props.children}
+            {children}
         </div>
     )
 }
