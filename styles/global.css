@@ -21,6 +21,10 @@ a {
   color: var(--jos-blue);
 }
 
+h1, h2, h3, h4 {
+  text-align: start !important;
+}
+
 .dark {
   color: white !important;
   background-color: #151515;

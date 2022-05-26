@@ -11,8 +11,8 @@ import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 
 const components = {
+    p: P,
     h1: Title,
-    p: P
 };
 
 const JosiasAurelDev: React.FC<AppProps> = ({ Component, pageProps }) => {
