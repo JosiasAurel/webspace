@@ -1,6 +1,7 @@
 
 import React from "react";
 import "../styles/global.css";
+import "../styles/github-syntax.css";
 import { AppProps } from "next/app";
 import Header from "../components/Header";
 
