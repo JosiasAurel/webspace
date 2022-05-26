@@ -12,9 +12,7 @@
 
 body {
   margin: 0 auto;
-  /* background: linear-gradient(90deg, white 96%, transparent 1%) center,
-    linear-gradient(white 96%, transparent 5%) center, black;
-  background-size: 25px 25px; */
+  background-color: white;
 }
 
 a {

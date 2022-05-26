@@ -6,11 +6,20 @@
 }
 
 .homePage p {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: rgb(88, 88, 88);
 }
 
-.profile img {
-  max-width: fit-content;
+.homePage span{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80%;
 }
 
 .labProjectPage {
