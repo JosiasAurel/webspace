@@ -16,7 +16,6 @@ const Index: React.FC<Props> = (props): JSX.Element => {
     //console.log(props);
     return (
         <div className={styles.homePage}>
-
             <Head>
                 <title>Josias Aurel</title>
             </Head>
