@@ -8,26 +8,29 @@ type Props = {
     title: string
     url: string
     description: string
+    date: string
 }
 
 const PostCard: React.FC<Props> = ({
     title,
     url,
-    description
+    description,
+    date
 }): JSX.Element => {
     return (
-        <Link href={`blog/${url}`}>
-            <div className={styles.postCard}>
-                <h2>
+        <div className={styles.postCard}>
+            <p> {date} </p>
+            <Link href={`blog/${url}`}>
+                <a>
                     {title}
-                </h2>
-                <p>
-                    {
-                        description ? description : "---"
-                    }
-                </p>
-            </div>
-        </Link>
+                </a>
+            </Link>
+            <p>
+                {
+                    description ? description : "---"
+                }
+            </p>
+        </div>
     )
 }
 

@@ -30,23 +30,16 @@
   background-color: white;
   padding: 1em;
   margin: 1em;
-  border-radius: 5px;
   width: 90%;
+  border-bottom: dotted 1px grey;
 }
 
-.postCard:hover {
-  background-color: grey;
+.postCard a {
+  text-decoration: none;
 }
 
-.profile {
-  border-radius: 40px;
-  width: 300px;
-  height: 300px;
-  box-shadow: 1px 1px 2px 2px whitesmoke;
-}
-
-.profile {
-  max-width: fit-content;
+.postCard a:hover {
+  text-decoration: underline;
 }
 
 .footer p {

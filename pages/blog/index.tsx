@@ -25,6 +25,7 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
                         return (
                             <PostCard
                                 key={idx}
+                                date={post.date}
                                 title={post.title}
                                 url={`/${post.name.split(".")[0]}`}
                                 description={post.description}
