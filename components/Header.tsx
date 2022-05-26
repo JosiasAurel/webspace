@@ -11,7 +11,7 @@ type Props = {
 const Header: React.FC<Props> = ({ theme, changeTheme, atHome }): JSX.Element => {
     const router = useRouter();
     return (
-        <header className={styles.header}>
+        <header style={{ zIndex: 10 }} className={styles.header}>
             <nav>
                 <h2>{!atHome ? (
                     <svg onClick={_ => router.back()} width="24" height="24" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

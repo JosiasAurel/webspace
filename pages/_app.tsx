@@ -9,7 +9,6 @@ import Title from "../components/Title";
 import P from "../components/Text";
 import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
-import ThemeContext from "../context/Theme";
 
 const components = {
     h1: Title,
@@ -20,34 +19,40 @@ const JosiasAurelDev: React.FC<AppProps> = ({ Component, pageProps }) => {
     const router = useRouter();
     const [theme, setTheme] = React.useState<"dark" | "light">("light");
     const [isHome, setIsHome] = React.useState<boolean>(true);
+
     React.useEffect(() => {
         if (router.pathname !== "/") {
             setIsHome(false);
         } else setIsHome(true);
     });
-    const propsWithTheme = { ...pageProps, theme };
+
+    React.useEffect(() => {
+        if (theme === "dark") {
+            document.body.classList.add("dark");
+        } else document.body.classList.remove("dark");
+    }, [theme]);
+
+    // const propsWithTheme = { ...pageProps, theme };
     return (
-        <ThemeContext.Provider value={theme}>
-            <div>
-                <Header atHome={isHome} theme={theme} changeTheme={setTheme} />
-                <MDXProvider components={components}>
-                    {!isHome ?
-                        <div className="blogStyle">
-                            <div className="blogContent">
-                                <Component {...propsWithTheme} />
-                            </div>
+        <div>
+            <Header atHome={isHome} theme={theme} changeTheme={setTheme} />
+            <MDXProvider components={components}>
+                {!isHome ?
+                    <div className="blogStyle">
+                        <div className="blogContent">
+                            <Component {...pageProps} />
                         </div>
-                        :
-                        <div style={{
-                            margin: "4em 0",
-                        }}>
-                            <Component {...propsWithTheme} />
-                        </div>
-                    }
-                </MDXProvider>
-                <Footer />
-            </div>
-        </ThemeContext.Provider>
+                    </div>
+                    :
+                    <div style={{
+                        margin: "4em 0",
+                    }}>
+                        <Component {...pageProps} />
+                    </div>
+                }
+            </MDXProvider>
+            <Footer />
+        </div>
     );
 }
 
