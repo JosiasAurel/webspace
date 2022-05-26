@@ -6,6 +6,7 @@ export default function ThisDocument() {
         <Html>
             <Head>
                 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+                <script async src="https://cdn.splitbee.io/sb.js"></script>
             </Head>
             <body>
                 <Main />
