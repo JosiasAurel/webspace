@@ -12,6 +12,24 @@ const Index: React.FC<Props> = (props): JSX.Element => {
     return (
         <div className={styles.homePage}>
             <Head>
+
+                <title>Josias Aurel</title>
+                <meta name="title" content="Josias Aurel" />
+                <meta name="description" content="" />
+
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://josiasw.dev/" />
+                <meta property="og:title" content="Josias Aurel" />
+                <meta property="og:description" content="17 y/o self-taught developer. I love building little tools, experiments, or just tinkering around on my computer. Math could be fun and emojis are cool 🏵️" />
+                <meta property="og:image" content="https://og-gen.josiasw.dev/Josias%20Aurel%20-%20Developer%F0%9F%8C%B1.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350" />
+
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://josiasw.dev/" />
+                <meta property="twitter:title" content="Josias Aurel" />
+                <meta property="twitter:description" content="17 y/o self-taught developer. I love building little tools, experiments, or just tinkering around on my computer. Math could be fun and emojis are cool 🏵️" />
+                <meta property="twitter:image" content="https://og-gen.josiasw.dev/Josias%20Aurel%20-%20Developer%F0%9F%8C%B1.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350" />
                 <title>Josias Aurel</title>
             </Head>
             <main>
@@ -69,7 +87,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                     display: "inline-block"
                 }}> Find more stuff <a href="https://github.com/JosiasAurel">here</a>.</p>
             </main>
-        </div>
+        </div >
     )
 }
 
