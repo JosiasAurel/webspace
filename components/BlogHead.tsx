@@ -1,19 +1,23 @@
 
 import React from "react";
 import Title from "./Title";
+import Text from "./Text";
+import styles from "../styles/components.module.css";
 
 type Props = {
     title: string
     description: string
+    date: string
 }
 
-const BlogHead: React.FC<Props> = ({ title, description }): JSX.Element => {
+const BlogHead: React.FC<Props> = ({ title, description, date }): JSX.Element => {
     return (
-        <div>
+        <div className={styles.blogHead}>
             <Title>
                 {title}
             </Title>
-            <p style={{ textAlign: "center", color: "grey" }}><em>{description}</em></p>
+            <Text><em>{description}</em></Text>
+            <p>{date}</p>
         </div>
     )
 }

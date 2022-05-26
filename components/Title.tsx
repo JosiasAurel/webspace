@@ -7,7 +7,7 @@ type Props = {
 
 const Title: React.FC<Props> = ({ children }) => <h1 style={{
     fontSize: "2.5em",
-    textAlign: "center",
+    textAlign: "start",
 }}>{children}</h1>;
 
 export default Title;

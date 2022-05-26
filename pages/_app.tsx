@@ -5,11 +5,13 @@ import "../styles/github-syntax.css";
 import { AppProps } from "next/app";
 import Header from "../components/Header";
 import Title from "../components/Title";
+import P from "../components/Text";
 import { MDXProvider } from "@mdx-js/react";
 import { useRouter } from "next/router";
 
 const components = {
-    h1: Title
+    h1: Title,
+    p: P
 };
 
 const JosiasAurelDev: React.FC<AppProps> = ({ Component, pageProps }) => {
@@ -25,13 +27,22 @@ const JosiasAurelDev: React.FC<AppProps> = ({ Component, pageProps }) => {
     return (
         <div className={theme === "dark" ? "dark" : ""}>
             <Header atHome={isHome} theme={theme} changeTheme={setTheme} />
-            <div className={!isHome ? "blogStyle" : ""} style={{
-                margin: "2.5em 0",
-            }}>
-                <MDXProvider components={components}>
-                    <Component {...propsWithTheme} />
-                </MDXProvider>
-            </div>
+            <MDXProvider components={components}>
+                {!isHome ?
+                    <div className="blogStyle">
+                        <div className="blogContent">
+                            <Component {...propsWithTheme} />
+                        </div>
+                    </div>
+                    :
+                    <div style={{
+                        margin: "2.5em 0",
+                    }}>
+                        <Component {...propsWithTheme} />
+                    </div>
+                }
+            </MDXProvider>
+
         </div>
     );
 }

@@ -32,13 +32,29 @@ a {
   box-shadow: none !important;
 }
 
+.blogStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4em 1.5em;
+}
+
+.blogStyle .blogContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 pre {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 code {
+  width: 100%;
   border-radius: 10px;
   overflow-x: scroll;
 }
@@ -47,4 +63,15 @@ blockquote {
   border: dotted 5px var(--jos-blue);
   padding: 1em;
   border-radius: 10px;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .blogStyle {
+    margin: 4em 8em;
+  }
+  h1 {
+    font-size: 5em !important;
+    text-align: start;
+  }
 }
