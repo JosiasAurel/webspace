@@ -1,17 +1,15 @@
 
 .header {
-  padding: 1em 0;
+  padding: 0.4em 0;
   position: fixed;
   top: 0px;
   background-color: transparent;
   margin: 0;
   font-size: 100%;
   width: 100vw;
-  backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 1px rgb(0, 110, 255);
 }
 
 .header nav {
@@ -20,13 +18,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.header .circle {
-  width: 30px;
-  height: 30px;
-  border: solid 2px rgb(0, 110, 255);
-  border-radius: 50%;
 }
 
 .header button {
