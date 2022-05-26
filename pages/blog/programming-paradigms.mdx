@@ -1,0 +1,140 @@
+import BlogHead from "../../components/BlogHead";
+import Head from "next/head";
+
+export const title = "Programming Paradigms";
+export const description = "An insightful look.";
+export const date = "Thursday, May 27, 2022";
+export const ogImage = `https://og-gen.josiasw.dev/${title
+  .split(" ")
+  .join(
+    "%20"
+  )}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350`;
+
+<Head>
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={ogImage} />
+</Head>
+
+<BlogHead title={title} description={description} date={date} />
+
+A programming pattern refers to the pattern which a program code follows.
+It can be thought of as a style of programming.
+Some languages will enforce a paradigm onto the programmers using it while others
+allow you to program in which ever paradigm you wish.
+
+In this article we are going to take a look at some few common programming paradigms;
+
+- Imperative
+- Procedural
+- Object Oriented
+- Functional
+- Declarative
+
+There are a few more interesting paradigms like [reactive](https://en.wikipedia.org/wiki/Reactive_programming) or [mathematical](https://en.wikipedia.org/wiki/Mathematical_programming)
+but I will limit this article to these five few paradigms.
+
+> For Object Oriented paradigm, I will take a deeper dive in a separate article mainly because of how much it is applied and how daunting it can be to grasp.
+
+Now you might wonder why you should even care about different paradigms.
+
+In programming, we can have different solutions to the same problem to simply say there is not a single way
+of tackling a problem. We can write code that solves the problem in totally different approaches and even programming languages and still make it.
+Paradigms offer us guidelines in which we can structure our code for solving problems, they are merely just that.
+
+Without further ado, let's get into it 🏃🏽
+
+## Imperative Paradigm
+
+In the imperative paradigm, we write statements that describe the way to solve our problem step-by-step.
+A statement here simply refer to some action to be carried out. One thing peculiar to imperative paradigm is that
+every statement changes the program's state.
+
+A typical example of an imperative language is [C](<https://en.wikipedia.org/wiki/C_(programming_language)>).
+
+Let's say we want to calculate the area of a circle.
+We know the area of a circle if given by $\pi \times radius^2$ so to do it step by step;
+
+```python
+
+PI = 3.14
+
+radius = input("Enter the radius : ")
+
+area = PI*radius**2
+
+print(area)
+
+```
+
+In the code above, we do the following;
+
+- we get the radius of a circle from the user.
+- we then compute the area of the circle
+- print the area of the circle
+
+Every statement above changes the program's state.
+
+- In the first line, we declare the value of PI.
+- Next we read some value from the user, here the state of the program is tilted towards reading from [**Standard Input**](<https://en.wikipedia.org/wiki/Standard_streams#Standard_input_(stdin)>)
+- We then compute the area of the circle and
+- print the area of the circle, the program state is then towards [**Standard Output**](<https://en.wikipedia.org/wiki/Standard_streams#Standard_output_(stdout)>)
+
+## Procedural Paradigm
+
+Procedural paradigm is a subset of imperative programming paradigm, so it
+has all of the features of the imperative paradigm.
+
+Here the program instructions are divided into subroutines or procedures
+and these are just blocks of code to carry out a specific task/computation.
+
+This paradigm encourages modularity i.e dividing your solution into smaller blocks
+that do one thing and does it well. A procedure may call another procedure in itself.
+This paradigm encourages reusability.
+
+C language is a typical example of a language following the imperative procedural paradigm.
+
+In C, we will divide each execution unit into separate functions/procedures.
+We will then have a main function which will be the entry point of our program
+and it is from there that every other procedure can be called.
+
+Here is some example code to compute the area of a circle (This is not C).;
+
+```typescript
+const PI: number = 3.14;
+
+function readUserInput(): number {
+  // read user input from keyboard for example
+  return userInput;
+}
+
+function computeArea() {
+  const radius = readUserInput();
+
+  const area = PI * (radius * radius);
+
+  print(area);
+}
+
+function main() {
+  computeArea();
+}
+
+// more operations...
+```
+
+In the code above, we have defined functions `readUserInput()` to read input from the user
+as well as a function `computeArea()` which should read the radius of the circle from user as input
+and then compute the area.
+
+We then have a main function where we call out `computeArea()` function.
