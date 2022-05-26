@@ -7,10 +7,11 @@ import Header from "../components/Header";
 
 const JosiasAurelDev: React.FC<AppProps> = ({ Component, pageProps }) => {
     const [theme, setTheme] = React.useState<string>("light");
+    const propsWithTheme = { ...pageProps, theme };
     return (
         <>
             <Header theme={theme} changeTheme={setTheme} />
-            <Component {...pageProps} />
+            <Component {...propsWithTheme} />
         </>
     );
 }
