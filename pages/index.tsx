@@ -1,7 +1,5 @@
 
 import React from "react";
-
-import Footer from "../components/Footer";
 import Profile from "../components/Profile";
 import Head from "next/head";
 import { twitterUrl, work } from "../utils/constants";

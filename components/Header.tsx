@@ -13,9 +13,15 @@ const Header: React.FC<Props> = ({ theme, changeTheme, atHome }): JSX.Element =>
             <nav>
                 <h2>{!atHome ? (
                     <Link href="/">
-                        <svg viewBox="0 0 24 24" stroke="black"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </Link>
-                ) : ""}</h2>
+                ) :
+                    <Link href="/blog">
+                        articles
+                    </Link>
+                }</h2>
                 <button onClick={() => {
                     if (theme === "light") {
                         changeTheme("dark");
