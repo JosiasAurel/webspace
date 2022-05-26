@@ -63,6 +63,7 @@ code {
   width: 100%;
   border-radius: 10px;
   overflow-x: scroll;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 code span {
@@ -74,6 +75,10 @@ blockquote {
   padding: 1em;
   border-radius: 10px;
   width: 100%;
+}
+
+ul, h1, h2, h3, h4, p {
+  align-self: flex-start;
 }
 
 @media screen and (min-width: 500px) {
