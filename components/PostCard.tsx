@@ -20,7 +20,7 @@ const PostCard: React.FC<Props> = ({
     return (
         <div className={styles.postCard}>
             <p> {date} </p>
-            <Link href={`blog/${url}`}>
+            <Link href={`/blog/${url}`}>
                 <a>
                     {title}
                 </a>

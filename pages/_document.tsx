@@ -1,6 +1,6 @@
 
 import { Head, NextScript, Main, Html } from "next/document";
-import Header from "../components/Header";
+import ThemeContext from "../context/Theme";
 
 export default function ThisDocument() {
     return (
@@ -8,10 +8,14 @@ export default function ThisDocument() {
             <Head>
                 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
             </Head>
-            <body>
-                <Main />
-                <NextScript />
-            </body>
+            <ThemeContext.Consumer>
+                {value => (
+                    <body className={value === "dark" ? "dark" : ""}>
+                        <Main />
+                        <NextScript />
+                    </body>
+                )}
+            </ThemeContext.Consumer>
         </Html>
     )
 }
