@@ -83,8 +83,22 @@ const projects: Project[] = [
         state: "experimental"
     }
 ];
+
+const work: Work[] = [
+    {
+        name: "Cropboard",
+        url: "https://cropboard.vercel.app/",
+        description: "Helping farmers earn better. [stealth, founder]"
+    },
+    {
+        name: "Magic Space",
+        url: "https://lab.josiasw.dev/",
+        description: "A virtual lab where you can experiment with your ideas. [wip, builder]."
+    }
+];
 export {
     TWITTER_PROFILE_IMAGE,
     twitterUrl,
-    projects
+    projects,
+    work
 }

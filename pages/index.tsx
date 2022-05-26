@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Profile from "../components/Profile";
 import Head from "next/head";
-import { twitterUrl } from "../utils/constants";
+import { twitterUrl, work } from "../utils/constants";
 import styles from "../styles/index.module.css";
 
 type Props = {
@@ -58,6 +58,19 @@ const Index: React.FC<Props> = (props): JSX.Element => {
 
                     </a>
                 </span>
+
+                <div className={styles.experience}>
+                    <h2>fun 🌱</h2>
+                    <div>
+                        {work.map(item => {
+                            return (
+                                <span>
+                                    <a target="_blank" href={item.url}>{item.name}</a> <p> — {item.description}</p>
+                                </span>
+                            )
+                        })}
+                    </div>
+                </div>
             </main>
 
             <Footer />

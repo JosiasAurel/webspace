@@ -19,3 +19,9 @@ declare type PostHolder = {
     status: boolean
     post: Post
 }
+
+declare type Work = {
+    name: string
+    url: string
+    description: string
+}
