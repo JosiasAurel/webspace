@@ -5,7 +5,6 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
 import Head from "next/head";
-import { Renderer } from "../../utils/render";
 
 import styles from "../../styles/post.module.css";
 
