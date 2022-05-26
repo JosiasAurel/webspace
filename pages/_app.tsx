@@ -23,7 +23,7 @@ const JosiasAurelDev: React.FC<AppProps> = ({ Component, pageProps }) => {
         if (router.pathname !== "/") {
             setIsHome(false);
         } else setIsHome(true);
-    }, []);
+    });
     const propsWithTheme = { ...pageProps, theme };
     return (
         <div className={theme === "dark" ? "dark" : ""}>
@@ -37,7 +37,7 @@ const JosiasAurelDev: React.FC<AppProps> = ({ Component, pageProps }) => {
                     </div>
                     :
                     <div style={{
-                        margin: "2.5em 0",
+                        margin: "4em 0",
                     }}>
                         <Component {...propsWithTheme} />
                     </div>

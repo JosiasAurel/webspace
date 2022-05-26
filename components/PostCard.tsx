@@ -16,7 +16,7 @@ const PostCard: React.FC<Props> = ({
     description
 }): JSX.Element => {
     return (
-        <Link href={`thoughts/${url}`}>
+        <Link href={`blog/${url}`}>
             <div className={styles.postCard}>
                 <h2>
                     {title}

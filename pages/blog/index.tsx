@@ -1,25 +1,19 @@
 import React from "react";
-
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
 import PostCard from "../../components/PostCard";
+import { readdirSync } from "fs";
 
 type Props = {
     posts: Post[]
 }
 const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
+    console.log(posts);
     return (
-        <div style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-evenly",
-            alignItems: "center"
-        }}>
+        <div>
             <div style={{
                 margin: "1em"
             }}>
-                <h2>Thoughts 🧠</h2>
-                <p>A collection of my thoughts and ideas. Juicy & instructive information.</p>
+                <h2>Blog & Thoughts 📝</h2>
+                <p>A collection of my thoughts, ideas and learnings. Juicy & instructive information.</p>
             </div>
             <div style={{
                 width: "90vw"
@@ -32,28 +26,34 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
                             <PostCard
                                 key={idx}
                                 title={post.title}
-                                url={post.url}
+                                url={`/${post.name.split(".")[0]}`}
                                 description={post.description}
                             />
                         )
                     })}
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }
 
 export async function getServerSideProps(ctx) {
-    // console.log(ctx);
-    const baseURL = process.env.reqBase;
-    const res = await fetch(`${baseURL}/api/fetchPosts`);
-    const posts = await res.json();
 
-    console.log(posts);
+    let files = readdirSync("./pages/blog/");
+
+    files = files.filter(file => file !== "index.tsx");
+
+    const articles_ = files.map(async file => {
+        const { title, description, date } = await require(`./${file}`);
+        const article: Post = { title, description, date, name: file };
+        return article;
+    });
+
+    const articles = await Promise.all(articles_);
+
     return {
         props: {
-            posts: posts.posts
+            posts: articles
         }
     }
 }

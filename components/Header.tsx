@@ -19,7 +19,7 @@ const Header: React.FC<Props> = ({ theme, changeTheme, atHome }): JSX.Element =>
                     </Link>
                 ) :
                     <Link href="/blog">
-                        articles
+                        <a style={{ color: "black", fontWeight: "lighter" }}>articles</a>
                     </Link>
                 }</h2>
                 <button onClick={() => {
