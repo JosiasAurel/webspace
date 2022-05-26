@@ -4,6 +4,7 @@ import "../styles/global.css";
 import "../styles/github-syntax.css";
 import { AppProps } from "next/app";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Title from "../components/Title";
 import P from "../components/Text";
 import { MDXProvider } from "@mdx-js/react";
@@ -42,7 +43,7 @@ const JosiasAurelDev: React.FC<AppProps> = ({ Component, pageProps }) => {
                     </div>
                 }
             </MDXProvider>
-
+            <Footer />
         </div>
     );
 }

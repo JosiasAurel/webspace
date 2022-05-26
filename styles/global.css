@@ -68,7 +68,7 @@ blockquote {
 
 @media screen and (min-width: 500px) {
   .blogStyle {
-    margin: 4em 8em !important;
+    margin: 4em 15em !important;
   }
   h1 {
     font-size: 5em !important;

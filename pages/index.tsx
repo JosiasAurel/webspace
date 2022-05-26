@@ -71,8 +71,6 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                     display: "inline-block"
                 }}> Find more stuff <a href="https://github.com/JosiasAurel">here</a>.</p>
             </main>
-
-            <Footer />
         </div>
     )
 }
