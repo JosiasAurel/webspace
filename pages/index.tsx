@@ -64,7 +64,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                     <div>
                         {work.map(item => {
                             return (
-                                <span>
+                                <span key={item.name}>
                                     <a target="_blank" href={item.url}>{item.name}</a> <p> — {item.description}</p>
                                 </span>
                             )
