@@ -5,7 +5,6 @@ export default function ThisDocument() {
     return (
         <Html>
             <Head>
-                <title>Josias Aurel</title>
                 <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
             </Head>
             <body>

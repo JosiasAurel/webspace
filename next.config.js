@@ -1,3 +1,4 @@
 module.exports = {
-    outputFileTracing: true
+    outputFileTracing: true,
+    swcMinify: true
 }

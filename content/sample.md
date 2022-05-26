@@ -2,7 +2,7 @@
 
 This simple document, can include math expressions using katex as a partial renderer.
 
-Here is a sample math expression as a proof of concept that it is possible like this one $ \int 4x^2 dx $ and it works fine
+Here is a sample math expression as a proof of concept that it is possible like this one $\int 4x^2 dx$ and it works fine
 
 $$
 \Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
