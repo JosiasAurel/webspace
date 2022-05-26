@@ -15,8 +15,6 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
             justifyContent: "space-evenly",
             alignItems: "center"
         }}>
-            <Header />
-
             <div style={{
                 margin: "1em"
             }}>

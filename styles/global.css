@@ -18,3 +18,16 @@ body {
 a {
   color: var(--jos-blue);
 }
+
+.dark {
+  color: white !important;
+  background-color: #21262d;
+}
+
+.dark p {
+  color: white !important;
+}
+
+.dark img {
+  box-shadow: none !important;
+}

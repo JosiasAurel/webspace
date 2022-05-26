@@ -1,16 +1,13 @@
 
 import React from "react";
 
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Profile from "../components/Profile";
 import Head from "next/head";
 import { twitterUrl, work } from "../utils/constants";
 import styles from "../styles/index.module.css";
 
-type Props = {
-    data: any
-}
+type Props = any;
 
 const Index: React.FC<Props> = (props): JSX.Element => {
     //console.log(props);
