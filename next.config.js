@@ -1,6 +1,7 @@
 import nextMDX from "@next/mdx";
 import remarkMath from "remark-math";
-import rehypeMathJaxSvg from "rehype-mathjax";
+import rehypeMathjax from "rehype-mathjax";
+// import rehypeMathJaxSvg from "rehype-mathjax";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 import fauxRemarkEmbedder from '@remark-embedder/core';
@@ -18,7 +19,7 @@ const withMDX = nextMDX({
             remarkGfm
         ],
         rehypePlugins: [
-            rehypeMathJaxSvg, 
+            rehypeMathjax, 
             rehypeHighlight,
         ],
         providerImportSource: '@mdx-js/react'

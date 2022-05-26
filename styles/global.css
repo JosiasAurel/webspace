@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-::root {
+:root {
   --jos-blue: rgb(0, 110, 255);
 }
 
@@ -30,4 +30,21 @@ a {
 
 .dark img {
   box-shadow: none !important;
+}
+
+pre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+code {
+  border-radius: 10px;
+  overflow-x: scroll;
+}
+
+blockquote {
+  border: dotted 5px var(--jos-blue);
+  padding: 1em;
+  border-radius: 10px;
 }
