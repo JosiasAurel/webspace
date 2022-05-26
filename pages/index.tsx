@@ -29,7 +29,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                         <br />
                         🏠 I currently live in Cameroon.
                         <br />
-                        🌱 I like how beautiful nature is
+                        🌱 I like how beautiful nature is.
                     </p>
                 </div>
                 <span>
@@ -67,6 +67,9 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                         })}
                     </div>
                 </div>
+                <p style={{
+                    display: "inline-block"
+                }}> Find more stuff <a href="https://github.com/JosiasAurel">here</a>.</p>
             </main>
 
             <Footer />
