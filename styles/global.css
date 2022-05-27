@@ -60,7 +60,7 @@ pre {
 }
 
 code {
-  width: 100%;
+  max-width: 80%;
   border-radius: 10px;
   overflow-x: scroll;
   font-family: 'JetBrains Mono', monospace !important;
