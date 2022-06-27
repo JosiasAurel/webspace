@@ -45,7 +45,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                         <br />
                         🏠 I live in Cameroon.
                         <br />
-                        🌱 I like how beautiful nature is.
+                        🌱 I love nature.
                     </p>
                 </div>
                 <span>
