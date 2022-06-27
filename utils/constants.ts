@@ -10,7 +10,7 @@ const work: Work[] = [
     },
     {
         name: "Magic Space",
-        url: "https://lab.josiasw.dev/",
+        url: "https://space.josiasw.dev/",
         description: "A virtual lab where you can experiment with your ideas. [wip, builder]."
     },
     {
