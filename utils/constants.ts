@@ -11,12 +11,7 @@ const work: Work[] = [
     {
         name: "Magic Space",
         url: "https://space.josiasw.dev/",
-        description: "A virtual lab where you can experiment with your ideas. [wip, builder]."
-    },
-    {
-        name: "Buffered.link",
-        url: "https://buffered.link/",
-        description: "Share text between your devices easily. [builder]"
+        description: "A virtual canvas where I can experiment with my ideas."
     },
     {
         name: "Delta",
