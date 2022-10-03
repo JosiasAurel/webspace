@@ -11,7 +11,7 @@ const work: Work[] = [
     {
         name: "funLab",
         url: "https://funlab.vercel.app",
-        description: "A virtual lab where you can experiment with your ideas when learning. Aims at making learning more fun [stealth, founder]" 
+        description: "A virtual space that helps makes learning more fun [stealth, founder]" 
     },
     {
         name: "Atlas",
@@ -26,7 +26,7 @@ const work: Work[] = [
     {
         name: "Mise",
         url: "mise-app.vercel.app",
-        description: "Mise makes managing your shop effortless and more lucrative with the help of social media."
+        description: "Mise makes your shop more lucrative with the help of social media."
     }
 ];
 export {

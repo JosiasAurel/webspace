@@ -35,7 +35,9 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                 <div className={styles.profile}>
                     <h2> Hi 👋🏽, I'm Josias Aurel</h2>
                     <p>
-                        Writing code is a medium I use to express my ideas and creativity. I like to undertake challenges and learn new things.
+                        Writing code is a medium I use to express my ideas and creativity. 
+                        <br />
+                        I like to undertake challenges and learn new things.
                         <br />
                         When I am not writing code, I am probably reading, writing or hanging out with friends. 
                         <br />
