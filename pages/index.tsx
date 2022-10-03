@@ -19,31 +19,28 @@ const Index: React.FC<Props> = (props): JSX.Element => {
 
 
                 <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://josiasw.dev/" />
+                <meta property="og:url" content="https://josiasaurel.github.io/" />
                 <meta property="og:title" content="Josias Aurel" />
                 <meta property="og:description" content="17 y/o self-taught developer. I love building little tools, experiments, or just tinkering around on my computer. Math could be fun and emojis are cool 🏵️" />
-                <meta property="og:image" content="https://og-gen.josiasw.dev/Josias%20Aurel%20-%20Developer%F0%9F%8C%B1.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350" />
+                <meta property="og:image" content="https://og-gen.josiasaurel.github.io/Josias%20Aurel%20-%20Developer%F0%9F%8C%B1.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350" />
 
 
                 <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://josiasw.dev/" />
+                <meta property="twitter:url" content="https://josiasaurel.github.io/" />
                 <meta property="twitter:title" content="Josias Aurel" />
                 <meta property="twitter:description" content="17 y/o self-taught developer. I love building little tools, experiments, or just tinkering around on my computer. Math could be fun and emojis are cool 🏵️" />
-                <meta property="twitter:image" content="https://og-gen.josiasw.dev/Josias%20Aurel%20-%20Developer%F0%9F%8C%B1.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350" />
+                <meta property="twitter:image" content="https://og-gen.josiasaurel.github.io/Josias%20Aurel%20-%20Developer%F0%9F%8C%B1.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350" />
                 <title>Josias Aurel</title>
             </Head>
             <main>
                 <div className={styles.profile}>
-                    <Profile name="Josias" imagePath="/josias.jpg" />
                     <h2> Hi 👋🏽, I'm Josias Aurel</h2>
                     <p>
                         👨🏽‍💻 I'm a self-taught programmer.
                         <br />
                         ⚒️ I like building tools or run little experiments on my computer.
                         <br />
-                        🧑🏽‍🎓 I'm currently in my last year in high school.
-                        <br />
-                        🏠 I live in Cameroon.
+                        🏠 I am based in Cameroon.
                         <br />
                         🌱 I love nature.
                     </p>
@@ -62,7 +59,7 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                         </svg>
 
                     </a>
-                    <a href="mailto:josias@josiasw.dev">
+                    <a href="mailto:ndjosiasaurel@gmail.com">
                         <svg width="24" height="24" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M7 9L12 12.5L17 9" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
                             <path d="M2 17V7C2 5.89543 2.89543 5 4 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H4C2.89543 19 2 18.1046 2 17Z" stroke="currentColor" strokeWidth="1.5" />
