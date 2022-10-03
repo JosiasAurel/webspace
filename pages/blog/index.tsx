@@ -38,7 +38,7 @@ const ThoughtsPage: React.FC<Props> = ({ posts }): JSX.Element => {
     )
 }
 
-export async function getServerSideProps(ctx) {
+export async function getStaticProps() {
 
     let files = readdirSync("./pages/blog/");
 
