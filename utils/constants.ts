@@ -9,19 +9,24 @@ const work: Work[] = [
         description: "Helping farmers earn better. [stealth, founder]"
     },
     {
-        name: "Magic Space",
-        url: "https://space.josiasw.dev/",
-        description: "A virtual canvas where I can experiment with my ideas."
+        name: "funLab",
+        url: "https://funlab.vercel.app",
+        description: "A virtual lab where you can experiment with your ideas when learning. Aims at making learning more fun [stealth, founder]" 
     },
     {
-        name: "Delta",
+        name: "Atlas",
         url: "#",
-        description: "A machine learning library. [wip, stealth]"
+        description: "An online learning platform that aims at making learning more engaging."
     },
     {
-        name: "Tossen",
+        name: "Buffered.link",
         url: "#",
-        description: "A supply chain system. [wip, stealth]"
+        description: "A tool to make sharing text and links between devices effortless. [OSS, maker]"
+    },
+    {
+        name: "Mise",
+        url: "mise-app.vercel.app",
+        description: "Mise makes managing your shop effortless and more lucrative with the help of social media."
     }
 ];
 export {

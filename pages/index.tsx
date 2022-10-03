@@ -1,6 +1,5 @@
 
 import React from "react";
-import Profile from "../components/Profile";
 import Head from "next/head";
 import { twitterUrl, work } from "../utils/constants";
 import styles from "../styles/index.module.css";
@@ -36,13 +35,20 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                 <div className={styles.profile}>
                     <h2> Hi 👋🏽, I'm Josias Aurel</h2>
                     <p>
-                        👨🏽‍💻 I'm a self-taught programmer.
+                        Writing code is a medium I use to express my ideas and creativity. I like to undertake challenges and learn new things.
                         <br />
-                        ⚒️ I like building tools or run little experiments on my computer.
+                        When I am not writing code, I am probably reading, writing or hanging out with friends. 
                         <br />
-                        🏠 I am based in Cameroon.
                         <br />
-                        🌱 I love nature.
+                        At the moment, I am finding my way in the machine learning field. 
+                        <br />
+                        I also appreciate game development—I may write one or two games now and then.
+                        <br />
+                        On the technical side, I know how to code fluently in Python, TypeScript/JavaScript. 
+                        <br />
+                        I am currently learning systems programming 
+                        and writing WebAssembly programs
+                        using Rust and C/C++.
                     </p>
                 </div>
                 <span>

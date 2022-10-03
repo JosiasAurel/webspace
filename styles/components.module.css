@@ -58,8 +58,6 @@
   width: 300px;
   height: 300px;
   box-shadow: 1px 1px 2px 2px whitesmoke;
-}
-
-.profile {
   max-width: fit-content;
 }
+
