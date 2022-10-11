@@ -11,7 +11,7 @@ const work: Work[] = [
     {
         name: "funLab",
         url: "https://funlab.vercel.app",
-        description: "A virtual space that helps makes learning more fun [stealth, founder]" 
+        description: "A virtual space that helps makes learning more fun [stealth, founder]"
     },
     {
         name: "Atlas",
@@ -20,12 +20,12 @@ const work: Work[] = [
     },
     {
         name: "Buffered.link",
-        url: "#",
+        url: "https://buffered.link",
         description: "A tool to make sharing text and links between devices effortless. [OSS, maker]"
     },
     {
         name: "Mise",
-        url: "mise-app.vercel.app",
+        url: "https://mise-app.vercel.app",
         description: "Mise makes your shop more lucrative with the help of social media."
     }
 ];

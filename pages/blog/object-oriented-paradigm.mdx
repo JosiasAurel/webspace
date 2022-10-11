@@ -4,12 +4,12 @@ import Head from "next/head";
 export const title = "Object Oriented Paradigm";
 export const description = "Everything is an object.";
 export const date = "Friday, May 27, 2022";
-export const ogImage = `https://og-gen.josiasw.dev/${title
+export const ogImage = `/api/og?msg=${title
   .split(" ")
   .join(
     "%20"
-  )}.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350`;
- 
+  )}`;
+  
 <Head>
 <title>{title}</title>
 <meta name="title" content={title} />

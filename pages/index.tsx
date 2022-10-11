@@ -21,34 +21,34 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                 <meta property="og:url" content="https://josiasaurel.github.io/" />
                 <meta property="og:title" content="Josias Aurel" />
                 <meta property="og:description" content="17 y/o self-taught developer. I love building little tools, experiments, or just tinkering around on my computer. Math could be fun and emojis are cool 🏵️" />
-                <meta property="og:image" content="https://og-gen.josiasaurel.github.io/Josias%20Aurel%20-%20Developer%F0%9F%8C%B1.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350" />
+                <meta property="og:image" content="/api/og?msg=Making%20Interesting%20Stuff" />
 
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://josiasaurel.github.io/" />
                 <meta property="twitter:title" content="Josias Aurel" />
                 <meta property="twitter:description" content="17 y/o self-taught developer. I love building little tools, experiments, or just tinkering around on my computer. Math could be fun and emojis are cool 🏵️" />
-                <meta property="twitter:image" content="https://og-gen.josiasaurel.github.io/Josias%20Aurel%20-%20Developer%F0%9F%8C%B1.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fraw.githubusercontent.com%2FJosiasAurel%2FJosiasAurel%2Fmaster%2Fjosias.jpg&widths=350&heights=350" />
+                <meta property="twitter:image" content="/api/og?msg=Making%20Interesting%20Stuff" />
                 <title>Josias Aurel</title>
             </Head>
             <main>
                 <div className={styles.profile}>
                     <h2> Hi 👋🏽, I'm Josias Aurel</h2>
                     <p>
-                        Writing code is a medium I use to express my ideas and creativity. 
+                        Writing code is a medium I use to express my ideas and creativity.
                         <br />
                         I like to undertake challenges and learn new things.
                         <br />
-                        When I am not writing code, I am probably reading, writing or hanging out with friends. 
+                        When I am not writing code, I am probably reading, writing or hanging out with friends.
                         <br />
                         <br />
-                        At the moment, I am finding my way in the machine learning field. 
+                        At the moment, I am finding my way in the machine learning field.
                         <br />
                         I also appreciate game development—I may write one or two games now and then.
                         <br />
-                        On the technical side, I know how to code fluently in Python, TypeScript/JavaScript. 
+                        On the technical side, I know how to code fluently in Python, TypeScript/JavaScript.
                         <br />
-                        I am currently learning systems programming 
+                        I am currently learning systems programming
                         and writing WebAssembly programs
                         using Rust and C/C++.
                     </p>
