@@ -41,7 +41,7 @@ export default async function returnOgImage(req: NextRequest) {
                     textAlign: "center",
                     maxWidth: "80%",
                     alignSelf: "center",
-                    marginTop: "40%"
+                    margin: "10em 0 0 0"
                 }}>
                     {title}
                 </h1>
