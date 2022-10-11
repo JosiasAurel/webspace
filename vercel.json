@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "api/*.tsx": {
+            "memory": 1024
+        }
+    }
+}
