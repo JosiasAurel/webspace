@@ -4,12 +4,12 @@ import Head from "next/head";
 export const title = "Programming Paradigms";
 export const description = "An insightful look.";
 export const date = "Friday, May 27, 2022";
-export const ogImage = `/api/og?msg=${title
+export const ogImage = ${location.host}`/api/og?msg=${title
   .split(" ")
   .join(
     "%20"
   )}`;
-  
+
 <Head>
 <title>{title}</title>
 <meta name="title" content={title} />
