@@ -35,7 +35,7 @@ export default async function returnOgImage(req: NextRequest) {
                 backgroundSize: "400px 400px"
             }}>
                 <h1 style={{
-                    fontSize: "100px",
+                    fontSize: "3.5em",
                     fontWeight: "bolder",
                     fontFamily: "sans-serif",
                     textAlign: "center",
@@ -63,6 +63,9 @@ export default async function returnOgImage(req: NextRequest) {
                     />
                 </span>
             </div>
-        </div>
+        </div>, {
+        width: 600,
+        height: 480
+    }
     );
 }
