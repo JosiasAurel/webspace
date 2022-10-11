@@ -3,7 +3,7 @@ import { ImageResponse } from "@vercel/og";
 import { dataUri } from "../../josias.data";
 
 export const config = {
-    runtime: "experimental-edge"
+    runtime: 'experimental-edge',
 };
 
 export default function returnOgImage(req: NextRequest, res: NextResponse) {
