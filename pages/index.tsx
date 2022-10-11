@@ -21,14 +21,14 @@ const Index: React.FC<Props> = (props): JSX.Element => {
                 <meta property="og:url" content="https://josiasaurel.github.io/" />
                 <meta property="og:title" content="Josias Aurel" />
                 <meta property="og:description" content="17 y/o self-taught developer. I love building little tools, experiments, or just tinkering around on my computer. Math could be fun and emojis are cool 🏵️" />
-                <meta property="og:image" content={`${location.host}/api/og?msg=Making%20Interesting%20Stuff`} />
+                <meta property="og:image" content={`https://josiasaurel.vercel.app/api/og?msg=Making%20Interesting%20Stuff`} />
 
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://josiasaurel.github.io/" />
                 <meta property="twitter:title" content="Josias Aurel" />
                 <meta property="twitter:description" content="17 y/o self-taught developer. I love building little tools, experiments, or just tinkering around on my computer. Math could be fun and emojis are cool 🏵️" />
-                <meta property="twitter:image" content={`${location.host}/api/og?msg=Making%20Interesting%20Stuff`} />
+                <meta property="twitter:image" content={`https://josiasaurel.vercel.app/api/og?msg=Making%20Interesting%20Stuff`} />
                 <title>Josias Aurel</title>
             </Head>
             <main>
