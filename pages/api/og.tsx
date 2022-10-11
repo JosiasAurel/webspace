@@ -18,7 +18,6 @@ export default function returnOgImage(req: NextRequest, res: NextResponse) {
             alignItems: "center",
             width: "100%",
             height: "100%",
-            backgroundSize: "400px 400px",
             backgroundColor: "white",
             backgroundSize: "100px 100px",
             backgroundImage: 'radial-gradient(circle at 25px 25px, lightgray 2%, transparent 0%), radial-gradient(circle at 75px 75px, lightgray 2%, transparent 0%)',
