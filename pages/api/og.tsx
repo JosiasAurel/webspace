@@ -16,7 +16,7 @@ export default async function returnOgImage(req: NextRequest) {
     return new ImageResponse(
         <div style={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "space-between",
             alignItems: "center",
             width: "100%",
             height: "100%",
@@ -34,17 +34,24 @@ export default async function returnOgImage(req: NextRequest) {
                 height: "100%",
                 backgroundSize: "400px 400px"
             }}>
-                <h1 style={{
-                    fontSize: "3.5em",
-                    fontWeight: "bolder",
-                    fontFamily: "sans-serif",
-                    textAlign: "center",
-                    maxWidth: "80%",
-                    alignSelf: "center",
-                    margin: "10em 0 0 0"
+                <div style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    height: "100%",
                 }}>
-                    {title}
-                </h1>
+                    <h1 style={{
+                        fontSize: "100px",
+                        fontWeight: "700",
+                        fontFamily: "sans-serif",
+                        textAlign: "center",
+                        maxWidth: "90%",
+                        alignSelf: "center",
+                        padding: "1em"
+                    }}>
+                        {title}
+                    </h1>
+                </div>
 
                 <span style={{
                     display: "flex",
@@ -52,6 +59,8 @@ export default async function returnOgImage(req: NextRequest) {
                     justifyContent: "space-between",
                     alignItems: "center",
                     alignSelf: "flex-end",
+                    position: "absolute",
+                    bottom: "1em"
                 }}>
                     <h2>— Josias 🛠️</h2>
                     <img
@@ -63,9 +72,6 @@ export default async function returnOgImage(req: NextRequest) {
                     />
                 </span>
             </div>
-        </div>, {
-        width: 600,
-        height: 480
-    }
+        </div>
     );
 }
