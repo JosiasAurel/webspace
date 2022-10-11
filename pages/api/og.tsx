@@ -9,8 +9,9 @@ export const config = {
 export default function returnOgImage(req: NextRequest, res: NextResponse) {
     // console.log(req.query);
     // res.send(`Hello ${req.query.msg}`)
-    const message = req.url.split("=")[1];
-    // console.log(message);
+    const { searchParams } = new URL(req.url);
+    const title = searchParams.has("msg") ? searchParams.get("msg") : "NO TITLE";
+    // console.log(title);
     return new ImageResponse(
         <div style={{
             display: "flex",
@@ -36,9 +37,9 @@ export default function returnOgImage(req: NextRequest, res: NextResponse) {
                     fontSize: "100px",
                     fontFamily: "sans-serif",
                     textAlign: "center",
-                    maxWidth: "350px"
+                    maxWidth: "80%"
                 }}>
-                    {message}
+                    {title}
                 </h1>
 
                 <span style={{
