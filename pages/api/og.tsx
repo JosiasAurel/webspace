@@ -36,9 +36,12 @@ export default async function returnOgImage(req: NextRequest) {
             }}>
                 <h1 style={{
                     fontSize: "100px",
+                    fontWeight: "bolder",
                     fontFamily: "sans-serif",
                     textAlign: "center",
-                    maxWidth: "80%"
+                    maxWidth: "80%",
+                    alignSelf: "center",
+                    marginTop: "40%"
                 }}>
                     {title}
                 </h1>
@@ -48,7 +51,7 @@ export default async function returnOgImage(req: NextRequest) {
                     flexDirection: "row",
                     justifyContent: "space-between",
                     alignItems: "center",
-                    alignSelf: "flex-end"
+                    alignSelf: "flex-end",
                 }}>
                     <h2>— Josias 🛠️</h2>
                     <img
