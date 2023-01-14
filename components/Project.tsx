@@ -17,7 +17,11 @@ const Project: React.FC<Props> = ({
   description,
 }): JSX.Element => {
   return (
-    <div>
+    <div
+      style={{
+        margin: "1em 0",
+      }}
+    >
       <h3>
         {name} · {shortDescription}
       </h3>
