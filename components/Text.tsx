@@ -1,12 +1,12 @@
-
 import React from "react";
 
-type Props = {
-    children: React.ReactNode
-}
+const Text = (props) => {
+  return (
+    <p style={{ fontFamily: "EB Garamond", fontSize: "1.5rem" }}>
+      {" "}
+      {props.children}{" "}
+    </p>
+  );
+};
 
-const P: React.FC<Props> = ({ children }) => <p style={{
-    fontSize: "1.2em",
-}}>{children}</p>;
-
-export default P;
+export default Text;
