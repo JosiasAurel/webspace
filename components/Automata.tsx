@@ -33,6 +33,12 @@ I want every square on the screen to by a 3x3 square
       .fill(0)
       .map((v) => new Array(horizontalSquareCount).fill(0));
 
+    function reInitArray() {
+      cellsArray = new Array(verticalSquareCount)
+        .fill(0)
+        .map((v) => new Array(horizontalSquareCount).fill(0));
+    }
+
     function fillGrid() {
       for (let x = 0; x < horizontalSquareCount; x++) {
         cellsArray.push([]);
@@ -121,6 +127,10 @@ I want every square on the screen to by a 3x3 square
     fillGrid();
     // prefillGrid();
     setInterval(drawCells, 300);
+    setInterval(() => {
+      reInitArray();
+      fillGrid();
+    }, 15000);
   }, []);
 
   return <canvas id="automata"></canvas>;
