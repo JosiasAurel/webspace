@@ -5,7 +5,7 @@ const Automata: React.FC = (): JSX.Element => {
     const canvas = document.getElementById("automata") as HTMLCanvasElement;
 
     const ctx = canvas.getContext("2d");
-    const dpi = window.devicePixelRatio * 2;
+    const dpi = window.devicePixelRatio;
     ctx.scale(dpi, dpi);
 
     /*
@@ -118,7 +118,7 @@ I want every square on the screen to by a 3x3 square
     //
     fillGrid();
     // prefillGrid();
-    setInterval(drawCells, 500);
+    setInterval(drawCells, window.innerWidth >= 1500 ? 500 : 100);
   }, []);
 
   return <canvas id="automata"></canvas>;

@@ -15,18 +15,6 @@ body {
   margin: 0 30%;
 }
 
-@media screen and (max-width: 1130px) {
-  .app > div {
-    margin: 10%;
-  }
-}
-
-@media screen and (max-width: 530px) {
-  .app > div {
-    margin: 5%;
-  }
-}
-
 .notif-text,
 .notif-text p {
   display: "inline-block";
@@ -78,4 +66,19 @@ canvas {
   top: 10vh;
   right: 10vw;
   image-rendering: pixelated;
+}
+
+@media screen and (max-width: 1130px) {
+  .app > div {
+    margin: 10%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .app > div {
+    margin: 5%;
+  }
+  canvas {
+    transform: rotate(90deg);
+  }
 }
