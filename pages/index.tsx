@@ -8,6 +8,9 @@ type Time = {
   seconds: number;
 };
 
+const twoDigit = (item: number): string =>
+  item < 10 ? "0" + item.toString() : item.toString();
+
 const HomePage: React.FC = () => {
   let isPm = false;
   const [time, setTime] = React.useState<Time>(getTime());
@@ -38,8 +41,9 @@ const HomePage: React.FC = () => {
       <span style={{ maxHeight: "5px" }}>
         <span style={{ display: "inline-block" }}>
           <p style={{ fontStyle: "italic" }}>
-            {time.hours}:{time.minutes}:{time.seconds} {isPm ? "pm" : "am"}{" "}
-            <span></span>· Yaounde, Cameroon
+            {twoDigit(time.hours)}:{twoDigit(time.minutes)}:
+            {twoDigit(time.seconds)} {isPm ? "pm" : "am"} <span></span>·
+            Yaounde, Cameroon
           </p>
         </span>
         <h2
@@ -51,7 +55,7 @@ const HomePage: React.FC = () => {
           Njouondo Djimi Josias Aurel
         </h2>
         <p style={{ color: "grey" }}>
-          is currently <em>Building RaboLand</em>
+          is <em>Building RaboLand</em>
         </p>
       </span>
 
@@ -84,8 +88,11 @@ const HomePage: React.FC = () => {
       <Text>
         If you want to connect, shoot me an email{" "}
         <a href="mailto:hey@josiasw.dev">hey@josiasw.dev</a> or send me a direct
-        message on Twitter{" "}
+        message over Twitter{" "}
         <a href="https://twitter.com/JosiasWing">@JosiasWing</a>.
+        <br />
+        You may also find me on GitHub{" "}
+        <a href="https://github.com/JosiasAurel">@JosiasAurel</a>
       </Text>
     </div>
   );

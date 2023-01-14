@@ -8,8 +8,12 @@ const Nav: React.FC = (): JSX.Element => {
         <h2>NDJA</h2>
       </Link>
       <span>
-        <a>projects</a>
-        <a>writing</a>
+        <Link href="/projects">
+          <p style={{ fontFamily: "EB Garamond" }}>projects</p>
+        </Link>
+        <Link href="/writing">
+          <p style={{ fontFamily: "EB Garamond" }}>writing</p>
+        </Link>
       </span>
     </nav>
   );
