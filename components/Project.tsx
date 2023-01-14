@@ -19,7 +19,7 @@ const Project: React.FC<Props> = ({
   return (
     <div
       style={{
-        margin: "1em 0",
+        margin: "2em 0",
       }}
     >
       <h3>

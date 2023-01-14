@@ -59,12 +59,16 @@ nav > span > a:hover {
 }
 
 canvas {
+  /*
   width: 80vw;
   height: 80vh;
+*/
+  width: 1600px;
+  height: 800px;
   z-index: -3;
   position: fixed;
-  top: 10vh;
-  right: 10vw;
+  top: -10vh;
+  right: 15vw;
   image-rendering: pixelated;
 }
 
@@ -79,6 +83,6 @@ canvas {
     margin: 5%;
   }
   canvas {
-    transform: rotate(90deg);
+    transform: rotate(45);
   }
 }

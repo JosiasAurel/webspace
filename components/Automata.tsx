@@ -5,8 +5,7 @@ const Automata: React.FC = (): JSX.Element => {
     const canvas = document.getElementById("automata") as HTMLCanvasElement;
 
     const ctx = canvas.getContext("2d");
-    const dpi = window.devicePixelRatio;
-    ctx.scale(dpi, dpi);
+    const dpi = 2; // window.devicePixelRatio * (window.innerWidth >= 1500 ? 2 : 1.1);
 
     /*
     const computedWidth = +getComputedStyle(canvas).width.split("px").join("");
@@ -15,7 +14,10 @@ const Automata: React.FC = (): JSX.Element => {
       .join("");
     canvas.width = Math.floor(computedWidth * dpi);
     canvas.height = Math.floor(computedHeight * dpi);
-*/
+
+    */
+    // console.log(canvas.width, canvas.height);
+    ctx.scale(dpi, dpi);
 
     /*  
 Cellular Automata
@@ -105,9 +107,9 @@ I want every square on the screen to by a 3x3 square
       cellsArray.forEach((row, j) => {
         row.forEach((cell, i) => {
           if (cell === 1) {
-            ctx.fillRect(i, j, 3, 3);
+            ctx.fillRect(i, j, 3.5, 3.5);
           } else {
-            ctx.clearRect(i, j, 3, 3);
+            ctx.clearRect(i, j, 3.5, 3.5);
           }
         });
       });
@@ -118,7 +120,7 @@ I want every square on the screen to by a 3x3 square
     //
     fillGrid();
     // prefillGrid();
-    setInterval(drawCells, window.innerWidth >= 1500 ? 500 : 100);
+    setInterval(drawCells, 300);
   }, []);
 
   return <canvas id="automata"></canvas>;
