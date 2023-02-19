@@ -5,7 +5,7 @@ const Nav: React.FC = (): JSX.Element => {
   return (
     <nav>
       <Link href="/">
-        <h2 style={{ fontFamily: "EB Garamond" }}>NDJA</h2>
+        <h2 style={{ fontFamily: "EB Garamond", color: "black" }}>NDJA</h2>
       </Link>
       <span>
         <Link href="/projects">

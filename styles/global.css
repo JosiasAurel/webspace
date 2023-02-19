@@ -11,7 +11,7 @@ body {
   margin: 0;
 }
 
-.app > div {
+.app>div {
   margin: 0 30%;
 }
 
@@ -20,11 +20,25 @@ body {
   display: "inline-block";
 }
 
+p {
+  font-family: "EB Garamond";
+  font-size: 1.7rem;
+}
+
 a,
-em {
+em,
+strong {
   color: black;
   font-family: "EB Garamond";
   text-decoration: underline;
+}
+
+a {
+  color: blue;
+}
+
+strong {
+  text-decoration: none;
 }
 
 nav {
@@ -36,11 +50,11 @@ nav {
 }
 
 nav h2,
-nav > a {
+nav>a {
   text-decoration: none;
 }
 
-nav > span {
+nav>span {
   width: 40%;
   display: flex;
   flex-direction: row;
@@ -49,12 +63,12 @@ nav > span {
   font-size: 1.3rem;
 }
 
-nav > span > a {
+nav>span>a {
   text-decoration: none;
   color: grey;
 }
 
-nav > span > a:hover {
+nav>span>a:hover {
   text-decoration: underline;
 }
 
@@ -72,16 +86,32 @@ canvas {
   image-rendering: pixelated;
 }
 
+.post {
+  padding: 1em 2em;
+  border-radius: 8px;
+}
+
+.post:hover {
+  background-color: rgba(202, 202, 202, 0.378);
+}
+
+.host-name {
+  background-color: rgba(146, 146, 146, 0.471);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
 @media screen and (max-width: 1130px) {
-  .app > div {
+  .app>div {
     margin: 10%;
   }
 }
 
 @media screen and (max-width: 530px) {
-  .app > div {
+  .app>div {
     margin: 5%;
   }
+
   canvas {
     transform: rotate(45);
   }
