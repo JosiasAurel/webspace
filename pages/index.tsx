@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
       <Nav />
       <span style={{ maxHeight: "5px" }}>
         <span style={{ display: "inline-block" }}>
-          <p style={{ fontStyle: "italic" }}>
+          <p style={{ fontStyle: "italic", fontSize: "1.3em" }}>
             {twoDigit(time.hours)}:{twoDigit(time.minutes)}:
             {twoDigit(time.seconds)} {isPm ? "pm" : "am"} <span></span>·
             Yaounde, Cameroon
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
           Njouondo Djimi Josias Aurel
         </h2>
         <p style={{ color: "grey" }}>
-          is <em>Building RaboLand</em>
+          is <em style={{ fontSize: "1.4rem" }}>Building RaboLand</em>
         </p>
       </span>
 

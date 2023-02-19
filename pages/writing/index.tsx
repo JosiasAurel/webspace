@@ -1,10 +1,17 @@
 import React from "react";
 import Text from "../../components/Text";
 import Nav from "../../components/Nav";
-import Post from "../../components/Post";
+import Post, { LocalPost } from "../../components/Post";
+import type { LocalPost as LocalPostType } from "../../components/Post";
 import { sourcedWritings } from "../../writing/sourced";
 
-const HomePage: React.FC = () => {
+import { readdirSync } from "fs";
+
+type Props = {
+  articles: LocalPostType[]
+}
+
+const HomePage: React.FC<Props> = ({ articles }) => {
   return (
     <div>
       <Nav />
@@ -19,6 +26,15 @@ const HomePage: React.FC = () => {
         </h2>
       </span>
       <div>
+        {articles.map(article => (
+          <LocalPost
+            title={article.title}
+            date={article.date}
+            description={article.description}
+            name={article.name.split(".")[0]}
+          />
+        ))}
+
         {sourcedWritings.map(writing => (
           <Post
             key={writing.title + writing.link}
@@ -36,5 +52,26 @@ const HomePage: React.FC = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+
+  let files = readdirSync("./pages/writing/");
+
+  files = files.filter(file => file !== "index.tsx");
+
+  const articles_ = files.map(async file => {
+    const { title, description, date } = await require(`./${file}`);
+    const article: LocalPostType = { title, description, date, name: file };
+    return article;
+  });
+
+  const articles = await Promise.all(articles_);
+
+  return {
+    props: {
+      articles
+    }
+  }
+}
 
 export default HomePage;

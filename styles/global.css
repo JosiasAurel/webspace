@@ -99,6 +99,7 @@ canvas {
   background-color: rgba(146, 146, 146, 0.471);
   padding: 2px 4px;
   border-radius: 4px;
+  font-size: 1.3rem;
 }
 
 @media screen and (max-width: 1130px) {
