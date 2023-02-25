@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
           Njouondo Djimi Josias Aurel
         </h2>
         <p style={{ color: "grey" }}>
-          is <em style={{ fontSize: "1.4rem" }}>Building RaboLand</em>
+          crafting <a href="https://doodle.josiasw.dev/" style={{ fontSize: "1.4rem" }}>Doodle</a>
         </p>
       </span>
 
