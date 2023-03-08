@@ -7,14 +7,19 @@ const Nav: React.FC = (): JSX.Element => {
       <Link href="/">
         <h2 style={{ fontFamily: "EB Garamond", color: "black" }}>NDJA</h2>
       </Link>
-      <span style={{
-        width: "50%"
-      }}>
+      <span
+        style={{
+          width: "60%",
+        }}
+      >
         <Link href="/projects">
           <p style={{ fontFamily: "EB Garamond" }}>projects</p>
         </Link>
         <Link href="/writing">
           <p style={{ fontFamily: "EB Garamond" }}>writing</p>
+        </Link>
+        <Link href="/logbook">
+          <p style={{ fontFamily: "EB Garamond" }}>logbook</p>
         </Link>
       </span>
     </nav>

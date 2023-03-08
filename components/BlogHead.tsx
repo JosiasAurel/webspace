@@ -26,7 +26,7 @@ const BlogHead: React.FC<Props> = ({ title, description, date }): JSX.Element =>
             <h1>
                 {title}
             </h1>
-            <Text><em style={{ textDecoration: "none" }}>{description}</em></Text>
+            <Text><em style={{ textDecoration: "none", color: "grey" }}>{description}</em></Text>
             <p>{date}.</p>
         </div>
     )
