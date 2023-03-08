@@ -1,6 +1,7 @@
 import React from "react";
 import Text from "../components/Text";
 import Nav from "../components/Nav";
+import Link from "next/link";
 
 type Time = {
   hours: number;
@@ -60,40 +61,60 @@ const HomePage: React.FC = () => {
       </span>
 
       <Text>
-        <br />I am fascinated by the engineering behind computer systems and
-        Artificial Intelligence. I highly value <em>aesthetically pleasing</em>{" "}
-        software solutions.
+        I'm just a guy who likes writing code and exploring new technologies and concepts.
+        I have a particular itch for trying new things and building random projects that pop in my mind.
+        Sometimes they work, other times they don't -- but it's fun regardless.
+        <br />
+        These days I'm more into systems programming, game dev and artificial intelligence. Game development and machine learning
+        particularly attracts me because of the maths. I am not very good, but it's fun to see mathematics in action.
       </Text>
 
       <Text>
-        At the moment, I personally work on building a digital space that
-        enables and encourages playful exploration while learning new concepts
-        (mostly regarding physics, computer science and mathematics).
+        At the moment, I am working on a platform that encourages playful exploration while learning.
+        <br />
+        I have always enjoyed learning in a playful or explorative way. Some <a href="https://experiments.josiasw.dev/">not-so-good-experiments</a>.
+        <br />
+        There are a few more I made while in high school (which I graduated in 2022) but they were never published.
+        I craved for more but having to bake a new cake for every new experiment did not sound all that fun to me.
+        <br />
+        So, I began building <a href="https://doodle.josiasw.dev/">Doodle</a> which I intend to show friends on April 1 (which is my birthday btw UwU).
+        This is likely the 5th iteration from scratch which -- as crazy as I am -- I'm trying to hack within a one-month period and share. Let's see how it goes.
       </Text>
 
       <Text>
-        I graduated high school in the year 2022 and I am in search of further
-        educational opportunities.
-      </Text>
-
-      <Text>
-        In the meantime, I work at a local startup to help build an{" "}
+        In the meantime, I work part-time [PAUSED] at a local startup to help build an{" "}
         <a href="https://www.amazon.com/">Amazon</a>
-        -like platform to skyrocket the e-commerce space.
+        -like platform to sky-rocket the e-commerce space.
         <br />I also contribute to{" "}
         <a href="https://github.com/hackclub/sinerider">sinerider</a>, a game
         about the love of mathematics and graphing.
       </Text>
 
       <Text>
-        If you want to connect, shoot me an email{" "}
-        <a href="mailto:hey@josiasw.dev">hey@josiasw.dev</a> or send me a direct
-        message over Twitter{" "}
-        <a href="https://twitter.com/JosiasWing">@JosiasWing</a>.
-        <br />
-        You may also find me on GitHub{" "}
-        <a href="https://github.com/JosiasAurel">@JosiasAurel</a>
+        View my <Link href="/projects">projects</Link> or enjoy my <Link href="/writing">writing</Link>.
       </Text>
+
+      <Text>
+        If you catch me somewhere, don't be shy, come say hi ;)
+      </Text>
+
+      <footer style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%",
+      }}>
+        <Text>
+          <a href="mailto:hey@josiasw.dev">Email</a>
+        </Text>
+        <Text>
+          <a href="https://twitter.com/JosiasWing">Twitter</a>
+        </Text>
+        <Text>
+          <a href="https://github.com/JosiasAurel">GitHub</a>
+        </Text>
+      </footer>
     </div>
   );
 };
