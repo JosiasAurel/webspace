@@ -1,6 +1,7 @@
 import React from "react";
 import Text from "../components/Text";
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import Link from "next/link";
 
 type Time = {
@@ -91,26 +92,6 @@ const HomePage: React.FC = () => {
       </Text>
 
       <Text>If you catch me somewhere, don't be shy, come say hi ;)</Text>
-
-      <footer
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
-        <Text>
-          <a href="mailto:hey@josiasw.dev">Email</a>
-        </Text>
-        <Text>
-          <a href="https://twitter.com/JosiasWing">Twitter</a>
-        </Text>
-        <Text>
-          <a href="https://github.com/JosiasAurel">GitHub</a>
-        </Text>
-      </footer>
     </div>
   );
 };

@@ -1,33 +1,9 @@
 import BlogHead from "../../components/BlogHead";
-import Nav from "../../components/Nav";
-import Head from "next/head";
  
 export const title = "I lost myself";
 export const description = "I am not a cyborg";
 export const date = "Sunday, Feb 19, 2023";
-export const ogImage = `https://josiasaurel.vercel.app/api/og?msg=${title
-  .split(" ")
-  .join(
-    "%20"
-  )}`;
 
-<Head>
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
- 
-<meta property="og:type" content="website" />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
- 
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={ogImage} />
-</Head>
- 
-<Nav />
 <BlogHead title={title} description={description} date={date} />
  
 _I am not a cyborg_
@@ -58,4 +34,3 @@ The programming community in general can be very toxic at times. When you get in
 I strive to be this calm, proactive, and curious person I once was. It seem like it is a dream so far away that I will have to go out of my way in every sense possible -- but truly this persona is within me already. 
 It is sure going to take some time for me to recover, but I already experience some change.
 
-— [Josias Aurel](/)

@@ -1,33 +1,9 @@
 import BlogHead from "../../components/BlogHead";
-import Nav from "../../components/Nav";
-import Head from "next/head";
  
 export const title = "Object Oriented Paradigm";
 export const description = "Everything is an object.";
 export const date = "Friday, May 27, 2022";
-export const ogImage = `https://josiasaurel.vercel.app/api/og?msg=${title
-  .split(" ")
-  .join(
-    "%20"
-  )}`;
 
-<Head>
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
- 
-<meta property="og:type" content="website" />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
- 
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={ogImage} />
-</Head>
- 
-<Nav />
 <BlogHead title={title} description={description} date={date} />
  
 _Everything is an Object_
@@ -115,4 +91,3 @@ This means that this `grow()` method may have been inherited from the `LivingThi
  
 You have reached the end. If you want to learn about other design patterns, then consider [this article](/blog/programming-paradigms).
  
-— [Josias Aurel](/)

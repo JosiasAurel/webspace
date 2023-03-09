@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inter&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
 
 * {
   box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 
-.app>div {
+.app > div {
   margin: 0 30%;
 }
 
@@ -51,26 +51,48 @@ nav {
 }
 
 nav h2,
-nav>a {
+nav > a {
   text-decoration: none;
 }
 
-nav>span {
+nav > span {
   width: 40%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
-nav>span>a {
+nav > span > a {
   text-decoration: none;
+  color: grey;
+  margin: 0 0.2rem;
+}
+
+nav > span > a:hover {
+  text-decoration: underline;
+}
+
+blockquote {
   color: grey;
 }
 
-nav>span>a:hover {
-  text-decoration: underline;
+blockquote::before {
+  content: "“";
+}
+
+blockquote::after {
+  content: "”";
+}
+
+li {
+  font-family: "EB Garamond";
+  font-size: 1.5rem;
+}
+
+li::marker {
+  color: grey;
 }
 
 canvas {
@@ -118,13 +140,13 @@ p code {
 }
 
 @media screen and (max-width: 1130px) {
-  .app>div {
+  .app > div {
     margin: 10%;
   }
 }
 
 @media screen and (max-width: 530px) {
-  .app>div {
+  .app > div {
     margin: 5%;
   }
 
