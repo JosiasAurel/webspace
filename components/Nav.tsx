@@ -18,9 +18,9 @@ const Nav: React.FC = (): JSX.Element => {
         <Link href="/writing">
           <p style={{ fontFamily: "EB Garamond" }}>writing</p>
         </Link>
-        <Link href="/logbook">
-          <p style={{ fontFamily: "EB Garamond" }}>logbook</p>
-        </Link>
+        <a href="https://scrapbook.hackclub.com/JosiasAurel">
+          <p style={{ fontFamily: "EB Garamond" }}>scrapbook</p>
+        </a>
       </span>
     </nav>
   );
