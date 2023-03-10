@@ -8,8 +8,8 @@ import { sourcedWritings } from "../../writing/sourced";
 import { readdirSync } from "fs";
 
 type Props = {
-  articles: LocalPostType[]
-}
+  articles: LocalPostType[];
+};
 
 const HomePage: React.FC<Props> = ({ articles }) => {
   return (
@@ -26,7 +26,7 @@ const HomePage: React.FC<Props> = ({ articles }) => {
         </h2>
       </span>
       <div>
-        {articles.map(article => (
+        {articles.map((article) => (
           <LocalPost
             title={article.title}
             date={article.date}
@@ -35,7 +35,7 @@ const HomePage: React.FC<Props> = ({ articles }) => {
           />
         ))}
 
-        {sourcedWritings.map(writing => (
+        {sourcedWritings.map((writing) => (
           <Post
             key={writing.title + writing.link}
             link={writing.link}
@@ -54,12 +54,13 @@ const HomePage: React.FC<Props> = ({ articles }) => {
 };
 
 export async function getStaticProps() {
-
   let files = readdirSync("./pages/writing/");
 
-  files = files.filter(file => file !== "index.tsx");
+  files = files.filter(
+    (file) => file !== "index.tsx" && file !== "template.mdx"
+  );
 
-  const articles_ = files.map(async file => {
+  const articles_ = files.map(async (file) => {
     const { title, description, date } = await require(`./${file}`);
     const article: LocalPostType = { title, description, date, name: file };
     return article;
@@ -69,9 +70,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      articles
-    }
-  }
+      articles,
+    },
+  };
 }
 
 export default HomePage;
