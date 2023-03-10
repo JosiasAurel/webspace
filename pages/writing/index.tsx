@@ -27,7 +27,7 @@ const HomePage: React.FC<Props> = ({ articles }) => {
       </span>
       <div>
         {articles
-          .sort((a, b) => a.num - b.num)
+          .sort((a, b) => b.num - a.num)
           .map((article) => (
             <LocalPost
               title={article.title}
