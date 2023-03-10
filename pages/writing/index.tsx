@@ -26,14 +26,17 @@ const HomePage: React.FC<Props> = ({ articles }) => {
         </h2>
       </span>
       <div>
-        {articles.map((article) => (
-          <LocalPost
-            title={article.title}
-            date={article.date}
-            description={article.description}
-            name={article.name.split(".")[0]}
-          />
-        ))}
+        {articles
+          .sort((a, b) => a.num - b.num)
+          .map((article) => (
+            <LocalPost
+              title={article.title}
+              date={article.date}
+              description={article.description}
+              name={article.name.split(".")[0]}
+              num={article.num}
+            />
+          ))}
 
         {sourcedWritings.map((writing) => (
           <Post
@@ -61,8 +64,14 @@ export async function getStaticProps() {
   );
 
   const articles_ = files.map(async (file) => {
-    const { title, description, date } = await require(`./${file}`);
-    const article: LocalPostType = { title, description, date, name: file };
+    const { title, description, date, num } = await require(`./${file}`);
+    const article: LocalPostType = {
+      title,
+      description,
+      date,
+      name: file,
+      num,
+    };
     return article;
   });
 
