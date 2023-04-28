@@ -35,7 +35,7 @@ It stars off with a point vector, $v$ , where $(x, y)$ has the value $(200, 200)
 
 That basically means that if we run the above command, these will happen:
 - Place the cursor at $(200, 200)$ 
-- Rotate the point by $90°$ (the vector is now point upwards)
+- Rotate the point by $90°$ (the vector is now pointing upwards)
 - Move the point by 100 units upward
 - Rotate the point by $90°$ (we are now pointing right)
 - Forward by 100 units 
@@ -47,11 +47,11 @@ The accumulated rotations are kept in memory though. So, every rotation is added
 
 But how is the new point calculated on every iteration? That's where trigonometry comes in.
 
-Say we have a triangle like the one below. We want to move a certain distance $h$ forward, whatever the direction of our vector is, the movement $h$ corresponds to a certain displacement on both the $x$ and $y$ axes. 
+Say we have a triangle like the one below. We want to move a certain distance $h$ forward, whatever the direction of our vector is, the movement $h$ corresponds to the displacement in the direction of our point vector. 
 
 ![Triangle example](/shapes.svg)
 
-If we compute the values of $x$ and $y$, we will get the change in the x,y values of our original starting vector. 
+Considering our current point, $v$, as the origin, if we compute the values of $x$ and $y$, we will get the $x_d$, $y_d$ displacement we can add to our original vector. 
 
 That means to get the new point, we will have $v_{new} = v + v_{\delta}$ where $v_\delta$ is the distance on x,y $(hcos\theta, hsin\theta)$ from the triangle.
 
