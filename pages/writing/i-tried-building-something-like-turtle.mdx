@@ -14,7 +14,7 @@ export const num = 6;
 
 Earlier this week I was doing some work on a tool I'm currently building in stealth (no worries, checkout [Tinker Quest](https://tinker.quest)).
 
-I thought of implementing a mini drawing tool that works programmatically. The idea was to have something like Python's Turtle module but without much functionality for a start. Honstly I struggled a little, but I eventually figured the math in order to do this sort of thing.
+I thought of implementing a mni drawing tool that works programmatically. The idea was to have something like Python's Turtle module but without much functionality for a start. Honestly I struggled a little, but I eventually figured the math in order to do this sort of thing.
 
 The aim of this post is to share with you how it works and how I achieved this.
 
@@ -49,8 +49,9 @@ But how is the new point calculated on every iteration? That's where trigonometr
 
 Say we have a triangle like the one below. We want to move a certain distance $h$ forward, whatever the direction of our vector is, the movement $h$ corresponds to a certain displacement on both the $x$ and $y$ axes. 
 
+![Triangle example](/shapes.svg)
+
 If we compute the values of $x$ and $y$, we will get the change in the x,y values of our original starting vector. 
 
-That means to get the new point, we will have $v_{new} = v + v_{\delta}$ where $v_\delta$ is the point $(hcos\theta, hsin\theta)$
+That means to get the new point, we will have $v_{new} = v + v_{\delta}$ where $v_\delta$ is the point $(hcos\theta, hsin\theta)$ on the triangle.
 
-![/shapes.svg]
