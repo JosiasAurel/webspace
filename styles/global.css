@@ -193,6 +193,10 @@ code * {
   overflow-x: scroll;
 }
 
+pre {
+  overflow-x: scroll;
+}
+
 p code {
   font-size: 1.1rem;
 }
