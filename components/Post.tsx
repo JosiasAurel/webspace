@@ -24,15 +24,15 @@ export type LocalPost = {
 };
 const LocalPost: React.FC<LocalPost> = ({ title, description, date, name }) => {
   return (
+    <>
     <div className="post">
       <Link style={{ color: "black" }} href={`/writing/${name}`}>
         <h1>{title}</h1>
       </Link>
-      <p>{description}</p>
-      <span>
-        <em style={{ fontSize: "1.2rem" }}>{date}</em>, Reads: {"NO_DATA"}
-      </span>
+      <p style={{ color: "grey"}}>{description}</p>
     </div>
+    
+    </>
   );
 };
 

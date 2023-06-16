@@ -18,11 +18,11 @@ const HomePage: React.FC<Props> = ({ articles }) => {
       <span style={{ maxHeight: "5px" }}>
         <h2
           style={{
-            fontFamily: "EB Garamond",
+            fontFamily: "Kalam",
             fontSize: "2rem",
           }}
         >
-          Writing
+          Writing — stuff I must have said, or thought about. 
         </h2>
       </span>
       <div>

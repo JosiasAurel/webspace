@@ -18,6 +18,7 @@ const Project: React.FC<Props> = ({
 }): JSX.Element => {
   return (
     <div
+      className="project-card"
       style={{
         margin: "2em 0",
       }}

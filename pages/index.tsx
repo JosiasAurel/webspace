@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
           <p>
             I'm <strong>Josias Aurel,</strong>
             a curiosity-driven <u>hacker</u> from Cameroon.
-            Ever since I wrote my fist RPG game in windows batch script, 
+            Ever since I wrote my fist RPG game in windows batch script at age 12, 
             I've done a bit of coding from writing a simple OS kernel and small games to building full-stack web applications
             and machine learning models.
           </p>
