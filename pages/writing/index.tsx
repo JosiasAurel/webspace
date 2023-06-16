@@ -28,8 +28,8 @@ const HomePage: React.FC<Props> = ({ articles }) => {
           .sort((a, b) => b.num - a.num)
           .map((article) => (
             <LocalPost
-            {...article}
-              name={article.title.split(".")[0]}
+              {...article}
+              name={article.name.split(".")[0]}
             />
           ))}
 
@@ -61,8 +61,7 @@ export async function getStaticProps() {
 
   const articles_ = files.map(async (file) => {
     const { meta } = await import(`../../content/${file}`);
-    console.log("meta = ", meta);
-    const article: LocalPostType = meta; 
+    const article: LocalPostType = {...meta, name: file}; 
     return article;
   });
 

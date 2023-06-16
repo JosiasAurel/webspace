@@ -197,6 +197,12 @@ p code {
   font-size: 1.1rem;
 }
 
+.post-content img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
 @media screen and (max-width: 1130px) {
   .app > div {
     margin: 10%;

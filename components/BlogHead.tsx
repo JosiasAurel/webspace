@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../styles/components.module.css";
 import Head from "next/head";
-import Nav from "./Header";
 
 type Props = {
   title: string;
@@ -46,7 +45,6 @@ const BlogHead: React.FC<Props> = ({
         <meta property="twitter:url" content={url} />
         <meta property="twitter:image" content={ogImage} />
       </Head>
-      <Nav />
       <h1>{title}</h1>
       <p>
         <em
