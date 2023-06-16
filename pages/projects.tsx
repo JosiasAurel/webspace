@@ -1,6 +1,4 @@
 import React from "react";
-import Text from "../components/Text";
-import Nav from "../components/Header";
 import Project from "../components/Project";
 
 const projects = [
@@ -59,7 +57,6 @@ const projects = [
 const HomePage: React.FC = () => {
   return (
     <div>
-      <Nav />
       <span style={{ maxHeight: "5px" }}>
         <h2
           style={{

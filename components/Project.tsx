@@ -1,5 +1,4 @@
 import React from "react";
-import Text from "./Text";
 
 type Props = {
   name: string;
@@ -26,7 +25,7 @@ const Project: React.FC<Props> = ({
       <h3>
         {name} · {shortDescription}
       </h3>
-      <Text>{description}</Text>
+      <p>{description}</p>
       <p style={{ fontSize: "1.2rem" }}>
         <a href={link}>Try it</a> – <a href={source}>GitHub</a>
       </p>

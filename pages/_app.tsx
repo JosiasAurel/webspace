@@ -5,6 +5,7 @@ import "../styles/github-syntax.css";
 import Automata from "../components/Automata";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import Nav from "../components/Header";
 
 const JosiasWDevApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -13,6 +14,7 @@ const JosiasWDevApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
       <div>
+        <Nav />
         <Component {...pageProps} />
         <Footer />
       </div>

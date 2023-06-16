@@ -1,5 +1,4 @@
 import React from "react";
-import Text from "./Text";
 import styles from "../styles/components.module.css";
 import Head from "next/head";
 import Nav from "./Header";
@@ -49,13 +48,13 @@ const BlogHead: React.FC<Props> = ({
       </Head>
       <Nav />
       <h1>{title}</h1>
-      <Text>
+      <p>
         <em
           style={{ textDecoration: "none", color: "grey", fontStyle: "normal" }}
         >
           {description}
         </em>
-      </Text>
+      </p>
     </div>
   );
 };

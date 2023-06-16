@@ -1,6 +1,4 @@
 import React from "react";
-import Text from "../../components/Text";
-import Nav from "../../components/Header";
 import Post, { LocalPost } from "../../components/Post";
 import type { LocalPost as LocalPostType } from "../../components/Post";
 import { sourcedWritings } from "../../writing/sourced";
@@ -12,9 +10,9 @@ type Props = {
 };
 
 const HomePage: React.FC<Props> = ({ articles }) => {
+  console.log("articles = ", articles);
   return (
     <div>
-      <Nav />
       <span style={{ maxHeight: "5px" }}>
         <h2
           style={{
@@ -30,11 +28,8 @@ const HomePage: React.FC<Props> = ({ articles }) => {
           .sort((a, b) => b.num - a.num)
           .map((article) => (
             <LocalPost
-              title={article.title}
-              date={article.date}
-              description={article.description}
-              name={article.name.split(".")[0]}
-              num={article.num}
+            {...article}
+              name={article.title.split(".")[0]}
             />
           ))}
 
@@ -57,21 +52,17 @@ const HomePage: React.FC<Props> = ({ articles }) => {
 };
 
 export async function getStaticProps() {
-  let files = readdirSync("./pages/writing/");
+  let files = readdirSync("./content");
+  console.log("Files = ", files);
 
   files = files.filter(
     (file) => file !== "index.tsx" && file !== "template.mdx"
   );
 
   const articles_ = files.map(async (file) => {
-    const { title, description, date, num } = await require(`./${file}`);
-    const article: LocalPostType = {
-      title,
-      description,
-      date,
-      name: file,
-      num,
-    };
+    const { meta } = await import(`../../content/${file}`);
+    console.log("meta = ", meta);
+    const article: LocalPostType = meta; 
     return article;
   });
 
