@@ -4,7 +4,7 @@ const Automata: React.FC = (): JSX.Element => {
   React.useEffect(() => {
     const canvas = document.getElementById("automata") as HTMLCanvasElement;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
     const dpi = 2; // window.devicePixelRatio * (window.innerWidth >= 1500 ? 2 : 1.1);
 
     /*
@@ -17,7 +17,7 @@ const Automata: React.FC = (): JSX.Element => {
 
     */
     // console.log(canvas.width, canvas.height);
-    ctx?.scale(dpi, dpi);
+    ctx.scale(dpi, dpi);
 
     /*  
 Cellular Automata
