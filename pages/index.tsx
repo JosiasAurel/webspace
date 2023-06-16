@@ -12,7 +12,9 @@ const HomePage: React.FC = () => {
         <img src="/josias.png" alt="josias" />
         <div>
           <h2>Hey 👋,</h2>
-          <p>
+          <p style={{
+            fontSize: "1rem"
+          }}>
             I'm <strong>Josias Aurel,</strong>
             a curiosity-driven <u>hacker</u> from Cameroon.
             Ever since I wrote my fist RPG game in windows batch script at age 12, 

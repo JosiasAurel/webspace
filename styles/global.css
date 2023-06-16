@@ -56,10 +56,18 @@ h1,h2,h3 {
 }
 
 a,
-em,
 strong {
   color: black;
   text-decoration: underline;
+}
+
+
+em {
+  color: blue;
+  border: dotted 1.5px blue;
+  border-radius: 5px;
+  padding: 1px 0.4em;
+  font-style: normal;
 }
 
 a {
@@ -179,7 +187,7 @@ code * {
 }
 
 p code {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 1130px) {
