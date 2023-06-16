@@ -20,7 +20,7 @@ const BlogHead: React.FC<Props> = ({
     console.log(url);
   }, [url]);
 
-  const ogImage = `https://josiasaurel.vercel.app/api/og?msg=${title
+  const ogImage = `https://josiasw.dev/api/og?msg=${title
     .split(" ")
     .join("%20")}`;
 
