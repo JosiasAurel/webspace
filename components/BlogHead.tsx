@@ -2,7 +2,7 @@ import React from "react";
 import Text from "./Text";
 import styles from "../styles/components.module.css";
 import Head from "next/head";
-import Nav from "./Nav";
+import Nav from "./Header";
 
 type Props = {
   title: string;

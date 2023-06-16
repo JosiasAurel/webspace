@@ -1,97 +1,51 @@
 import React from "react";
 import Text from "../components/Text";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import Nav from "../components/Header";
 import Link from "next/link";
 
-type Time = {
-  hours: number;
-  minutes: number;
-  seconds: number;
-};
-
-const twoDigit = (item: number): string =>
-  item < 10 ? "0" + item.toString() : item.toString();
-
 const HomePage: React.FC = () => {
-  let isPm = false;
-  const [time, setTime] = React.useState<Time>(getTime());
-
-  function getTime(): Time {
-    const date = new Date();
-    const hours = date.getUTCHours() + 1;
-    const minutes = date.getUTCMinutes();
-    const seconds = date.getUTCSeconds();
-
-    isPm = !(hours <= 12);
-
-    return {
-      hours: hours <= 12 ? hours : hours - 12,
-      minutes,
-      seconds,
-    };
-  }
-  React.useEffect(() => {
-    setInterval(() => {
-      setTime(getTime());
-    }, 1000);
-  }, []);
-
   return (
     <div>
       <Nav />
-      <span style={{ maxHeight: "5px" }}>
-        <h2
-          style={{
-            fontFamily: "EB Garamond",
-            fontSize: "2rem",
-          }}
-        >
-          Josias Aurel
-        </h2>
-        <p style={{ fontStyle: "italic", fontSize: "1.3em" }}>
-          {twoDigit(time.hours)}:{twoDigit(time.minutes)}:
-          {twoDigit(time.seconds)} {isPm ? "pm" : "am"} <span></span>· Yaounde,
-          Cameroon
-        </p>
 
-        <p style={{ color: "grey" }}>
-          crafting{" "}
-          <a href="https://doodle.josiasw.dev/" style={{ fontSize: "1.4rem" }}>
-            Doodle
-          </a>
-        </p>
-      </span>
-
-      <Text>
-        I'm that guy who likes taking apart that thing and exploring those
-        rabbit holes – sometimes building random stuff because it's fun.
+      <main className="index-main">
+        <img src="/josias.png" alt="josias" />
+        <div>
+          <h2>Hey 👋,</h2>
+          <p>
+            I'm <strong>Josias Aurel,</strong>
+            a curiosity-driven <u>hacker</u> from Cameroon.
+            Ever since I wrote my fist RPG game in windows batch script, 
+            I've done a bit of coding from writing a simple OS kernel and small games to building full-stack web applications
+            and machine learning models.
+          </p>
+        </div>
+      </main>
+     <Text>
+        I'm that guy who likes taking apart things and and building random projects <i>just because it's fun</i> — and to quench my insatiable curiosity.
         <br />
-        Vibin' at <a href="https://hackclub.com/">HackClub</a>
+        Proudly vibin' at <a href="https://hackclub.com/">HackClub</a>
       </Text>
+
+      
 
       <Text>
-        I'm a passion driven software [craftsman?] who is enthusiastic about AI
-        and game development. Also a 2022 high school graduate.
-      </Text>
+        Throughout my journey, I mostly worked solo on a few side projects such as <a href="https://linksbook.vercel.app/">LinksBook</a> (now terminated).   
+        I also worked at a local startup for about four months (Nov, 2022 - Feb 2023) where we built an online e-commerce marketplace similar to Amazon.
+      </Text> 
 
       <Text>
-        Professionally, I'm a full-stack web developer working part-time
-        [PAUSED] at a local startup to help build an{" "}
-        <a href="https://www.amazon.com/">Amazon</a>
-        -like platform to sky-rocket the e-commerce space.
-        <br />
-        <br />I also contribute to{" "}
-        <a href="https://github.com/hackclub/sinerider">sinerider</a>, a game
-        that teaches graphing in a playful way.
+        These days I'm mostly working on <a href="https://lingua.josiasw.dev/">Linguana</a> — a project that aims
+        at creating an accessible learning platform for learning Cameroons's local languages — and <a href="https://tinker.quest/">Doodle (or Tinker Quest?)</a> — an interactive learning environment
+        that makes it easier for the curious mind to explore/experiment ideas quickly. 
       </Text>
 
-      <Text>
-        View my <Link href="/projects">projects</Link> or enjoy my{" "}
-        <Link href="/writing">writing</Link>.
+<Text>
+        I take pride in the work I do and value aesthetically pleasing software experiences. I also like to take on interesting challenges, if you've any, please shoot me an email at <a href="mailto:hey@josiasw.dev">hey@josiasw.dev</a> and I'll reply, promise.
       </Text>
 
-      <Text>If you catch me somewhere, don't be shy, come say hi ;)</Text>
+
+      <Text>If you catch me somewhere, don't be shy, come say hi.</Text>
     </div>
   );
 };

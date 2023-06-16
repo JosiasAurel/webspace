@@ -1,6 +1,6 @@
 import React from "react";
 import Text from "../components/Text";
-import Nav from "../components/Nav";
+import Nav from "../components/Header";
 import Project from "../components/Project";
 
 type Time = {

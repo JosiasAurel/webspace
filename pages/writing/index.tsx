@@ -1,6 +1,6 @@
 import React from "react";
 import Text from "../../components/Text";
-import Nav from "../../components/Nav";
+import Nav from "../../components/Header";
 import Post, { LocalPost } from "../../components/Post";
 import type { LocalPost as LocalPostType } from "../../components/Post";
 import { sourcedWritings } from "../../writing/sourced";

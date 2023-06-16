@@ -1,15 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Roboto+Mono&display=swap');
 
 * {
   box-sizing: border-box;
-  font-family: "EB Garamond", serif;
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
+  font-family: "Inter", "Kalam", sans-serif;
   transition: all 0.2s ease-in-out;
 }
 
 body {
   margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  max-width: 50px;
+  border-radius: 50%;
 }
 
 .app > div {
@@ -22,15 +34,14 @@ body {
 }
 
 p {
-  font-family: "EB Garamond";
-  font-size: 1.7rem;
+  font-size: large;
 }
 
 a,
 em,
 strong {
   color: black;
-  font-family: "EB Garamond";
+  font-family: "Roboto Mono";
   text-decoration: underline;
 }
 
@@ -43,35 +54,21 @@ strong {
 }
 
 nav {
-  margin-top: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-nav h2,
-nav > a {
-  text-decoration: none;
-}
-
-nav > span {
-  width: 40%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 1.2rem;
-}
-
-nav > span > a {
+nav > * {
+  font-family: "Kalam", sans-serif;
+  margin: 0 5px;
   text-decoration: none;
   color: grey;
-  margin: 0 0.2rem;
 }
 
-nav > span > a:hover {
-  text-decoration: underline;
+i {
+  font-family: "Kalam", sans-serif;
 }
 
 blockquote {
@@ -87,12 +84,22 @@ blockquote::after {
 }
 
 li {
-  font-family: "EB Garamond";
   font-size: 1.5rem;
 }
 
 li::marker {
   color: grey;
+}
+
+.index-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index-main > * {
+  width: 45%;
 }
 
 canvas {
