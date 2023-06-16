@@ -17,7 +17,7 @@ const Automata: React.FC = (): JSX.Element => {
 
     */
     // console.log(canvas.width, canvas.height);
-    ctx.scale(dpi, dpi);
+    ctx?.scale(dpi, dpi);
 
     /*  
 Cellular Automata
