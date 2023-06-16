@@ -50,7 +50,11 @@ const BlogHead: React.FC<Props> = ({
       <Nav />
       <h1>{title}</h1>
       <Text>
-        <em style={{ textDecoration: "none", color: "grey", fontStyle: "normal" }}>{description}</em>
+        <em
+          style={{ textDecoration: "none", color: "grey", fontStyle: "normal" }}
+        >
+          {description}
+        </em>
       </Text>
     </div>
   );

@@ -29,11 +29,13 @@ const Footer: React.FC = (): JSX.Element => {
         width: "100%",
       }}
     >
-      <p style={{
-        fontFamily: "Kalam",
-        fontSize: "1.5em",
-        textAlign: "center"
-      }}>
+      <p
+        style={{
+          fontFamily: "Kalam",
+          fontSize: "1.5em",
+          textAlign: "center",
+        }}
+      >
         ~~~
       </p>
       <div>
@@ -41,7 +43,7 @@ const Footer: React.FC = (): JSX.Element => {
         <a href="https://twitter.com/JosiasWing">Twitter</a>
         <a href="https://github.com/JosiasAurel">GitHub</a>
       </div>
-    <p style={{ fontFamily: "Kalam", fontSize: "1.2em"}}>{msg}</p>
+      <p style={{ fontFamily: "Kalam", fontSize: "1.2em" }}>{msg}</p>
     </footer>
   );
 };

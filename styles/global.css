@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Roboto+Mono&display=swap");
 
 * {
   box-sizing: border-box;
@@ -23,6 +23,10 @@ header {
   align-items: center;
 }
 
+header a {
+  font-size: 1.2rem;
+}
+
 header img {
   max-width: 50px;
   border-radius: 50%;
@@ -41,7 +45,6 @@ p {
   font-size: large;
 }
 
-
 p img {
   max-width: 100%;
 }
@@ -50,7 +53,9 @@ h1 {
   font-family: "Kalam", sans-serif;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   width: 100%;
   text-align: start;
 }
@@ -60,7 +65,6 @@ strong {
   color: black;
   text-decoration: underline;
 }
-
 
 em {
   color: blue;
@@ -135,13 +139,15 @@ footer > div {
   align-items: center;
 }
 
-footer > div a, .project-card a {
+footer > div a,
+.project-card a {
   text-decoration: none;
   color: grey;
   padding: 0.1em 0.5em;
 }
 
-footer > div a:hover, .project-card a:hover {
+footer > div a:hover,
+.project-card a:hover {
   background-color: black;
   color: white;
 }
@@ -158,6 +164,7 @@ canvas {
   top: -10vh;
   right: 15vw;
   image-rendering: pixelated;
+  filter: blur(2px);
 }
 
 .post {
@@ -203,5 +210,13 @@ p code {
 
   canvas {
     transform: rotate(45);
+  }
+
+  .index-main {
+    flex-direction: column;
+  }
+
+  .index-main > * {
+    width: 90%;
   }
 }

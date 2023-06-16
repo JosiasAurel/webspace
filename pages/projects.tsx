@@ -27,11 +27,13 @@ const projects = [
     shortDescription: "A markdown to html converter",
     description:
       "A basic markdown to html converter written in pure C. It can also be compiled to WebAssembly and ran in a web browser. It supports only headings, blockquotes, lists, strikethrough, italic and bold text only.",
-  },{
+  },
+  {
     name: "SineRider",
     link: "https://sinerider.com/",
     source: "https://github.com/hackclub/sinerider",
-    shortDescription: "SineRider is a game about love and graphing, built by a global team of teenagers at Hack Club.",
+    shortDescription:
+      "SineRider is a game about love and graphing, built by a global team of teenagers at Hack Club.",
     description:
       "SineRider is a game that immerses you into the beauty of mathematics, along with a love story. It's a special game that recalls the playful side of you, reminding us that we can learn a lot from mathematics and ourselves by just playing a great game.",
   },
@@ -65,7 +67,7 @@ const HomePage: React.FC = () => {
             fontSize: "2rem",
           }}
         >
-          Projects — stuff I built, or contributed to. 
+          Projects — stuff I built, or contributed to.
         </h2>
       </span>
       <div>
@@ -73,7 +75,6 @@ const HomePage: React.FC = () => {
           <Project key={key} {...project} />
         ))}
       </div>
-      
     </div>
   );
 };
