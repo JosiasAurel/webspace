@@ -1,6 +1,4 @@
 import React from "react";
-import Link from "next/link";
-import Text from "./Text";
 
 const messages = [
   "Shall we party?",
@@ -31,12 +29,19 @@ const Footer: React.FC = (): JSX.Element => {
         width: "100%",
       }}
     >
+      <p style={{
+        fontFamily: "Kalam",
+        fontSize: "1.5em",
+        textAlign: "center"
+      }}>
+        ~~~
+      </p>
       <div>
         <a href="mailto:hey@josiasw.dev">Email</a>
         <a href="https://twitter.com/JosiasWing">Twitter</a>
         <a href="https://github.com/JosiasAurel">GitHub</a>
       </div>
-    <p style={{ fontFamily: "Kalam"}}>{msg}</p>
+    <p style={{ fontFamily: "Kalam", fontSize: "1.2em"}}>{msg}</p>
     </footer>
   );
 };
