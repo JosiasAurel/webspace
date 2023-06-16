@@ -1,4 +1,3 @@
-
 .header {
   padding: 0.4em 0;
   position: fixed;
@@ -53,6 +52,14 @@
   width: 100%;
 }
 
+.blogHead em {
+  border: none;
+}
+
+.blogHead h1 {
+  font-size: 2.4em;
+}
+
 .profile {
   border-radius: 40px;
   width: 300px;
@@ -60,4 +67,3 @@
   box-shadow: 1px 1px 2px 2px whitesmoke;
   max-width: fit-content;
 }
-

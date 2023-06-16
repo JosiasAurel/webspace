@@ -1,32 +1,9 @@
-import BlogHead from "../../components/BlogHead";
-import Head from "next/head";
- 
-export const title = "Programming Paradigms";
-export const description = "An insightful look.";
-export const date = "Friday, May 27, 2022";
-export const ogImage = `https://josiasaurel.vercel.app/api/og?msg=${title
-  .split(" ")
-  .join(
-    "%20"
-  )}`;
-
-<Head>
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
- 
-<meta property="og:type" content="website" />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={description} />
-<meta property="og:image" content={ogImage} />
- 
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={ogImage} />
-</Head>
- 
-<BlogHead title={title} description={description} date={date} />
+export const meta = {
+title : "Programming Paradigms",
+description : "An insightful look.",
+date : "Friday, May 27, 2022",
+num : 1,
+}
  
 A programming paradigm refers to the pattern which a program code follows.
 It can be thought of as a style of programming.
@@ -246,5 +223,3 @@ If you are interested in learning more paradigms, then consider reading [this Wi
  
 We are going to close this here.
 I hope you enjoyed reading this as much as I enjoyed writing it.
-
-— [Josias Aurel](/)

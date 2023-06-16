@@ -1,93 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap');
-
-:root {
-  --jos-blue: rgb(0, 110, 255);
-}
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Roboto+Mono&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
+  font-family: "Inter", "Kalam", sans-serif;
   transition: all 0.2s ease-in-out;
-  word-wrap: break-word;
+}
+
+::selection {
+  background-color: rgb(255, 238, 0);
 }
 
 body {
-  margin: 0 auto;
-  background-color: white;
-  width: 100vw;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  font-size: 1.2rem;
+}
+
+header img {
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.app > div {
+  margin: 0 30%;
+}
+
+.notif-text,
+.notif-text p {
+  display: "inline-block";
+}
+
+p {
+  font-size: large;
+}
+
+p img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: "Kalam", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  width: 100%;
+  text-align: start;
+}
+
+a,
+strong {
+  color: black;
+  text-decoration: underline;
+}
+
+em {
+  color: blue;
+  border: dotted 1.5px blue;
+  border-radius: 5px;
+  padding: 1px 0.4em;
+  font-style: normal;
 }
 
 a {
-  color: var(--jos-blue);
+  color: blue;
 }
 
-h1, h2, h3, h4 {
-  text-align: start !important;
+strong {
+  text-decoration: none;
 }
 
-.dark {
-  color: white !important;
-  background-color: #151515;
-}
-
-.dark p {
-  color: white !important;
-}
-
-.dark img {
-  box-shadow: none !important;
-}
-
-.blogStyle {
+nav {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  margin: 4em 1.5em;
 }
 
-.blogStyle .blogContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
+nav > * {
+  font-family: "Kalam", sans-serif;
+  margin: 0 5px;
+  text-decoration: none;
+  color: grey;
 }
 
-pre {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
-
-code {
-  border-radius: 10px;
-  overflow-x: scroll;
-  font-family: 'JetBrains Mono', monospace !important;
-}
-
-code span {
-  font-family: 'JetBrains Mono', monospace !important;
+i {
+  font-family: "Kalam", sans-serif;
 }
 
 blockquote {
-  border: dotted 5px var(--jos-blue);
-  padding: 1em;
-  border-radius: 10px;
+  color: grey;
+}
+
+blockquote::before {
+  content: "“";
+}
+
+blockquote::after {
+  content: "”";
+}
+
+ul {
+  list-style-type: square;
+}
+
+li {
+  font-size: 1.2rem;
+}
+
+.index-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index-main > * {
+  width: 45%;
+}
+
+footer > div {
+  align-self: flex-start;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer > div a,
+.project-card a {
+  text-decoration: none;
+  color: grey;
+  padding: 0.1em 0.5em;
+}
+
+footer > div a:hover,
+.project-card a:hover {
+  background-color: black;
+  color: white;
+}
+
+canvas {
+  /*
+  width: 80vw;
+  height: 80vh;
+*/
+  width: 1600px;
+  height: 800px;
+  z-index: -3;
+  position: fixed;
+  top: -10vh;
+  right: 15vw;
+  image-rendering: pixelated;
+  filter: blur(2px);
+}
+
+.post {
+  padding: 1em 2em;
+  border-radius: 8px;
+}
+
+.post:hover {
+  background-color: rgba(202, 202, 202, 0.378);
+}
+
+.host-name {
+  background-color: rgba(146, 146, 146, 0.471);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 1.3rem;
+}
+
+code {
+  border-radius: 8px;
+}
+
+code,
+code * {
+  font-family: "JetBrains Mono", monospace;
+  overflow-x: scroll;
+}
+
+pre {
+  overflow-x: scroll;
+}
+
+p code {
+  font-size: 1.1rem;
+}
+
+.post-content img {
+  display: block;
+  margin: 0 auto;
   width: 100%;
 }
 
-ul, h1, h2, h3, h4, p {
-  align-self: flex-start;
+@media screen and (max-width: 1130px) {
+  .app > div {
+    margin: 10%;
+  }
 }
 
-@media screen and (min-width: 900px) {
-  .blogStyle {
-    margin: 4em 15em !important;
+@media screen and (max-width: 530px) {
+  .app > div {
+    margin: 5%;
   }
-  h1 {
-    font-size: 5em !important;
-    text-align: start;
+
+  canvas {
+    transform: rotate(45);
+  }
+
+  .index-main {
+    flex-direction: column;
+  }
+
+  .index-main > * {
+    width: 90%;
   }
 }
