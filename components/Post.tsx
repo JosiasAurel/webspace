@@ -29,7 +29,7 @@ const LocalPost: React.FC<LocalPost> = ({ title, description, date, name }) => {
         <Link style={{ color: "black" }} href={`/writing/${name}`}>
           <h1>{title}</h1>
         </Link>
-        <p style={{ color: "grey" }}>{description}</p>
+        <p style={{ color: "grey" }}>{description} • {date}</p>
       </div>
     </>
   );
