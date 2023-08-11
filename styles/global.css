@@ -33,7 +33,7 @@ header img {
 }
 
 .app > div {
-  margin: 0 30%;
+  margin: 0 25%;
 }
 
 .notif-text,
@@ -67,8 +67,8 @@ strong {
 }
 
 em {
-  color: blue;
-  border: dotted 1.5px blue;
+  color: black;
+  background-color: rgba(128, 128, 128, 0.165);
   border-radius: 5px;
   padding: 1px 0.4em;
   font-style: normal;
@@ -199,6 +199,15 @@ pre {
 
 p code {
   font-size: 1.1rem;
+}
+
+.post-content p {
+  font-size: 1.5em;
+}
+
+.post-content h2 {
+  font-weight: bolder;
+  font-size: 2em;
 }
 
 .post-content img {
