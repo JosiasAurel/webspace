@@ -2,7 +2,25 @@ import React from "react";
 import Project from "../components/Project";
 
 const projects = [
-  {
+
+{
+    name: "digital art",
+    link: "#",
+    source: "#",
+    shortDescription: "Digital Math Art",
+    description:
+      "Digital art created on an 80x60 grid by manipulating the x and y axes as well as using time and positivity as parameters.",
+    image: "/marth.png"
+  },  
+{
+    name: "sudoku solver",
+    link: "https://github.com/JosiasAurel/sudoku-solver",
+    source: "https://github.com/JosiasAurel/sudoku-solver",
+    shortDescription: "A brute-force sudoku solver using backtracking",
+    description:
+      "A fast and efficient sudoku solver written in Zig. This sudoku solver performs zero memory allocations and uses backtracking to solve sudoku games.",
+    image: "/sudokus.png"
+  },  {
     name: "dg",
     link: "https://github.com/JosiasAurel/dg",
     source: "https://github.com/JosiasAurel/dg",
