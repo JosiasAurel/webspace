@@ -97,6 +97,7 @@ const HomePage: React.FC = () => {
           <Project key={key} {...project} />
         ))}
       </div>
+      <p> Find more of my projects on <a href="https://github.com/JosiasAurel?tab=repositories">GitHub</a>. </p>
     </div>
   );
 };
