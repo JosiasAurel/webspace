@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
             from Cameroon. I'm that guy who likes taking apart things and and building random
         projects <i style={{ fontSize: "larger" }}>just because it's fun</i>.</p>
         </div>
-        <img src="/josias.png" alt="josias" />
+        <img src="/josias.jpg" alt="josias" />
       </main>
       <p>
         I work as a Gap Software Engineer at <a href="https://hackclub.com/">HackClub</a>

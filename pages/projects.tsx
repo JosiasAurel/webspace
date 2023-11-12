@@ -19,7 +19,7 @@ const projects = [
     shortDescription: "A brute-force sudoku solver using backtracking",
     description:
       "A fast and efficient sudoku solver written in Zig. This sudoku solver performs zero memory allocations and uses backtracking to solve sudoku games.",
-    image: "/sudokus.png"
+    image: "/sudokus.jpg"
   },  {
     name: "dg",
     link: "https://github.com/JosiasAurel/dg",
@@ -27,7 +27,7 @@ const projects = [
     shortDescription: "A dictionary CLI written in Rust",
     description:
       "A CLI tool that outputs definitions. It keeps a local copy of every query you make, making it very fast if you query the same word more than once.",
-    image: "/dg.png"
+    image: "/dg.jpg"
   },
   {
     name: "mirage",
@@ -55,7 +55,7 @@ const projects = [
       "SineRider is a game about love and graphing, built by a global team of teenagers at Hack Club.",
     description:
       "SineRider is a game that immerses you into the beauty of mathematics, along with a love story. It's a special game that recalls the playful side of you, reminding us that we can learn a lot from mathematics and ourselves by just playing a great game.",
-    image: "sinerider.png"
+    image: "sinerider.jpg"
   },
 
   {
@@ -65,7 +65,7 @@ const projects = [
     shortDescription: "A tool to share short text and links across devices.",
     description:
       "Buffer is a tool that allows me to share text and links across devices. I built it because I found myself sharing short text between my phone and computer a lot. That did not only happen while I was studying or working but also when I was away. I decided to build this app to help me do so no matter where I am. It ended up being useful to some classmates and friends and it got regular visits everyday (averagely ~18 distinct users).",
-    image: "buffered.png"
+    image: "buffered.jpg"
   },
   {
     name: "LinksBook [discontinued]",
@@ -74,7 +74,7 @@ const projects = [
     shortDescription: "A full-featured bookmark manager",
     description:
       "A full-featured bookmark manager written in Typescript, React, Next.js on the client and Typescript, Node.js, Python, GraphQL and FastAPI on the server. It uses deta.sh as cloud provider and some other APIs like SendGrid for emails. The project was built over a period of two months so that I could manage my articles (save, read, write summaries, remind myself via email etc) but was later turned into a product that I stopped maintaining.",
-    image: "linksbook.png"
+    image: "linksbook.jpg"
   },
 ];
 
