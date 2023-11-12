@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/components.module.css";
 
 type Props = {
   name: string;
@@ -6,6 +7,7 @@ type Props = {
   source?: string;
   shortDescription: string;
   description: string;
+  image: string,
 };
 
 const Project: React.FC<Props> = ({
@@ -14,20 +16,19 @@ const Project: React.FC<Props> = ({
   source,
   shortDescription,
   description,
+  image
 }): JSX.Element => {
   return (
     <div
-      className="project-card"
-      style={{
-        margin: "2em 0",
-      }}
+      className={styles.projectCard}
     >
-      <h3>
+      <img src={image} alt={name} />
+      <h3 style={{ fontWeight: "bolder" }}>
         {name} · {shortDescription}
       </h3>
       <p>{description}</p>
       <p style={{ fontSize: "1.2rem" }}>
-        <a href={link}>Try it</a> – <a href={source}>GitHub</a>
+        <a href={link}>Try it</a> – <a href={source}>Code</a>
       </p>
     </div>
   );

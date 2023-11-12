@@ -67,3 +67,30 @@
   box-shadow: 1px 1px 2px 2px whitesmoke;
   max-width: fit-content;
 }
+
+.projectCard {
+  border-radius: 12px;
+  padding: 1em;
+  margin: 2em 0;
+}
+
+.projectCard img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.projectCard h3 {
+  font-weight: 700;
+}
+
+.projectCard:hover {
+  background-color: #f7ecd5;
+}
+
+.projectCard a {
+  text-decoration: none;
+  color: black;
+  padding: 0.4em 0.8em;
+  border-radius: 8px;
+  background-color: #a6f5b2;
+}

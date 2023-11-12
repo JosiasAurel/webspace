@@ -43,7 +43,7 @@ const Footer: React.FC = (): JSX.Element => {
         <a href="https://twitter.com/JosiasWing">Twitter</a>
         <a href="https://github.com/JosiasAurel">GitHub</a>
       </div>
-      <p style={{ fontFamily: "Kalam", fontSize: "1.2em" }}>{msg}</p>
+      <p style={{ fontFamily: "Kalam", fontSize: "1.2em" }}>&copy; {new Date().getFullYear()} | {msg}</p>
     </footer>
   );
 };

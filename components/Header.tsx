@@ -5,9 +5,9 @@ const Nav: React.FC = (): JSX.Element => {
   return (
     <header>
       <Link href="/" style={{ textDecoration: "none" }}>
-        <h2 style={{ fontFamily: "Kalam" }}>
-          You home?
-        </h2>
+        <p style={{ margin: "0.5em 0", fontFamily: "Kalam", color: "black" }}>
+          Josias
+        </p>
       </Link>
       <nav>
         <Link href="/projects">Projects</Link>

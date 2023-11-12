@@ -20,7 +20,7 @@ const HomePage: React.FC<Props> = ({ articles }) => {
             fontSize: "2rem",
           }}
         >
-          Writing — stuff I must have said, or thought about.
+          Writing — articles, thoughts or essays.
         </h2>
       </span>
       <div>
