@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
         <img src="/josias.jpg" alt="josias" />
       </main>
       <p>
-        I work as a Gap Software Engineer at <a href="https://hackclub.com/">HackClub</a>
+        I'm a fulltime <a href="https://hackclub.com/">Hack Club</a> HQ Member.
       </p>
 
       <p>
