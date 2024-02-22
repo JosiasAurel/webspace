@@ -68,23 +68,24 @@
   max-width: fit-content;
 }
 
+.projectLink:hover {
+  background-color: azure;
+}
+
 .projectCard {
-  border-radius: 12px;
+  border-radius: 18px;
   padding: 1em;
-  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .projectCard img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.projectCard h3 {
-  font-weight: 700;
-}
-
-.projectCard:hover {
-  background-color: #f7ecd5;
+  border-radius: 10px;
+  border: solid 1px rgb(216, 231, 216);
+  min-width: 100%;
+  max-width: 100%;
 }
 
 .projectCard a {
@@ -93,4 +94,13 @@
   padding: 0.4em 0.8em;
   border-radius: 8px;
   background-color: #a6f5b2;
+}
+
+.projectCard p {
+  color: grey;
+  font-size: 1rem;
+}
+
+.projectCard h3 {
+  color: black;
 }

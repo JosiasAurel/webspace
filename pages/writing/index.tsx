@@ -16,7 +16,6 @@ const HomePage: React.FC<Props> = ({ articles }) => {
       <span style={{ maxHeight: "5px" }}>
         <h2
           style={{
-            fontFamily: "Kalam",
             fontSize: "2rem",
           }}
         >
@@ -34,13 +33,15 @@ const HomePage: React.FC<Props> = ({ articles }) => {
           ))}
 
         {sourcedWritings.map((writing) => (
-          <Post
+          <>
+ <Post
             key={writing.title + writing.link}
             link={writing.link}
             title={writing.title}
             views={writing.views}
             host={writing.host}
           />
+          </>
         ))}
       </div>
 

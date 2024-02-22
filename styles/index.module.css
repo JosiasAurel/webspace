@@ -1,0 +1,47 @@
+.page {
+  margin: 1em 2em;
+  font-size: 0.9rem;
+}
+
+.page p {
+  color: rgb(145, 145, 145);
+}
+
+.headIntro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headIntro img {
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+.headIntro * {
+  margin: 0 1em;
+}
+
+.introText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.introText p {
+  max-width: 300px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sign {
+  width: 100%;
+}
+.sign img {
+  width: 20%;
+}

@@ -18,7 +18,6 @@ const JosiasWDevApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <Component {...pageProps} />
         <Footer />
       </div>
-      <Automata />
     </div>
   );
 };

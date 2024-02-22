@@ -5,7 +5,7 @@ type Props = {
   name: string;
   link: string;
   source?: string;
-  shortDescription: string;
+  workType: string;
   description: string;
   image: string,
 };
@@ -14,23 +14,22 @@ const Project: React.FC<Props> = ({
   name,
   link,
   source,
-  shortDescription,
+  workType,
   description,
   image
 }): JSX.Element => {
   return (
-    <div
-      className={styles.projectCard}
-    >
-      <img src={image} alt={name} />
-      <h3 style={{ fontWeight: "bolder" }}>
-        {name} · {shortDescription}
-      </h3>
-      <p>{description}</p>
-      <p style={{ fontSize: "1.2rem" }}>
-        <a href={link}>Try it</a> – <a href={source}>Code</a>
-      </p>
-    </div>
+    <a className={styles.projectLink} href={link} style={{ textDecoration: "none", border: "solid 0.5px grey", margin: "0.2em", borderRadius: "8px" }}>
+      <div
+        className={styles.projectCard}
+      >
+        <img src={image} alt={name} />
+        <h3>
+          {name} · {workType}
+        </h3>
+        <p>{description}</p>
+      </div>
+    </a>
   );
 };
 
