@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
           On the side, I'm currently building a plaform for creative exploration called <a href="https://play.withdoodle.app/">Doodle</a> and an e-commerce platform called <b>Baskket</b>.
           <br />
           <br />
-          Before joining Hack Club HQ full-time, I worked on a variety of projects such as <a href="https://sinerider.com/">SineRider </a>, organised a hackathon in my local town called <a href="https://ticsummit.org/">TiC Summit</a>, and worked as a software engineer at a local e-commerce startup developing administrative side software participating in infrastructure development for the tech side.
+          Before joining Hack Club HQ full-time, I worked on a variety of projects such as <a href="https://sinerider.com/">SineRider </a>, organised a hackathon in my local town called <a href="https://ticsummit.org/">TiC Summit</a>, and worked as a software engineer at a local e-commerce startup developing administrative side software for managing our mobile app.
           <br />
           <br />
           After graduating high-school in 2022, I joined <a href="https://www.open-dreams.org/">Open Dreams</a> where I got to meet a community of incredibly talented and curious people.
