@@ -4,14 +4,14 @@ import Link from "next/link";
 const Nav: React.FC = (): JSX.Element => {
   return (
     <header>
-      <Link href="/" style={{ textDecoration: "none" }}>
-        <p style={{ margin: "0.5em 0", fontFamily: "Kalam", color: "black" }}>
-          Josias
-        </p>
+      <Link style={{ textDecoration: "none", color: "black", fontFamily: "Micro 5" }} href="/">
+        <h2>Birb!</h2>
       </Link>
       <nav>
-        <Link href="/projects">Projects</Link>
         <Link href="/writing">Writing</Link>
+        <a href="https://twitter.com/JosiasWing">Twitter</a>
+        <a href="https://github.com/JosiasAurel">GitHub</a>
+        <a href="mailto:ndjosiasaurel@gmail.com">Email</a>
       </nav>
     </header>
   );

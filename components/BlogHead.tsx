@@ -45,14 +45,18 @@ const BlogHead: React.FC<Props> = ({
         <meta property="twitter:url" content={url} />
         <meta property="twitter:image" content={ogImage} />
       </Head>
-      <h1>{title}</h1>
-      <p>
-        <em
-          style={{ textDecoration: "none", color: "grey", fontStyle: "normal" }}
+      <img className={styles.blogHeadImage} src={ogImage} alt="" />
+      <h1>{title}
+      <br />
+      </h1>
+       <p>
+      ·
+      <br />
+        <i
+          style={{ color: "grey", textAlign: "center" }}
         >
           {description}
-        </em>
-      </p>
+        </i></p> 
     </div>
   );
 };

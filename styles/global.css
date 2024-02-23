@@ -1,52 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Kalam&family=Roboto+Mono&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Micro+5&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   box-sizing: border-box;
-  font-family: "Roboto Mono", sans-serif;
-  font-family: "Inter", "Kalam", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   transition: all 0.2s ease-in-out;
 }
 
-::selection {
-  background-color: #88ff7a;
-}
-
-body {
-  margin: 0;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEUAAAD8/vz08vT09vT8+vzs7uxH16TeAAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAuFJREFUOI0Vk+3NLiEIRG1B8ClAYAsQ2AIEt4D9ePtv5Xp/mZgYJ2fOFJKEfInkVWY2aglmQFkimRTV7MblYyVqD7HXyhKsSuPX12MeDhRHLtGvRG+P+B/S0Vu4OswR9tmvwNPyhdCDbVayJGads/WiUWcjCvCnruTBNHS9gmX2VzVbk7ZvB1gb1hkWFGl+A/n+/FowcO34U/XvKqZ/fHY+6vgRfU92XrOBUbGeeDfQmjWjdrK+frc6FdGReQhfSF5JvR29O2QrfNw1huTwlgsyXLo0u+5So82sgv7tsFZR2nxB6lXiquHrfD8nfYZ9SeT0LiuvSoVrxGY16pCNRZKqvwWsn5OHypPBELzohMCaRaa0ceTHYqe7X/gfJEEtKFbJpWoNqO+aS1cuTykGPpK5Ga48m6L3NefTr013KqYBQu929iP1oQ/7UwSR+i3zqruUmT84qmhzLpxyj7pr9kg7LKvqaXxZmdpn+6o8sHqSqojy02gU3U8q9PnpidiaLks0mbMYz+q2uVXsoBQ8bfURULYxRgZVYCHMv9F4OA7qxT2NPPpvGQ/sTDH2yznKh7E2AcErfcNsaIoN1izzbJiaY63x4QjUFdBSvDCvugPpu5xDny0jzEeuUQbcP1aGT9V90uixngTRLYNEIIZ6yOF1H8tm7rj2JxiefsVy53zGVy3ag5uuPsdufYOzYxLRxngKe7nhx3VAq54pmz/DK9/Q3aDam2Yt3hNXB4HuU87jKNd/CKZn77Qdn5QkXPfqSkhk7hGOXXB+7v09KbBbqdvxGqa0AqfK/atIrL2WXdAgXAJ43Wtwe/aIoacXezeGPMlhDOHDbSfHnaXsL2QzbT82GRwZuezdwcoWzx5pnOnGMUdHuiY7lhdyWzWiHnucLZQxYStMJbtcydHaQ6vtMbe0AcDbxG+QG14AL94xry4297xpy9Cpf1OoxZ740gHDfrK+gtsy0xabwJmfgtCeii79B6aj0SJeLbd7AAAAAElFTkSuQmCC);
-}
-
 header {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #d2fad8;
-  border: solid 1px transparent;
-  border-radius: 10px;
   margin: 1em 0;
-  padding: 0 1em;
 }
 
-header a {
-  font-size: 1.2rem;
-  margin: 0 0.5em;
+header > nav {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-header nav a {
-  padding: 0.2em 0.5em;
-  border-radius: 8px;
+header h2 {
+  font-family: "Micro 5", sans-serif;
+  font-size: 3em;
+  background: -webkit-linear-gradient(0deg, rgba(255,0,112,1) 19%, rgba(33,81,255,1) 47%, rgba(124,242,155,1) 81%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-header nav a:hover {
-  background-color: #a5f5b2;
-  color: black;
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-main img {
-  border-radius: 8px;  
+nav > a {
+  font-size: 1rem;
+  margin: 0.5em;
+  text-decoration: none;
+  color: grey;
+}
+
+nav > a:hover {
+  text-decoration: underline;
 }
 
 .app > div {
@@ -60,14 +63,6 @@ main img {
 
 p {
   font-size: larger;
-}
-
-p img {
-  max-width: 100%;
-}
-
-h1 {
-  font-family: "Kalam", sans-serif;
 }
 
 h1,
@@ -92,29 +87,11 @@ em {
 }
 
 a {
-  color: blue;
+  color: rgb(92, 92, 92);
 }
 
 strong {
   text-decoration: none;
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav > * {
-  font-family: "Kalam", sans-serif;
-  margin: 0 5px;
-  text-decoration: none;
-  color: grey;
-}
-
-i {
-  font-family: "Kalam", sans-serif;
 }
 
 blockquote {
@@ -163,21 +140,6 @@ footer > div a {
   margin: 0 0.4em;
 }
 
-canvas {
-  /*
-  width: 80vw;
-  height: 80vh;
-*/
-  width: 1600px;
-  height: 800px;
-  z-index: -3;
-  position: fixed;
-  top: -10vh;
-  right: 15vw;
-  image-rendering: pixelated;
-  filter: blur(2px);
-}
-
 .post {
   padding: 1em 2em;
   border-radius: 8px;
@@ -213,7 +175,8 @@ p code {
 }
 
 .post-content p {
-  font-size: 1.5em;
+  font-size: 1.4em;
+  font-family: "Lato", sans-serif;
 }
 
 .post-content h2 {

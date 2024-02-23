@@ -31,19 +31,15 @@ const Footer: React.FC = (): JSX.Element => {
     >
       <p
         style={{
-          fontFamily: "Kalam",
           fontSize: "1.5em",
           textAlign: "center",
         }}
       >
-        ~~~
+        <span style={{ fontSize: "2.5em", color: "#7cf29b"}}>·</span>
+        <span style={{ fontSize: "2.5em", color: "#2151ff"}}>·</span>
+        <span style={{ fontSize: "2.5em", color: "#ff2e77"}}>·</span>
       </p>
-      <div>
-        <a href="mailto:hey@josiasw.dev">Email</a>
-        <a href="https://twitter.com/JosiasWing">Twitter</a>
-        <a href="https://github.com/JosiasAurel">GitHub</a>
-      </div>
-      <p style={{ fontFamily: "Kalam", fontSize: "1.2em" }}>&copy; {new Date().getFullYear()} | {msg}</p>
+      <p style={{ textAlign: "center", fontSize: "1.2em" }}>Thank you for visiting my space on the internet. | {msg}</p>
     </footer>
   );
 };
