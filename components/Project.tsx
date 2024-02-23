@@ -1,19 +1,10 @@
 import React from "react";
 import styles from "../styles/components.module.css";
+import { WorkType, Project } from "../constants/projects";
 
-type Props = {
-  name: string;
-  link: string;
-  source?: string;
-  workType: string;
-  description: string;
-  image: string,
-};
-
-const Project: React.FC<Props> = ({
+const Project: React.FC<Project> = ({
   name,
   link,
-  source,
   workType,
   description,
   image
@@ -25,7 +16,7 @@ const Project: React.FC<Props> = ({
       >
         <img src={image} alt={name} />
         <h3>
-          {name} · {workType}
+          {name} · <span style={{ color: workType === "Personal" ? "#00df3b" : "#ffd500" }}>{workType}</span>
         </h3>
         <p>{description}</p>
       </div>

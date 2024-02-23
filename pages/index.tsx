@@ -24,22 +24,22 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <p>
-          At Hack Club, I work on engineering projects across game dev, web dev, systems and machine learning with an <a href="https://hackclub.com/team/">incredible team</a>. Most of our work in Open Source under <a href="https://github.com/hackclub">github.com/hackclub</a>.
+          At Hack Club, I work on engineering projects across game dev, web dev, systems and machine learning with an <a href="https://hackclub.com/team/">incredible team</a>. Most of our work is Open Source under <a href="https://github.com/hackclub">github.com/hackclub</a>.
           <br />
           <br />
           On the side, I'm currently building a plaform for creative exploration called <a href="https://play.withdoodle.app/">Doodle</a> and an e-commerce platform called <b>Baskket</b>.
           <br />
           <br />
-          Before joining Hack Club HQ full-time, I worked on a variety of projects such as <a href="https://sinerider.com/">SineRider </a>, organised a hackathon in my local town called <a href="https://ticsummit.org/">TiC Summit</a>, and worked as a software engineer at a local e-commerce startup developing administrative type software.
+          Before joining Hack Club HQ full-time, I worked on a variety of projects such as <a href="https://sinerider.com/">SineRider </a>, organised a hackathon in my local town called <a href="https://ticsummit.org/">TiC Summit</a>, and worked as a software engineer at a local e-commerce startup developing administrative side software participating in infrastructure development for the tech side.
           <br />
           <br />
-          I graduated high-school in 2022 and yet to go to college. After graduating high-school, I joined <a href="https://www.open-dreams.org/">Open Dreams</a> where I got to meet a community of incredibly talented people and curious people.
+          After graduating high-school in 2022, I joined <a href="https://www.open-dreams.org/">Open Dreams</a> where I got to meet a community of incredibly talented and curious people.
           <br />
           <br />
         </p>
 
         <div>
-          <h2>Projects</h2>
+          <h2>Projects - Stuff I made or contributed to</h2>
           <div className={styles.projects}>
             {projects.map((project, key) => (
               <Project key={key} {...project} />
