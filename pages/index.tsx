@@ -2,12 +2,10 @@ import React from "react";
 import styles from "../styles/index.module.css"
 import Project from "../components/Project";
 import { projects } from "../constants/projects";
-  import Link from "next/link";
 
 const HomePage: React.FC = () => {
   return (
     <div className={styles.page}>
-      
       <main>
         <div className={styles.headIntro}>
           <img src="/josias.jpg" alt="" />

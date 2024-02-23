@@ -19,7 +19,7 @@ header {
 }
 
 header > nav {
-  width: 40%;
+  width: 60%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -36,7 +36,7 @@ nav {
 
 nav > a {
   font-size: 1rem;
-  margin: 0 5px;
+  margin: 0.5em;
   text-decoration: none;
   color: grey;
 }
@@ -85,11 +85,6 @@ a {
 
 strong {
   text-decoration: none;
-}
-
-
-i {
-  font-family: "Kalam", sans-serif;
 }
 
 blockquote {
