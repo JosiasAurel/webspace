@@ -13,14 +13,14 @@ export const projects: Array<Project> = [
 
 {
     name: "/z",
-    link: "slash-z.hackclub.com",
+    link: "https://slash-z.hackclub.com",
     source: "#",
     workType: "Work",
     description: "Start Zoom meetings from anywhere in the Hack Club Slack community with a simple /z command. Or schedule calls via your Google Calendar. It's free to use for all Hack Clubbers even without needing a Zoom Pro account.",
     image: "/slashz.jpg"
   },{
     name: "Sprig",
-    link: "sprig.hackclub.com",
+    link: "https://sprig.hackclub.com",
     source: "#",
     workType: "Work",
     description: "The game console where every player is a creator. Draw, make music, and craft games in our web-based editor. Build an original game and we'll ship you a Sprig kit!",
@@ -28,7 +28,7 @@ export const projects: Array<Project> = [
   },
 {
     name: "Scrapbook",
-    link: "scrapbook.hackclub.com",
+    link: "https://scrapbook.hackclub.com",
     source: "#",
     workType: "Work",
     description: "A daily diary of what Hack Clubbers are learning & making every day.",
