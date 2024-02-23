@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
             <h2>Hello 👋, Josias here!</h2>
             <br />
             <p>
-              I spend a disproportionate amount of time on my computer coding, reading psychology articles, creating digital art, watching anime or computing the {(1 / (8.1 * 10e9)).toPrecision(3)} probability of you reading this page.
+              I spend a disproportionate amount of time on my computer coding, reading psychology articles, creating digital art, watching anime or ceremoniously computing the {(1 / (8.1 * 10e9)).toPrecision(3)} probability of you reading this page.
               <br />
               <br />
               I'm the nerdy adventurous type always following my curiosity.
