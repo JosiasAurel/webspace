@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
         </p>
 
         <div>
-          <h2>Projects - Stuff I made or contributed to</h2>
+          <h2>Projects — Stuff I've worked on</h2>
           <div className={styles.projects}>
             {projects.map((project, key) => (
               <Project key={key} {...project} />

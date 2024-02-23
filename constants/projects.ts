@@ -1,4 +1,4 @@
-export type WorkType = "Personal" | "Contributor"
+export type WorkType = "Personal" | "Contributor" | "Work"
 
 export type Project = {
   name: string
@@ -10,7 +10,23 @@ export type Project = {
 }
 
 export const projects: Array<Project> = [
+
 {
+    name: "Sprig",
+    link: "sprig.hackclub.com",
+    source: "#",
+    workType: "Work",
+    description: "The game console where every player is a creator. Draw, make music, and craft games in our web-based editor. Build an original game and we'll ship you a Sprig kit!",
+    image: "https://sprig.hackclub.com/stories-tiny/sprig-front.jpeg"
+  },
+{
+    name: "Scrapbook",
+    link: "scrapbook.hackclub.com",
+    source: "#",
+    workType: "Work",
+    description: "A daily diary of what Hack Clubbers are learning & making every day.",
+    image: "/scrapbook.jpg"
+  },  {
     name: "Digital Art",
     link: "#",
     source: "#",

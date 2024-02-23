@@ -16,7 +16,7 @@ const Project: React.FC<Project> = ({
       >
         <img src={image} alt={name} />
         <h3>
-          {name} · <span style={{ color: workType === "Personal" ? "#00df3b" : "#ffd500" }}>{workType}</span>
+          {name} · <span style={{ color: workType === "Personal" ? "#00df3b" : workType === "Contributor" ? "#ffd500" : "#ff0070" }}>{workType}</span>
         </h3>
         <p>{description}</p>
       </div>
