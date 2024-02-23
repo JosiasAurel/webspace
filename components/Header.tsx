@@ -4,7 +4,7 @@ import Link from "next/link";
 const Nav: React.FC = (): JSX.Element => {
   return (
     <header>
-      <Link style={{ textDecoration: "none", color: "black"}} href="/">
+      <Link style={{ textDecoration: "none", color: "black", fontFamily: "Micro 5" }} href="/">
         <h2>Birb!</h2>
       </Link>
       <nav>

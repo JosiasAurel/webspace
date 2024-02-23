@@ -35,7 +35,9 @@ const Footer: React.FC = (): JSX.Element => {
           textAlign: "center",
         }}
       >
-        ~~~
+        <span style={{ fontSize: "2.5em", color: "#7cf29b"}}>·</span>
+        <span style={{ fontSize: "2.5em", color: "#2151ff"}}>·</span>
+        <span style={{ fontSize: "2.5em", color: "#ff2e77"}}>·</span>
       </p>
       <p style={{ textAlign: "center", fontSize: "1.2em" }}>Thank you for visiting my space on the internet. | {msg}</p>
     </footer>
