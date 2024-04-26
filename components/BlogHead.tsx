@@ -45,7 +45,7 @@ const BlogHead: React.FC<Props> = ({
         <meta property="twitter:url" content={url} />
         <meta property="twitter:image" content={ogImage} />
       </Head>
-      <img className={styles.blogHeadImage} src={ogImage} alt="" />
+      {/* <img className={styles.blogHeadImage} src={ogImage} alt="" /> */}
       <h1>{title}
       <br />
       </h1>
