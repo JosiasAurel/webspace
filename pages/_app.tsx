@@ -8,11 +8,12 @@ import Nav from "../components/Header";
 
 const JosiasWDevApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <div className="app">
+    // <div className="app">
+      <div>
       <Head>
         <script async src="https://cdn.splitbee.io/sb.js"></script>
       </Head>
-      <div>
+      <div className="pageContent">
         <Nav />
         <Component {...pageProps} />
         <Footer />
