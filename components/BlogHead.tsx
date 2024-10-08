@@ -47,16 +47,14 @@ const BlogHead: React.FC<Props> = ({
       </Head>
       {/* <img className={styles.blogHeadImage} src={ogImage} alt="" /> */}
       <h1>{title}
-      <br />
       </h1>
-       <p>
-      ·
-      <br />
-        <i
-          style={{ color: "grey", textAlign: "center" }}
-        >
-          {description}
-        </i></p> 
+       <p style={{ color: "grey" }}>
+        — {description}
+        <br />
+        <br />
+        <i>{date}</i>
+      </p> 
+
     </div>
   );
 };

@@ -11,16 +11,21 @@ const HomePage: React.FC = () => {
         <div>
             <h1>hi, i'm josias</h1>
             <p>I enjoy nerding around with computers and learning new things.</p>
+            <p>Besides spending a disproportionate amount of time in front of my computer screen 👨🏽‍💻, I enjoy reading (psychology, science and philosophy among others) 📚, writing ✍🏽, hiking ⛰️ and playing tennis 🎾.</p>
         </div>
-        <img src="/josias.jpg" alt="Josias Aurel" />
+        {/* <img src="/josias.jpg" alt="Josias Aurel" /> */}
     </main>
+
+    <hr style={{
+      borderTop: "1px solid #fdfdfd"
+    }} />
 
     <div className="description">
         <p>
             I am currently working remotely as a Software Engineer at
             <a href="https://hackclub.com/">
             {" "}
-                Hack Club HQ
+                Hack Club HQ 
             {" "}
                 <svg width="25" height="25" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0)">
@@ -106,17 +111,24 @@ const HomePage: React.FC = () => {
                     </defs>
                 </svg>
             </a>
+            {" "}
             while on a Gap Year. <br/>
             Previously, I worked for four (4) months as a Software Developer at a small e-commerce startup in my local
-            town Yaounde, Cameroon. Graduated high-school in 2022 and a prospective University student with a Computer
-            Science major.
+            town <i>Yaounde, Cameroon</i>. 
+            <br />
+            I graduated high-school in 2022 and I'm looking forward to major in Computer Science when I get into University.
         </p>
     </div>
 
     <div className="description">
         <p>
-            Currently developing a <a href="https://play.withdoodle.app/">tool for creative exploration in education</a>
-            on the side. Also prototyping a new e-commerce platform called <b>Baskket</b> with some friends.
+            On the side, I'm currently developing a tool for creative exploration in education called <a href="https://play.withdoodle.app/">Doodle</a>. 
+            <br />
+            <br />
+            Also, I'm prototyping a new e-commerce platform called <b>Baskket</b> with a friend - will hopefully share more about that in the near future.
+
+            <br />
+            <br />
             Besides that, I'm trying to get into hardware development and embedded systems while building a drone with a
             friend and contributing to Sprig firmware.
         </p>
@@ -151,7 +163,7 @@ const HomePage: React.FC = () => {
         </p>
 
         <div>
-          <h2>Projects — Stuff I've worked on</h2>
+          <h2>Projects — A few stuff I've worked on</h2>
           <div className={styles.projects}>
             {projects.map((project, key) => (
               <Project key={key} {...project} />

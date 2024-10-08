@@ -5,7 +5,14 @@ const Nav: React.FC = (): JSX.Element => {
   return (
     <header className="flex-row-btw-center">
       <Link href="/">
-        <div className="home-btn"></div>
+        <img style={{
+          width: "40px",
+          // height: "40px",
+          borderRadius: "5px",
+          transform: "rotate(5deg)",
+          boxShadow: "2px 3px 10px rgba(0, 0, 0, 0.3)"
+        }} src="/josias.jpg" alt="Josias Aurel" />
+        {/* <div className="home-btn"></div> */}
       </Link>
       <nav>
         {/* github */}

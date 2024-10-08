@@ -10,7 +10,6 @@ const Post = ({ meta, post }) => {
     return (
        <div className="post-content">
         <BlogHead {...meta} />
-        <br />
         <Content />
        </div> 
     )

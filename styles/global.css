@@ -42,9 +42,9 @@ main h1 {
   font-size: calc(2rem + 1vw);
 }
 
-main p {
+/* main p {
   max-width: 90%;
-}
+} */
 
 main img {
   transform: rotate(5deg);
@@ -110,7 +110,7 @@ header nav a svg:hover {
 }
 
 body {
-  margin: 1em 8vw;
+  margin: 1em 6vw;
 }
 
 @media (min-width: 980px) {
@@ -286,8 +286,8 @@ p code {
 }
 
 .post-content p {
-  font-size: 1.4em;
-  font-family: "Lato", sans-serif;
+  /* font-size: 1.4em; */
+  font-family: sans-serif;
 }
 
 .post-content h2 {
