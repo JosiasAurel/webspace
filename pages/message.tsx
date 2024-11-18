@@ -14,7 +14,7 @@ export default function MessagePage() {
         const loadInterval = setInterval(() => {
             counter = (counter + 1) % 4;
             setButtonText(baseButtonText + new Array(counter).fill(".").join(""));
-        });
+        }, 200);
         fetch("/api/message", {
             method: "POST",
             body: JSON.stringify({
@@ -27,7 +27,7 @@ export default function MessagePage() {
                 jsConfetti.addConfetti({
                     confettiRadius: 6
                 });
-            }, 200);
+            });
 
     }
 
