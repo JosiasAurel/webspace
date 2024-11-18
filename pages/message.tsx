@@ -1,11 +1,22 @@
-import { useState } from "react";
-import JSConfetti from "js-confetti";
+import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
 
 export default function MessagePage() {
-    const jsConfetti = new JSConfetti();
     const baseButtonText = "Send";
     const [message, setMessage] = useState("");
     const [buttonText, setButtonText] = useState(baseButtonText);
+    // const { width, height } = useWindowSize();
+    const [width, setWidth] = useState(0);
+    const [height, setHeight] = useState(0);
+    const [displayConfetti, setDisplayConfetti] = useState(false);
+    const [opacity, setOpacity] = useState(1.0);
+
+    useEffect(() => {
+        setWidth(window.innerWidth);
+        setHeight(window.innerHeight);
+    }, []);
 
     async function sendMessage(event) {
         event.preventDefault();
@@ -24,9 +35,14 @@ export default function MessagePage() {
             .then(data => {
                 clearInterval(loadInterval);
                 setButtonText(baseButtonText);
-                jsConfetti.addConfetti({
-                    confettiRadius: 6
-                });
+                setDisplayConfetti(true)
+
+                setInterval(() => {
+                    // setOpacity(opacity - 0.1);
+                }, 500);
+
+                setTimeout(() => setDisplayConfetti(false), 5000);
+               
             });
 
     }
@@ -46,6 +62,14 @@ export default function MessagePage() {
                 </button>
         </form>
         </div>
+
+                {displayConfetti ? 
+                <Confetti
+                    width={width}
+                    height={height}
+                />
+                : ""
+            }
     </div>
     )
 }
