@@ -361,3 +361,17 @@ p code {
 .anon-message input:focus {
   outline: none;
 }
+
+@media screen and (max-width: 800px) {
+  .anon-message {
+    flex-direction: column;
+  }
+
+  .anon-message input {
+    width: 90%;
+  }
+
+  .anon-message button {
+    width: 90%;
+  }
+}
