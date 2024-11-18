@@ -35,7 +35,7 @@ export default function MessagePage() {
     <div>
             <div>
         <h2 style={{ textAlign: "center" }}> Send an anonymous message to Josias</h2>
-        <form class="anon-message" onSubmit={sendMessage}>
+        <form className="anon-message" onSubmit={sendMessage}>
             <input name="" placeholder="Type your message in here..."
                     value={message}
                     onChange={event => setMessage(event.target.value)}
