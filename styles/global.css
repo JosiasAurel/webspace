@@ -301,6 +301,7 @@ p code {
 .post-content h2 {
   font-weight: bolder;
   font-size: 2em;
+  /* font-family: "Lora", "Inter"; */
 }
 
 .post-content img {
