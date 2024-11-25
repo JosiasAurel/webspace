@@ -6,12 +6,12 @@
 
 @font-face {
   font-family: Satoshi;
-  src: url("/assets/satoshi-medium.woff") format("woff");
+  src: url("/assets/Satoshi-Medium.woff") format("woff");
 }
 
 @font-face {
   font-family: SatoshiItalic;
-  src: url("/assets/satoshi-italic.woff") format("woff");
+  src: url("/assets/Satoshi-Italic.woff") format("woff");
 }
 
 * {
