@@ -13,12 +13,12 @@ To give a bit of context, I have about four years of experience as a web develop
 
 This post is a rant about what I've disliked about my experience developing some of these applications.
 
-Before we get there, I'm still involved in some web development projects and will continue to be because I love developing web applications. I've included the reasons below.
+Before we get there, I think it's worth noting that I'm still involved in some web development projects and will continue to be because I love developing web applications. Reasons below.
 
 ## I can ship however and whenever I want
 My most significant selling point in web development is that I could quickly develop an application in my bedroom, type a few commands in my terminal, and voila! It's on the web, and anyone can open and use it. I don't have to deal with the obscure verification processes of Apple or Google to have my application used by people. 
 
-Additionally, updates are frictionless for me and those using what I build. Oh, there's a bug? Easy! I fixed it on my side, pushed my changes, and the update is live. They need to add a new feature and do the same thing, and the next time they open the app, it's already there. The user isn't even aware that I've made some changes (unless they're visual); they keep using the app.
+Additionally, updates are frictionless for me and those using what I build. Oh, there's a bug? Easy! I fixed it on my side, pushed my changes, and the update is live. If I need to add a new feature, same thing, and the next time they open the app, it's already there. The user isn't even aware that I've made some changes (unless they're visual); they keep using the app.
 
 Contrast that with a mobile application: I would have to push the updates to Google/Apple and wait for them to verify them before they move it to their store. More importantly, the user has to be notified there's an update or go to their app store themselves and click "Update" before they get the fix or new feature I've pushed. 
 
@@ -33,7 +33,7 @@ I could write a web app on my phone or on a 2GB HP Notebook without struggling, 
 Things break down when we introduce "modern" technologies like React. 
 
 ## It's nearly impossible to develop a reasonably large web dev project on a low-end computer
-Before moving to Mac, I drove a 4GB RAM HP Notebook daily. I was all-in into web development; I developed web applications from morning to evening. As the projects I was working on grew, I began to notice that I was reaching the limits of my low-end laptop. I did everything I could think of to make my experience better. I uninstalled Windows and switched to an Arch-based Linux distribution (Manjaro, yeah, I was your Linux boy :D); I was writing code using Vim in my terminal, no GUI-based text editors like vscode because it was too slow. I maxed out my swap memory and did all sorts of configurations I could think of. Yet, changing the large codebase I was working on at my part-time job could take up to 20 seconds to finish an incremental build to freeze my laptop. 
+Before moving to Mac, I drove a 4GB RAM HP Notebook daily. I was all-in into web development; I developed web applications from morning to evening. As the projects I was working on grew, I began to notice that I was reaching the limits of my low-end laptop. I did everything I could think of to make my experience better. I uninstalled Windows and switched to an Arch-based Linux distribution (Manjaro, yeah, I was your Linux boy :D); I was writing code using Vim in my terminal, no GUI-based text editors like vscode because it was too slow. I maxed out my swap memory and did all sorts of configurations I could think of. Yet, changing the large codebase I was working on at my part-time job could take up to 20 seconds to finish an incremental build, just for my laptop to then freeze. 
 
 Sometimes, I'm working on a project, and I'm in a file with over 1000 lines I've been editing since morning; then, for some reason, my laptop crashes, and when I reboot, the file is empty. It was an awful experience. In worst cases, my laptop would overheat and shock me (if I had my headphones on) before crashing. 
 
@@ -41,17 +41,18 @@ I recall performing a major migration to the project's codebase at work just to 
 
 Sadly, those weren't enough. In my fourth month, I quit my part-time position to focus on other important things for myself and recharge because the stress was taking a toll on me. 
 
-I eventually moved to an Apple Silicon MacBook, which was a big jump in terms of experience. I don't have any of these issues anymore, but I still find building web applications slower than they should be. 
+I eventually moved to an Apple Silicon MacBook, which was a big jump in terms of experience. I don't have any of these issues anymore, but I still think the experience developing these web applications could be better. 
 
 ## Huge dependencies
 There's this meme going around comparing the `node_modules` folder to a black hole.
 ![node_modules blackhole](/article-images/node_modules_blackhole.png)
-It's both funny and sad at the same time. Doing a quick `du -h node_modules` on some projects on my laptop gives me these.
+It's both funny and sad at the same time. Running the `du -h node_modules` command on some projects on my laptop gives me these.
 ```
 [REDACTED_NAME] size: 573MB
 [REDACTED_NAME] size: 416MB
 [REDACTED_NAME] size: 203MB
 ```
+(Name redacted because these are either private projects or I don't feel comfortable disclosing which one)
 
 That's just the size of the dependencies folder, not counting the actual source code in the project. 
 I find myself regularly purging projects out of my computer to free up some space (I have just 256GB of storage). One could argue that I should have just bought more storage, but Apple is being unreasonably selfish with storage upgrades, and that is beside the point. 
@@ -62,7 +63,7 @@ I've started a few side projects only to abandon them later because of obscure e
 
 I recall having to dig and read into the source code of one of a project's dependencies just to understand it enough to fix another higher-level problem. It's frustrating.
 
-I like to have a deep or first-principles understanding (or just the right mental model) of what I'm working on. Without that, I get easily frustrated when everything looks like a black box, and I have to make a change, cross my fingers, and pray it works. 
+I happen to be someone who likes to have a deep or first-principles understanding (or just the right mental model) of what I'm working on. Without that, I get easily frustrated when everything looks like a black box, and I have to make a change, cross my fingers, and pray it works. 
 
 But when a project has more lines of code than there are lines in every single book in your home, phone and laptop combined, it's just mad even to try to dig into it. The behaviour of the language also sometimes leads to horrific code. There's a repository of some of its quirks [here](https://github.com/denysdovhan/wtfjs?tab=readme-ov-file#nan-is-not-a-nan:~:text=Array%20is%20equal%20not%20array%3A).
 
