@@ -4,3 +4,4 @@ node_modules
 out
 project.txt
 .DS_Store
+content/*.html

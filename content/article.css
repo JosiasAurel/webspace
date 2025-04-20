@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+body {
+  margin: 0 20%;
+}
+
+h1,
+h2, h3 {
+  font-family: "EB Garamond";
+  font-style: italic;
+}
+
+p {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0 5%;
+  }
+}

@@ -1,0 +1,78 @@
+---
+title: "Moving Slow"
+description: "Move slow, move better."
+date: "2023-11-17"
+---
+
+
+So, last night, I went to bed in a bad mood. I felt tormented by all the four commitments I currently have while trying to satisfy my demands for a more pleasant life. It's rough, and I follow a rigorous schedule to stay on track—so much so that when I break it, it messes me up entirely. 
+
+For some time, I have become used to moving fast and shipping quickly, so when I do not see gratifying results within a reasonable/expected amount of time, I get worried. My coffee intake does not help either, as it amplifies my anxiety. 
+
+Moreover, knowing I can go 'fast' has made me undertake tasks that I end up slowing down on because of the pressure of trying to deliver all of them soon. That pressure builds up and crushes me daily.
+
+For the past few months, I have gotten used to doing a lot in a day without having coffee. After going on and off with it for some time and observing how my habits changed, I'm better off being slow and arguably methodical sometimes in the things I do and my craft to be faster.
+
+Initially, it sounded strange to me how being slower would make me go faster, but here I am, after almost half a year doing it, and I'm better than I thought. 
+
+First, these may sound obvious to you, but they weren't obvious to me some months and even years ago.
+
+Before talking about slow, I want to highlight what fast was.
+
+Fast is rushing things.
+Fast is not trying to understand the problem.
+Fast is taking a one-sided view of a situation and concluding too soon.
+Fast is not preparing or under-preparing. 
+Fast is not acknowledging long-term consequences or acknowledging them, but it is still ignoring them anyway. 
+
+Disclaimer: I'm not saying being fast is terrible. This article itself was written quickly while on my bed. This article is about the benefits of being slow. You HAVE to be fast A LOT of times... but if you can afford to, slow down!
+
+## Eliminate the fuzziness
+When trying to be fast, I risk making mistakes that can be very costly in the long run. For example, when I had to change a project, especially an unfamiliar one, I would poke around and dial values here and there until it just "worked". Doing this always kept me eye-rolling or jerking at my work because I could not prove it right. It would take me hours to patch something together to think, ' Oh wait, this will break here', and have to go back and make more changes. 
+
+Anything I do not understand well enough haunts and worries me. I cannot solve all the problems in physics, but if I can correctly intuit what they're about, it gives me the confidence and assurance I need to move forward in any undertaking that relies on what I already know to be true. Trying to work with a fuzzy mind is hard for me, so I try as much as possible to reduce distractions and slow down to understand the problem I have at hand before even diving into a solution. Because whatever I would come up with if I didn't have a clear mind would most likely be time wasted.
+
+I slow down to have clarity and to validate my thoughts.
+
+## Preparation
+Oh dear! The number of times I thought to myself, "Thank God I read that article," or "Yeesh, I should've read the documentation," was a lot. 
+
+I always told myself I would learn on the way by trying to move fast. While that's true, I do know while trying harder all the time. Sometimes, it's worth stepping back to read more about what I have at hand, which gives me a jumpstart I wouldn't get otherwise. 
+
+For example, writing my sudoku solver at a low level took me two or three days of on/off work. It uses backtracking, which I had never implemented, and I only recalled an excerpt from an article I had read two years ago. I can't emphasize how much I struggled, given my little experience in low-level languages, but I gained a lot of knowledge about what to do and when.
+
+Reading about low-level programming could have saved me some time, and I would have had more tools to address the problems and blockers I encountered quickly. 
+
+This goes the same for presentations, debates, and construction! 
+
+I (and many others) failed to realize that behind that woman effortlessly playing the violin, that guy giving the best talk you've ever listened to, or that engineer quickly evaluating a plan for that bridge is a history of struggle and intense preparation. 
+
+And good preparation is done slowly.
+
+## Slow down and say 'No'
+People have told me I'm too kind sometimes. When your friend calls you so you can go and play that new game he got, and in the mutual excitement, you say 'yes'? While you have a pile of unfinished tasks waiting for you to triage, maybe you should slow down and think for a minute and say, 'Look, dude, I really have to finish that right now, after which I'll have more time to play.'
+
+By slowing down and thinking clearly, I've found myself saying no more often to things I would quickly say yes to. 
+
+## Slow doesn't mean perfect
+Slow doesn't mean too slow. If you try to be too fast, you risk breaking things. Slow means clear.
+
+When I'm talking about doing things slow, I mean taking the time to acknowledge what you're saying and the actions you're about to commit. It means stepping back and appreciating your work. It means re-reading that message you're about to send.
+
+"Does it take me towards my goal?"
+"Is this the right thing to do? What consequences could it have?"
+"Does it help me to open YouTube right now?"
+
+This means that if you have to use twenty statements to describe a face, you should do it. Even if it's not perfect, it's clear, and clarity matters greatly. 
+
+## Slow means enjoying the process
+When I write an article like this, I really enjoy it. It is not because I'm looking to get thousands of views, no. It is because I get to share my thoughts, and I enjoy doing that. 
+
+I enjoy every bit of my work when I'm slow. 
+
+Enjoying it means I'm not very worried and can do great work. 
+
+## ...And delivering
+And because I have a clear mind, and I'm enjoying it, and I'm prepared and relaxed, I get to call it 'done'. 
+
+By moving slowly, I'm more intentional, organized, and reasonable in my actions. It helps me build strong foundations and more easily find and acknowledge my errors. 
