@@ -15,12 +15,27 @@ const Post = ({ meta, post }) => {
     )
 }
 
-Post.getInitialProps =  async (ctx: NextPageContext) => {
-    const { post } = ctx.query;
+export async function getStaticPaths() {
+  const { readdirSync } = require("node:fs");
+  const files = readdirSync(process.cwd() + "/content/");
+
+  const paths = files.map(filename => "/writing/" + filename.slice(0, -4))
+
+  return {
+    paths: paths,
+    fallback: false
+  } 
+}
+
+export const getStaticProps =  async (ctx: NextPageContext) => {
+    console.log("context", ctx);
+    const { post } = ctx.params;
     const { default: Content, meta } = await import(`../../content/${post}.mdx`);
+
     return {
-        meta,
-        post
+      props: {
+        meta, post
+      }
     }
 }
 
