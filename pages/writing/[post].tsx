@@ -27,7 +27,7 @@ export async function getStaticPaths() {
   } 
 }
 
-export const getStaticProps =  async (ctx: NextPageContext) => {
+export const getStaticProps =  async (ctx: any) => {
     console.log("context", ctx);
     const { post } = ctx.params;
     const { default: Content, meta } = await import(`../../content/${post}.mdx`);

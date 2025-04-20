@@ -24,6 +24,9 @@ const withMDX = nextMDX({
 });
 
 export default withMDX({
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
   pageExtensions: ["md", "mdx", "tsx", "ts", "jsx", "js"],
   outputFileTracing: true,
   swcMinify: true,
