@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$title$</title>
+
+  <meta name="date" content="$date$" scheme="YYYY-MM-DD" />
+  <meta name="description" content="$description$" />
+  $if(author)$
+    <meta name="author" content="$author$" />
+  $endif$
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0 20%;
+      line-height: 1.6;
+      color: #111;
+      background: #fff;
+    }
+
+    h1, h2, h3 {
+      font-family: "EB Garamond", serif;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    p, li, blockquote {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-weight: 300;
+    }
+
+    blockquote {
+      border-left: 4px solid #ccc;
+      padding-left: 1em;
+      color: #555;
+      font-style: italic;
+    }
+
+    @media screen and (max-width: 500px) {
+      body {
+        margin: 0 5%;
+      }
+    }
+
+    a {
+      color: #0070f3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 2rem 0;
+    }
+
+    nav#TOC {
+      margin-bottom: 2rem;
+      font-family: "Bricolage Grotesque", sans-serif;
+    }
+
+    .article-meta {
+      margin-bottom: 2rem;
+      font-family: "Bricolage Grotesque", sans-serif;
+      color: #444;
+      font-size: 0.95em;
+    }
+
+    .article-meta span {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>$title$</h1>
+    <div class="article-meta">
+      <span><strong>Published:</strong> $date$</span>
+      $if(author)$<span><strong>Author:</strong> $author$</span>$endif$
+      <span><strong>Summary:</strong> $description$</span>
+    </div>
+  </header>
+
+  $if(toc)$
+  <nav id="TOC">
+    $toc$
+  </nav>
+  $endif$
+
+  <main>
+    $body$
+  </main>
+</body>
+</html>
