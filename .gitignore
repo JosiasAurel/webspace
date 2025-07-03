@@ -5,3 +5,8 @@ out
 project.txt
 .DS_Store
 content/*.html
+
+
+# Added by cargo
+
+/target
