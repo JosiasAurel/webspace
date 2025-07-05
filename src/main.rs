@@ -1,6 +1,5 @@
 #[macro_use]
 extern crate rocket;
-use markdown_parser;
 use rocket::fs::FileServer;
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
@@ -34,14 +33,15 @@ fn rocket() -> _ {
         .mount("/content", FileServer::from("./content/"))
 }
 
-use chrono::{DateTime, NaiveDate, Utc};
+use chrono::{TimeZone, NaiveDate, Utc};
 
 fn date_to_rss_datestring(date_str: &str) -> String {
     // Attempt to parse the date
     if let Ok(date) = NaiveDate::parse_from_str(date_str, "%Y-%m-%d") {
         // Safe unwrap since we know the time is valid
         let naive_datetime = date.and_hms_opt(0, 0, 0).unwrap();
-        let utc_datetime: DateTime<Utc> = DateTime::from_utc(naive_datetime, Utc);
+        let utc_datetime = Utc.from_utc_datetime(&naive_datetime);
+        // let utc_datetime: DateTime<Utc> = DateTime::from_utc(naive_datetime, Utc);
         utc_datetime
             .format("%a, %d %b %Y %H:%M:%S +0000")
             .to_string()
@@ -75,7 +75,7 @@ fn build_rss() -> io::Result<String> {
                 .adapt::<markdown_parser::JsonAdapter, MyFrontMatter>()
                 .unwrap();
             let front_matter = md_json.front_matter();
-            let fm_json: Value = serde_json::from_str(&front_matter).unwrap();
+            let fm_json: Value = serde_json::from_str(front_matter).unwrap();
             // let front_matter = md.front_matter();
 
             let path_slice = &path_str[2..path_str.len() - 2];
