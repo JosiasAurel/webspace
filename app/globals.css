@@ -96,3 +96,25 @@ main { max-width: var(--grid); }
 
 .icon-link { display: inline-flex; align-items: center; gap: 0.3rem; text-decoration: none; }
 .icon-link:hover { opacity: 0.8; }
+
+/* Fixed scroll progress circle */
+.scroll-circle {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: conic-gradient(#2563eb 0deg calc(var(--p, 0) * 360deg), transparent calc(var(--p, 0) * 360deg) 360deg);
+  -webkit-mask: radial-gradient(circle 14px at center, transparent 14px, #000 14.5px);
+  mask: radial-gradient(circle 14px at center, transparent 14px, #000 14.5px);
+  transition: background 80ms linear;
+}
+
+.scroll-circle.bump { animation: bump 280ms ease-out; }
+@keyframes bump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}

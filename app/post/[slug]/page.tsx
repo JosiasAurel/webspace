@@ -1,6 +1,7 @@
 import { getPostBySlug, getAllSlugs } from '../../../lib/content';
 import Link from 'next/link';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Home } from 'lucide-react';
+import ScrollCircle from './ScrollCircle';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
@@ -18,7 +19,7 @@ export default async function PostPage({ params }: { params: { slug: string }}) 
       <div style={{marginBottom:'0.75rem'}}>
         <Link href="/" className="icon-link" aria-label="Back to home">
           <ArrowLeft size={18} />
-          <span className="visually-hidden">Back to home</span>
+          <span>Home</span>
         </Link>
       </div>
       <h1>{post.title}</h1>
