@@ -1,11 +1,11 @@
-import nextMDX from "@next/mdx";
-import remarkMath from "remark-math";
-import rehypeMathjax from "rehype-mathjax";
-// import rehypeMathJaxSvg from "rehype-mathjax";
-import rehypeHighlight from "rehype-highlight";
-import remarkGfm from "remark-gfm";
-import fauxRemarkEmbedder from "@remark-embedder/core";
-import fauxOembedTransformer from "@remark-embedder/transformer-oembed";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '10mb'
+    }
+  }
+};
 
 const remarkEmbedder = fauxRemarkEmbedder.default;
 const oembedTransformer = fauxOembedTransformer.default;

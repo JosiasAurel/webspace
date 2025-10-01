@@ -1,0 +1,69 @@
+.article :global(img) {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+}
+
+.article :global(h1) {
+  font-size: clamp(2.2rem, 6vw, 3.2rem);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.article :global(pre) {
+  background: #0b1020;
+  color: #eaeaea;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+/* Minimal highlight.js-inspired tokens */
+.article :global(.hljs) { color: #eaeaea; }
+.article :global(.hljs-comment),
+.article :global(.hljs-quote) { color: #9aa4b2; font-style: italic; }
+.article :global(.hljs-keyword),
+.article :global(.hljs-selector-tag),
+.article :global(.hljs-subst) { color: #8bd5ff; }
+.article :global(.hljs-string),
+.article :global(.hljs-title),
+.article :global(.hljs-name),
+.article :global(.hljs-type),
+.article :global(.hljs-attribute) { color: #a7f3d0; }
+.article :global(.hljs-number),
+.article :global(.hljs-literal),
+.article :global(.hljs-symbol),
+.article :global(.hljs-bullet) { color: #fca5a5; }
+.article :global(.hljs-section),
+.article :global(.hljs-selector-id) { color: #c4b5fd; }
+.article :global(.hljs-emphasis) { font-style: italic; }
+.article :global(.hljs-strong) { font-weight: 700; }
+
+.article :global(code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+.article :global(pre code) {
+  background: transparent;
+}
+
+.article :global(a) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.article :global(h2),
+.article :global(h3),
+.article :global(h4) {
+  scroll-margin-top: 2rem;
+}
+
+.article :global(blockquote) {
+  border-left: 3px solid #ddd;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color: #444;
+  font-style: italic;
+}
+
+.article :global(p) { margin: 1.25rem 0; }

@@ -1,0 +1,31 @@
+---
+title: "I lost myself"
+description: "I am not a cyborg"
+date: "2023-02-19"
+---
+
+If you truly know me, then you know I overthink a lot.
+I always have this sense of insecurity everywhere I go and everytime I am doing something.
+
+I have never been able to explain this feeling till now, I think I know what I am suffering of and I want to change that.
+
+When I was younger, I loved reading articles on the internet about science (physics and computer science mostly). I did so because I was very interested in both fields.
+I felt no obligation to do something "productive" of my time, no obligation to change the world. I just had the desire to have the power of creating something of my own and use it myself and share it with people.
+Proud I was. I didn't like being humiliated (and still don't). Being on top of things was what I strived the most, so I studied hard at school, I trekked home almost everyday to save money and purchase my own data and I was highly focused on improving myself.
+
+Trying new technologies, exploring ideas I had or exploring new concepts and putting them into practice was my _hobby_. Even if I read something that was way beyond my understanding, I would never give up and try everyday for weeks or even months just to get what I want -- I was stubborn to failure.
+I hardly overlooked what people had that I didn't. My friends had a nice laptop, a nice phone and all I had was an Android phone. I was okay with it because I could research, write code, publish articles and entertain myself.
+
+Over time, this part of me gradualy faded away. I think that happened when I started learning to code in Form 3. I stopped striving for good grades, and I was all focused on programming -- I was good at it -- at the cost of my grades (and indirectly, who I really was).
+I began spending more time on the internet. I joined Twitter and started participating in _#100DaysOfCode_. I liked it initially because I was learning more consitently, but I also fell for the metrics.
+
+My motivation to explore my own ideas, to make the best out of everything I did and my own pride died down. The work I did, the things I learned was no longer what made me proud of myself... it was the appreciation of people that followed my journey that did.
+I do not claim Twitter is a bad place, I just think I messed up by falling for the cheap dopamine that the platform is designed to give to retain users as much as possible.
+
+I am not the only one in this, I have seen some other people fall for this, and it hurts me everytime.
+Uninstalling Twitter and logging out has helped me. Also, limiting my screen time, muting buzzwords, and forcefully trying to do things I truly love doing is helping me. This gives an idea of the magnitude of the damage I suffer from.
+
+The programming community in general can be very toxic at times. When you get into this field, it is best to avoid people who's way of communicating an opinion or idea is too imposing. Usually they are wrong, and the only way of knowing if something is true is trying for yourself.
+
+I strive to be this calm, proactive, and curious person I once was. It seem like it is a dream so far away that I will have to go out of my way in every sense possible -- but truly this persona is within me already.
+It is sure going to take some time for me to recover, but I already experience some change.
