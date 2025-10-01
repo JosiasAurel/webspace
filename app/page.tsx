@@ -29,7 +29,7 @@ export default async function HomePage() {
           <div className="intro-copy" dangerouslySetInnerHTML={{ __html: personal }} />
         ) : (
           <div className="intro-copy">
-            <p>I'm Josias — a generalist who enjoys building simple tools and small, joyful web things.</p>
+            <p>I'm Josias — a generalist who enjoys building simple tools and small, joyful things.</p>
             <p>You can reach me at <a href="mailto:hey@josiasw.dev">hey@josiasw.dev</a>.</p>
           </div>
         )}
