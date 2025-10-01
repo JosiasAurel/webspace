@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState } from 'react';
-import dynamic from 'next/dynamic';
 import { EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
@@ -19,6 +18,7 @@ export default function AdminPanel() {
     extensions: [StarterKit, Image],
     content: '',
     autofocus: false,
+    immediatelyRender: false,
     onUpdate: ({ editor }) => {
       setValue(editor.getHTML());
     },
