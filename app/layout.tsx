@@ -8,7 +8,7 @@ import { Github, Twitter } from 'lucide-react';
 const mono = Roboto_Mono({ subsets: ['latin'], weight: ['300', '400', '500', '700'] });
 
 export const metadata: Metadata = {
-  title: 'Webspace – Minimal Blog',
+  title: 'Josias Aurel',
   description: 'A minimal Next.js blog powered by local markdown content.',
   other: {
     'color-scheme': 'light only',

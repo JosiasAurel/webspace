@@ -106,10 +106,9 @@ main { max-width: var(--grid); }
   height: 44px;
   border-radius: 50%;
   border: 0;
-  background: conic-gradient(#2563eb 0deg calc(var(--p, 0) * 360deg), transparent calc(var(--p, 0) * 360deg) 360deg);
-  -webkit-mask: radial-gradient(circle 14px at center, transparent 14px, #000 14.5px);
-  mask: radial-gradient(circle 14px at center, transparent 14px, #000 14.5px);
-  transition: background 80ms linear;
+  background: transparent;
+  transition: transform 120ms ease;
+  z-index: 50;
 }
 
 .scroll-circle.bump { animation: bump 280ms ease-out; }

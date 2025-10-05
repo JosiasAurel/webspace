@@ -10,9 +10,13 @@ export default function ScrollCircle() {
 
   useEffect(() => {
     const onScroll = () => {
+      const se = document.scrollingElement as HTMLElement | null;
       const doc = document.documentElement;
-      const scrollTop = doc.scrollTop || window.pageYOffset || 0;
-      const max = Math.max(1, doc.scrollHeight - doc.clientHeight);
+      const body = document.body;
+      const scrollTop = (se?.scrollTop ?? doc.scrollTop ?? body.scrollTop ?? window.pageYOffset ?? 0) as number;
+      const scrollHeight = (se?.scrollHeight ?? doc.scrollHeight ?? body.scrollHeight ?? 1) as number;
+      const clientHeight = (se?.clientHeight ?? doc.clientHeight ?? body.clientHeight ?? window.innerHeight) as number;
+      const max = Math.max(1, scrollHeight - clientHeight);
       const p = Math.min(1, Math.max(0, scrollTop / max));
       setProgress(p);
       const atBottom = p >= 0.999;
@@ -38,8 +42,20 @@ export default function ScrollCircle() {
       className={`scroll-circle${started ? ' started' : ''}${isComplete ? ' complete' : ''}${bump ? ' bump' : ''}`}
       aria-hidden
       title="Reading progress"
-      style={{ ['--p' as any]: String(progress) }}
-    />
+    >
+      {(() => {
+        const size = 44;
+        const stroke = 6;
+        const r = (size - stroke) / 2;
+        const c = 2 * Math.PI * r;
+        const offset = c * (1 - progress);
+        return (
+          <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
+            <circle cx={size/2} cy={size/2} r={r} stroke="#2563eb" strokeWidth={stroke} fill="none" strokeLinecap="round" strokeDasharray={c} strokeDashoffset={offset} />
+          </svg>
+        );
+      })()}
+    </div>
   );
 }
 

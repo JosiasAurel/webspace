@@ -15,7 +15,6 @@ export default async function HomePage() {
     const html = await fs.readFile(indexPath, 'utf8');
     const match = html.match(/<body>[\s\S]*?(?=<h1>\s*Writing\s*<\/h1>)/i);
     personal = match ? match[0].replace(/<\/?body[^>]*>/gi, '') : null;
-    if (personal) personal = personal.replace(/<h1[\s\S]*?<\/h1>/i, '');
   } catch {}
 
   return (
@@ -29,7 +28,10 @@ export default async function HomePage() {
           <div className="intro-copy" dangerouslySetInnerHTML={{ __html: personal }} />
         ) : (
           <div className="intro-copy">
-            <p>I'm Josias — a generalist who enjoys building simple tools and small, joyful things.</p>
+            <h1>Hallo!</h1>
+            <p>I'm Josias and I love exploring my curiosity. I live in Cameroon and spend most of my time hacking together weird, useful, or slightly broken things.</p>
+            <p>I work at <a href="https://hackclub.com/">Hack Club</a> (aka The Hack Foundation), where I write open‑source software and help teenagers learn to code by building and sharing.</p>
+            <p>Outside of code, I’m usually chasing a tennis ball 🎾, wandering off on hikes ⛰️, or helping run research at <a href="https://theameaarchives.com/">Amea</a>.</p>
             <p>You can reach me at <a href="mailto:hey@josiasw.dev">hey@josiasw.dev</a>.</p>
           </div>
         )}

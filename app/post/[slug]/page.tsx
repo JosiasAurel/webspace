@@ -1,4 +1,5 @@
 import { getPostBySlug, getAllSlugs } from '../../../lib/content';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft, Home } from 'lucide-react';
 import ScrollCircle from './ScrollCircle';
@@ -10,6 +11,15 @@ import rehypeHighlight from 'rehype-highlight';
 import styles from './post.module.css';
 
 export const revalidate = 60;
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = await getPostBySlug(params.slug);
+  if (!post) return { title: 'Not found' };
+  return {
+    title: post.title,
+    description: post.description || undefined,
+  };
+}
 
 export default async function PostPage({ params }: { params: { slug: string }}) {
   const post = await getPostBySlug(params.slug);
